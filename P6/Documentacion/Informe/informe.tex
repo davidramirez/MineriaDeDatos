@@ -1,0 +1,114 @@
+\documentclass[a4paper]{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage[left=3cm,right=3cm,top=3cm,bottom=3cm]{geometry}
+\usepackage{eurosym}
+\usepackage{fancyhdr}%encabezado y pie de página
+\usepackage[colorlinks=true, linkcolor=black, urlcolor=blue]{hyperref}
+\setcounter{secnumdepth}{5}
+\usepackage[spanish]{babel}
+\setcounter{tocdepth}{5}
+\usepackage{colortbl}%para colorear tablas
+\usepackage{tabularx}
+\usepackage{pdfpages}%para incluir documentos pdf
+\usepackage{placeins}%para poner barrera y no pasen de secciones los elemntos flotantes
+\usepackage{longtable}
+\usepackage{multirow} %para juntar varias filas en una tabla
+
+\author{Marta Aguilera Anguita \\ Begoña Carcedo Avedillo \\ Andoni Martín Reboredo \\ David Ramirez Ambrosi}
+\title{\begin{center}
+\textbf{\Huge{Práctica 3, Clasificación: \\ Modelos OneR y \\ SVM }} \\ \includegraphics{./figs/svm.png}\\ \textbf{Sistemas de Apoyo a la Decisión}
+\end{center}}
+\date{\today}
+
+
+\pagestyle{fancy}
+\rhead{
+\textbf{Sistemas de Apoyo a la Decisión} \hfill \textbf{Grupo de laboratorio 1}\\
+Práctica 3: Clasificación \hfill \textbf{Fecha:} \date{\today}
+}
+
+\lhead{}
+
+%colores
+\definecolor{azul}{RGB}{0,240,255}
+\definecolor{amarillo}{RGB}{255,240,0}
+\definecolor{rojo}{RGB}{255,198,198}
+
+%Separación entre párrafos
+\setlength{\parskip}{4mm}
+
+\begin{document}
+\maketitle
+
+\thispagestyle{empty}%para evitar enumeración de la página de la portada y del índice
+\newpage
+\tableofcontents%índice
+\thispagestyle{empty}
+\newpage
+
+\listoffigures%índice de figuras
+\thispagestyle{empty}
+\newpage
+
+\setcounter{page}{1}%Para reinizar el contador de páginas en la página deseada
+
+
+\chapter{Introducción}
+
+	\section{Clasificación no-supervisada}
+
+	\section{Objetivo}
+
+\chapter{Algoritmo}
+
+
+
+\chapter{Diseño}
+
+\chapter{Resultados experimentales}
+
+	\section{Banco de pruebas para la validación de software y resultados}
+	
+	\section{Resultados}
+	
+	\section{Clasificación supervisada respecto de otro software de refernecia}
+	
+	\section{Análisis crítico y discusión de resultados}
+	
+	\section{Rendimiento del software}
+
+\chapter{Conclusiones}
+
+	\section{Motivación para la realización de clustering \textit{Clustering}}
+	
+	\section{Conclusiones de los resultados}
+	
+	\section{Conclusiones generales}
+	
+	\section{Propuestas de mejora}
+
+%Bibliografía
+
+\newpage
+\bibliographystyle{plain}
+
+\bibliography{mdp6}
+
+\chapter{Valoración subjetiva}
+	
+	\section{Alcance de objetivos}
+	
+	\section{Utilidad de la tarea}
+	
+	\section{Dificultad}
+	
+	\section{Tiempo de trabajo}
+	
+	\section{Sugerencias de mejora}
+	
+	\section{Críticas}
+
+\end{document}
