@@ -1,3 +1,4 @@
+package packAlgoritmia;
 
 public class MDP6 {
 
