@@ -6,6 +6,13 @@ public class Instancia {
 
 	private Vector<Double> vector = new Vector<Double>();
 
+	public Instancia(double pValores[])
+	{
+		for(int i=0;i<pValores.length;i++)
+		{
+			this.getVector().add(pValores[i]);
+		}
+	}
 	/**
 	 * 
 	 * @param pInstancia: Una instancia cualquiera
