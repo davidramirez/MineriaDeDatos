@@ -14,21 +14,7 @@ public class MDP6 {
 			/* Bloque de carga de ruta. */
 			String ruta=args[0];
 			
-			if(comprobarExtension(ruta, "csv"))
-			{
-				CargadorFichero().getCargadorFichero().cargarCSV(ruta);
-			}
-			else 
-			{
-				if(comprobarExtension(ruta, "arff"))
-				{
-					CargadorFichero().getCargadorFichero.cargarARFF(ruta);
-				}
-				else
-				{
-					System.exit(-1);
-				}
-			}
+			CargadorFichero().getCargarFichero().cargarFichero(ruta);
 			
 			/*Bloque de distancia*/
 			Distancia distancia;
