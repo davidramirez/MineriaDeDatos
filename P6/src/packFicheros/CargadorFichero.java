@@ -46,16 +46,17 @@ public class CargadorFichero {
 	 */
 	private ListaInstancias cargarCSV(String path) {
 		try {
+			//lista a cargar
 			ListaInstancias lista = new ListaInstancias();
 			
 			File fichero = new File(path);
 			Scanner sc = new Scanner(fichero);
-			String linea;
+			String linea = null;
 			
 			//comenzamos a cargar el fichero
 			//Puede haber comentarios en las primeras líneas o lineas vacías hasta encontrar la linea que da nombre a los atributos
 			boolean masComentarios = true;
-			while(masComentarios)
+			while(masComentarios && sc.hasNext())
 			{
 				linea = sc.nextLine();
 				
@@ -68,6 +69,42 @@ public class CargadorFichero {
 					}
 				}
 			}
+			
+			//ya tenemos la primera linea con los nombres de los atributos
+			String[] atributos = obtenerLineaSinComentario(linea).split(";");
+			lista.setNombresAtributos(atributos);
+			
+			//obtenemos la dimension de las instancias
+			int dimension = atributos.length;
+			
+			//ahora procesamos el resto del fichero añadiendo cada una de las instancias
+			while(sc.hasNext())
+			{
+				//obtenemos la siguiente linea
+				linea = obtenerLineaSinComentario(sc.nextLine());
+				
+				if(linea.length() > 0)
+				{
+					if(linea.matches("\\S"))
+					{
+						String[] instancia = linea.split(",");
+						
+						//procesamos la instancia
+						if(instancia.length == dimension)
+						{
+							
+						}
+						else
+						{
+							//si la dimensión de la instancia no coincide con la especificada por los nombres de los atributos
+							//no tenemos en cuenta la instancia y seguimos
+							System.err.println("La dimensión de la instancia: "+linea+" no coincide la dimensión especificada: "+dimension+" y no ha sido cargada");
+						}
+					}
+				}
+			}
+			
+			
 			
 		} catch (FileNotFoundException e) {
 			System.out.println("El fichero especificado no existe");
@@ -106,6 +143,30 @@ public class CargadorFichero {
 			}
 		}
 		return false;
+	}
+
+	
+	/**
+	 * Dada una línea de un fichero, devuelve la parte útil de la misma, es decir, hasta que se encuentra un comentario
+	 * indicado por '%'
+	 * @param pLinea
+	 * Linea a procesar
+	 * @return
+	 * La linea sin comentarios
+	 */
+	private String obtenerLineaSinComentario(String pLinea)
+	{
+		int indComent = pLinea.indexOf("%");
+		
+		if(indComent != -1)
+		{
+			//si la línea tiene un comentario, devolvemos la línea sin el comentario
+			return pLinea.substring(0, indComent -1);
+		}
+		else
+		{
+			return pLinea;
+		}
 	}
 
 }

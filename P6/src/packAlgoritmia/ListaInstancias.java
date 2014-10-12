@@ -5,10 +5,14 @@ import java.util.LinkedList;
 
 public class ListaInstancias {
 
-	private LinkedList<Instancia> listaInstancia=new LinkedList<Instancia>();
+	private LinkedList<Instancia> listaInstancia;
+	private String[] nombreAtributos;
 	
-	
-	
+	public ListaInstancias()
+	{
+		listaInstancia = new LinkedList<Instancia>();
+		nombreAtributos = null;
+	}
 	
 
 	public double[] getMaximos() {
@@ -80,6 +84,29 @@ double minimos[]=new double[dimension()];
 	 */
 	public LinkedList<Instancia> getListaInstancia() {
 		return listaInstancia;
+	}
+	
+	public String[] getNombresAtributos()
+	{
+		return nombreAtributos;
+	}
+	
+	public void setNombresAtributos(String[] pNombres)
+	{
+		this.nombreAtributos = pNombres;
+	}
+	
+	/**
+	 * Dada una instancia, la añade al final de la lista que ya teníamos
+	 * @param pInstancia
+	 * instancia a añadir
+	 */
+	public void anadirInstancia(Instancia pInstancia)
+	{
+		if(pInstancia != null)
+		{
+			this.listaInstancia.addLast(pInstancia);
+		}
 	}
 
 }
