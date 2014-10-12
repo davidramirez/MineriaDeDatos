@@ -8,11 +8,11 @@ public class InicializacionAleatoria extends KMeans {
 		double maximos[];
 		double minimos[];
 		
-		pListaInstancias.getMaximos();
-		pListaInstancias.getMinimos();
+		maximos=pListaInstancias.getMaximos();
+		minimos=pListaInstancias.getMinimos();
 		
 		int dimension=pListaInstancias.getListaInstancia().get(0).dimension();
-		double instanciaAleatoria[];
+		double instanciaAleatoria[] = new double[pListaInstancias.dimension()];
 		
 		ListaInstancias centroides=new ListaInstancias();
 		for(int i=0;i<pNumeroClusters;i++)
