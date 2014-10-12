@@ -3,7 +3,9 @@ package packFicheros;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.Vector;
 
+import packAlgoritmia.Instancia;
 import packAlgoritmia.ListaInstancias;
 
 public class CargadorFichero {
@@ -86,13 +88,31 @@ public class CargadorFichero {
 				if(linea.length() > 0)
 				{
 					if(linea.matches("\\S"))
-					{
+					{//tiene caracteres
 						String[] instancia = linea.split(",");
 						
 						//procesamos la instancia
 						if(instancia.length == dimension)
 						{
+							//obtenemos cada uno de los atributos y los convertimos a double
+							Vector<Double> valores = new Vector<Double>();
 							
+							for(int i = 0; i<instancia.length;i++)
+							{
+								try{
+									valores.add(i, Double.parseDouble(instancia[i]));
+								}catch(NumberFormatException e)
+								{
+									//TODO mejorar, evitar el error y quedarse automáticamente con los atributos numéricos descartando el resto
+									System.err.println("El fichero contiene instancias con atributos no numéricos");
+									System.exit(1);
+								}
+								
+							}
+							
+							Instancia instanciaCargada = new Instancia(valores);
+							
+							lista.anadirInstancia(instanciaCargada);
 						}
 						else
 						{
