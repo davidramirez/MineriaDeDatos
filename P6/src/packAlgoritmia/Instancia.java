@@ -4,14 +4,10 @@ import java.util.Vector;
 
 public class Instancia {
 
-	private Vector<Double> vector = new Vector<Double>();
-
-	public Instancia(double pValores[])
+	private Vector<Double> vector;
+	public Instancia(Vector<Double> pVector)
 	{
-		for(int i=0;i<pValores.length;i++)
-		{
-			this.getVector().add(pValores[i]);
-		}
+		this.setVector(pVector);
 	}
 	/**
 	 * 
