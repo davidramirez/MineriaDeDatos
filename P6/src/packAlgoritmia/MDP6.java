@@ -2,6 +2,9 @@ package packAlgoritmia;
 
 import javax.print.attribute.standard.PrinterResolution;
 
+import packDistancias.Distancia;
+import packDistancias.DistanciaChebyshev;
+import packDistancias.DistanciaMinkowski;
 import packFicheros.CargadorFichero;
 
 public class MDP6 {
@@ -14,7 +17,7 @@ public class MDP6 {
 			/* Bloque de carga de ruta. */
 			String ruta=args[0];
 			
-			CargadorFichero().getCargarFichero().cargarFichero(ruta);
+			CargadorFichero.getCargadorFichero().cargarFichero(ruta);
 			
 			/*Bloque de distancia*/
 			Distancia distancia;

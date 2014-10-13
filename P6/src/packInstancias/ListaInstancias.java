@@ -1,4 +1,4 @@
-package packAlgoritmia;
+package packInstancias;
 
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -8,6 +8,8 @@ public class ListaInstancias {
 	private LinkedList<Instancia> listaInstancia;
 	private String[] nombreAtributos;
 	
+	private int dimension;//guarda la dimensión de las instancias que contiene este objeto
+	
 	public ListaInstancias()
 	{
 		listaInstancia = new LinkedList<Instancia>();
@@ -16,13 +18,12 @@ public class ListaInstancias {
 	
 
 	public double[] getMaximos() {
-		double maximos[]=new double[dimension()];
+		double maximos[]=new double[getDimension()];
 		
-		for(int i =0; i<dimension();i++)
-			maximos[i]=0;
+		//array a 0 al crearlo
 		
 		Iterator<Instancia> iterador=this.getListaInstancia().iterator();
-		int dimension=dimension();
+		int dimension=getDimension();
 		 	
 		Instancia instanciaTemporal;
 		double maximoTemporal;
@@ -45,13 +46,13 @@ public class ListaInstancias {
 	}	
 	
 	public double[] getMinimos() {
-double minimos[]=new double[dimension()];
+		double minimos[]=new double[getDimension()];
 		
-		for(int i =0; i<dimension();i++)
+		for(int i =0; i<getDimension();i++)
 			minimos[i]=Double.MAX_VALUE;
 		
 		Iterator<Instancia> iterador=this.getListaInstancia().iterator();
-		int dimension=dimension();
+		int dimension=getDimension();
 		 	
 		Instancia instanciaTemporal;
 		double maximoTemporal;
@@ -74,15 +75,24 @@ double minimos[]=new double[dimension()];
 		
 	}
 	
-	public int dimension() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 
 	/*
 	 * GETTERS & SETTERS
 	 */
-	public LinkedList<Instancia> getListaInstancia() {
+	public int getDimension() {
+		return dimension;
+	}
+	
+	/**
+	 * 
+	 * @param pDimension
+	 */
+	public void setDimension(int pDimension)
+	{
+		this.dimension = pDimension;
+	}
+	
+	private LinkedList<Instancia> getListaInstancia() {
 		return listaInstancia;
 	}
 	

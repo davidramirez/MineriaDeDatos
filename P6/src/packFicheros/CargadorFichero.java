@@ -5,12 +5,24 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.Vector;
 
-import packAlgoritmia.Instancia;
-import packAlgoritmia.ListaInstancias;
+import packInstancias.Instancia;
+import packInstancias.ListaInstancias;
 
 public class CargadorFichero {
 	
+	private static CargadorFichero mCargadorFichero = new CargadorFichero();
+	
 	String ficherosSoportados = ".csv";
+	
+	private CargadorFichero()
+	{
+		
+	}
+	
+	public static CargadorFichero getCargadorFichero()
+	{
+		return mCargadorFichero;
+	}
 	
 	/**
 	 * Dado el path de un fichero, comprueba que el fichro puede ser cargado (por su extensión) 
@@ -78,6 +90,8 @@ public class CargadorFichero {
 			
 			//obtenemos la dimension de las instancias
 			int dimension = atributos.length;
+			//y la asignamos a la lista de instancias
+			lista.setDimension(dimension);
 			
 			//ahora procesamos el resto del fichero añadiendo cada una de las instancias
 			while(sc.hasNext())

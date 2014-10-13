@@ -1,4 +1,7 @@
-package packAlgoritmia;
+package packCluster;
+
+import packInstancias.Instancia;
+import packInstancias.ListaInstancias;
 
 public class Cluster {
  private Instancia centroide;

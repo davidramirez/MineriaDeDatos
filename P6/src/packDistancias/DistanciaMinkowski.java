@@ -1,4 +1,6 @@
-package packAlgoritmia;
+package packDistancias;
+
+import packInstancias.Instancia;
 
 public class DistanciaMinkowski extends Distancia {
 

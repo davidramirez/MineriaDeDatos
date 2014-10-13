@@ -1,4 +1,4 @@
-package packAlgoritmia;
+package packInstancias;
 
 import java.util.Vector;
 

@@ -1,4 +1,4 @@
-package packAlgoritmia;
+package packCluster;
 
 import java.util.LinkedList;
 

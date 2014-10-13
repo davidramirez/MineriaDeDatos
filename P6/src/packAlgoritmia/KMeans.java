@@ -1,12 +1,25 @@
 package packAlgoritmia;
 
+import packCluster.ListaCluster;
+import packDistancias.Distancia;
+import packInstancias.Instancia;
+import packInstancias.ListaInstancias;
+
+/**
+ * 
+ * @author david
+ *
+ */
 public abstract class KMeans {
 	
-	private int k;
-	private Distancia distancia;
-	private ListaInstancias instancias;
-	private int numIteraciones;
-	private double delta;
+	protected int k;//el número predefinido de clusters que se van a realizar
+	protected Distancia distancia;
+	protected ListaInstancias instancias;
+	protected int numIteraciones;
+	protected double delta;
+	
+	protected Instancia[] centroides;
+	protected boolean[][] matrizPertenencia;
 	
 	public KMeans(int pK, Distancia pDistancia, ListaInstancias pListaInstancias, int pNumIt, double pDelta)
 	{
@@ -23,7 +36,7 @@ public abstract class KMeans {
 				
 		this.inicializar();
 		
-		//while
+		//while convergencia > delta
 		
 			this.calcularPertenencias();
 			
@@ -44,6 +57,65 @@ public abstract class KMeans {
 	public void calcularCentroides()
 	{
 		
+	}
+	
+	public Instancia[] getCentroides() {
+		return centroides;
+	}
+	
+	
+	public void setCentroides(Instancia[] centroides) {
+		this.centroides = centroides;
+	}
+	
+	
+	public int getK() {
+		return k;
+	}
+	
+	
+	public void setK(int k) {
+		this.k = k;
+	}
+	
+	
+	public Distancia getDistancia() {
+		return distancia;
+	}
+	
+	
+	public void setDistancia(Distancia distancia) {
+		this.distancia = distancia;
+	}
+	
+	
+	public ListaInstancias getInstancias() {
+		return instancias;
+	}
+	
+	
+	public void setInstancias(ListaInstancias instancias) {
+		this.instancias = instancias;
+	}
+	
+	
+	public int getNumIteraciones() {
+		return numIteraciones;
+	}
+	
+	
+	public void setNumIteraciones(int numIteraciones) {
+		this.numIteraciones = numIteraciones;
+	}
+	
+	
+	public double getDelta() {
+		return delta;
+	}
+	
+	
+	public void setDelta(double delta) {
+		this.delta = delta;
 	}
 
 }
