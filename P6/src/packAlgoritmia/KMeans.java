@@ -49,12 +49,12 @@ public abstract class KMeans {
 	
 	protected abstract void inicializar();
 	
-	public void calcularPertenencias()
+	private void calcularPertenencias()
 	{
 		
 	}
 	
-	public void calcularCentroides()
+	protected void calcularCentroides()
 	{
 		
 	}
