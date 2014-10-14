@@ -1,6 +1,10 @@
 package packAlgoritmia;
 
+import java.util.Iterator;
+
+import packCluster.ListaCluster;
 import packDistancias.Distancia;
+import packInstancias.Instancia;
 import packInstancias.ListaInstancias;
 
 public class PertenenciaAleatoria extends KMeans {
@@ -9,9 +13,22 @@ public class PertenenciaAleatoria extends KMeans {
 		super(pK, pDistancia, pListaInstancias, pNumIt, pDelta);
 	}
 
-	@Override
+	/**
+	 * Inicializa KMeans utilizando el método de pertenencias aleatorias, asigna cada instancia del conjunto de estudio a uno de los K clusters establecidos por el usuario.
+	 */
 	protected void inicializar() {
-		// TODO Auto-generated method stub
+	
+		this.clusters=new ListaCluster(centroides);
+		
+		Iterator<Instancia> iteradorInstancias=this.instancias.getIterador();
+		Instancia instanciaAleatoria;
+		int introductorAleatorioCluster;
+		while(iteradorInstancias.hasNext())
+		{
+			introductorAleatorioCluster=(int)Math.random()*this.getK();
+			instanciaAleatoria=iteradorInstancias.next();
+			this.clusters.anadirInstanciaACluster(introductorAleatorioCluster, instanciaAleatoria);
+		}
 		
 	}
 

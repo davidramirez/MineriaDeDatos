@@ -27,11 +27,15 @@ public abstract class KMeans {
 	
 	public KMeans(int pK, Distancia pDistancia, ListaInstancias pListaInstancias, int pNumIt, double pDelta)
 	{
-		k = pK;
-		distancia = pDistancia;
-		instancias = pListaInstancias;
-		numIteraciones = pNumIt;
-		delta = pDelta;
+		this.k = pK;
+		this.distancia = pDistancia;
+		this.instancias = pListaInstancias;
+		this.numIteraciones = pNumIt;
+		this.delta = pDelta;
+		
+		this.centroides=new Instancia[pK];
+		this.centroidesNuevos=new Instancia[pK];
+		this.clusters=new ListaCluster(centroides);
 	}
 	
 	public ListaCluster ejecutar()
@@ -62,7 +66,7 @@ public abstract class KMeans {
 	 *  
 	 *  Considera el caso de que una instancia pueda asociarse a varios codewords
 	 */
-	private void calcularPertenencias()
+	protected void calcularPertenencias()
 	{
 		//inicializar los clusters para esta vuelta
 		this.clusters = new ListaCluster(centroides);
