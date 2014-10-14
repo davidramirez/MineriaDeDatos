@@ -1,6 +1,7 @@
 package packAlgoritmia;
 
 import java.util.Iterator;
+import java.util.LinkedList;
 
 import packCluster.ListaCluster;
 import packDistancias.Distancia;
@@ -21,7 +22,8 @@ public abstract class KMeans {
 	protected double delta;
 	
 	protected Instancia[] centroides;
-	protected boolean[][] matrizPertenencia;
+	protected Instancia[] centroidesNuevos;
+	protected ListaCluster clusters;
 	
 	public KMeans(int pK, Distancia pDistancia, ListaInstancias pListaInstancias, int pNumIt, double pDelta)
 	{
@@ -34,18 +36,21 @@ public abstract class KMeans {
 	
 	public ListaCluster ejecutar()
 	{
-		ListaCluster lista = null;
 				
 		this.inicializar();
 		
-		//while convergencia > delta
+		//centroides = centriodesNuevos
 		
-			this.calcularPertenencias();
+		//while convergencia > delta--> cluster calcula convergencia respecto a centroidesnuevos que recibirá por param
+		
+		//centroides = centroidesnuevos
+		
+			this.calcularPertenencias();//crea nuevos clusters a partir  del atrib centroides
 			
-			this.calcularCentroides();
+			this.calcularCentroides();//Calcula los nuevos, los dejara en centroidesnuevos
 			
 		
-		return lista;	
+		return clusters;	
 			
 	}
 	
@@ -59,8 +64,8 @@ public abstract class KMeans {
 	 */
 	private void calcularPertenencias()
 	{
-		//inicializar la matriz de pertenencias, por defecto al crear la matriz, sus posiciones valen FALSE
-		this.matrizPertenencia = new boolean[this.instancias.getNumeroInstancias()][k];
+		//inicializar los clusters para esta vuelta
+		this.clusters = new ListaCluster(centroides);
 		
 		//Recorremos la lista de instancias
 		Iterator<Instancia> it = this.instancias.getIterador();
@@ -71,14 +76,42 @@ public abstract class KMeans {
 			instanciaActual = it.next();
 			
 			//calcuar la distancia respecto a cada codeword
+			//guardamos en cada momento cuales son los codewords más próximos a la instancia y su distancia
+			LinkedList<Integer> centroidesProximos = new LinkedList<Integer>();
+			double distMin = Double.MAX_VALUE;
+			
 			for(int i = 0; i < centroides.length; i++)
 			{
 				try {
-					this.distancia.distancia(instanciaActual, centroides[i]);
+						double distActual = this.distancia.distancia(instanciaActual, centroides[i]);
+						
+						if(distActual < distMin)
+						{
+							//reiniciamos la lista de centroides proximos con el actual y actualizamos la distancia mínima
+							centroidesProximos = new LinkedList<Integer>();
+							centroidesProximos.add(i);
+							distMin = distActual;
+						}
+						else if(distActual == distMin)
+						{
+							//Tenemos otro centroide a la misma distancia
+							centroidesProximos.add(i);
+						}
+					
 				} catch (Exception e) {
 					System.err.println("Error al calcular la distancia entre dos instancias: \n" + e.getMessage() + "\n El programa finalizará");
 					System.exit(1);
 				}
+			}
+			
+			//pasamos los resultados a La lista de clusters, asignando la instancia actual a su respectivo cluser
+			Iterator<Integer> iteradorCentroide = centroidesProximos.iterator();
+			int i;
+			
+			while(iteradorCentroide.hasNext())
+			{
+				i = iteradorCentroide.next();
+				this.clusters.anadirInstanciaACluster(i, instanciaActual);
 			}
 		}
 		
