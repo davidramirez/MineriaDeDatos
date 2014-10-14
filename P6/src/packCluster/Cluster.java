@@ -1,5 +1,6 @@
 package packCluster;
 
+import packDistancias.Distancia;
 import packInstancias.Instancia;
 import packInstancias.ListaInstancias;
 
@@ -18,12 +19,6 @@ public class Cluster {
 		return 0;
 	}
 	
-	private Instancia calcularCentroide() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-	
 	/*
 	 * GETTERS & SETTERS
 	 */
@@ -40,5 +35,17 @@ public class Cluster {
 
 	public Instancia calcularNuevoCentroide() {
 		return this.listaInstancias.calcularInstanciaMedia();
+	}
+
+	public double calcularDivergencia(Instancia pCentroide, Distancia pDistancia) {
+		try {
+			return (pDistancia.distancia(pCentroide, this.centroide));
+		} catch (Exception e) {
+			System.err.println("Error al calcular la distancia entre dos instancias: \n" + e.getMessage() + "\n El programa finalizará");
+			System.exit(1);
+		}
+		
+		//si algo falla, la divergencia devuelta ess infinita
+		return Double.MAX_VALUE;
 	}
 }

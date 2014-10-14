@@ -3,6 +3,7 @@ package packCluster;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import packDistancias.Distancia;
 import packInstancias.Instancia;
 
 public class ListaCluster {
@@ -67,5 +68,22 @@ public class ListaCluster {
 		}
 		
 		return nuevosCentroides;
+	}
+
+	public double calcularDivergencia(Instancia[] pCentroides, Distancia pDistancia) {
+		double divergencia = 0;
+		Iterator<Cluster> it = this.getIterator();
+		Cluster clusterActual;
+		int i = 0;
+		
+		while(it.hasNext())
+		{
+			clusterActual = it.next();
+			
+			divergencia = divergencia + clusterActual.calcularDivergencia(pCentroides[i], pDistancia);
+			
+			i++;
+		}
+		return divergencia;
 	}
 }
