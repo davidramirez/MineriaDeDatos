@@ -18,6 +18,13 @@ public class InicializacionAleatoria extends KMeans {
 	 */
 	public void inicializar()
 	{
+		int numeroInstancias=this.getInstancias().getNumeroInstancias();
+		
+		for(int indice=0;i<this.getK();indice++)
+		{
+			this.getInstancias().getInstancia((int)Math.random()*(numeroInstancias));
+		}
+			instanciaAleatoria[j] = Math.random()*(maximos[j]-minimos[j])+minimos[j];
 		
 	}
 	
