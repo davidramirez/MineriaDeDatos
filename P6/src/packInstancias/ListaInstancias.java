@@ -2,6 +2,7 @@ package packInstancias;
 
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.Vector;
 
 public class ListaInstancias {
 
@@ -141,7 +142,18 @@ public class ListaInstancias {
 	 * La instancia media de la lista, el centroide
 	 */
 	public Instancia calcularInstanciaMedia() {
-		// TODO Auto-generated method stub
+		Iterator<Instancia> it = this.getIterador();
+		Instancia instanciaActual;
+		
+		Vector<Double> media = new Vector<Double>(this.dimension);
+		
+		while(it.hasNext())
+		{
+			instanciaActual = it.next();
+			
+			Iterator<Double> d; //TODO finalizar media
+		}
+		
 		return null;
 	}
 }

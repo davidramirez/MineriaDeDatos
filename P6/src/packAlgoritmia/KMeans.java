@@ -41,7 +41,7 @@ public abstract class KMeans {
 		
 		//centroides = centriodesNuevos
 		
-		//while convergencia > delta--> cluster calcula convergencia respecto a centroidesnuevos que recibirá por param
+		//while convergencia > delta--> cluster calcula convergencia respecto a centroidesnuevos que recibirá por param y tener en cuenta iteraciones predefinidas
 		
 		//centroides = centroidesnuevos
 		
