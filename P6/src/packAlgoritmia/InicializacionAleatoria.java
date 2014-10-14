@@ -1,8 +1,10 @@
 package packAlgoritmia;
 
+import java.util.HashSet;
 import java.util.Vector;
 
 import packDistancias.Distancia;
+import packInstancias.Instancia;
 import packInstancias.ListaInstancias;
 
 public class InicializacionAleatoria extends KMeans {
@@ -14,17 +16,26 @@ public class InicializacionAleatoria extends KMeans {
 	
 	
 	/**
-	 * 
+	 * Inicializa KMeans usando el método de inicialización aleatoria. Establece los centroides de la primera inicialización copiando K instancias aleatorias del espacio de muestra.
 	 */
 	public void inicializar()
 	{
 		int numeroInstancias=this.getInstancias().getNumeroInstancias();
+		HashSet<Integer> instanciaExtraidas= new HashSet<Integer>(); 
+		int extractorAleatorioInstancias;
 		
-		for(int indice=0;i<this.getK();indice++)
+		for(int indice=0;indice<this.getK();indice++)
 		{
-			this.getInstancias().getInstancia((int)Math.random()*(numeroInstancias));
+			do
+			{
+				extractorAleatorioInstancias=(int)Math.random()*(numeroInstancias);
+			}while(instanciaExtraidas.contains(extractorAleatorioInstancias));
+			
+			instanciaExtraidas.add(extractorAleatorioInstancias);
+			this.centroides[indice]=this.getInstancias().getInstancia(extractorAleatorioInstancias);	
 		}
-			instanciaAleatoria[j] = Math.random()*(maximos[j]-minimos[j])+minimos[j];
+		
+		this.calcularPertenencias();
 		
 	}
 	

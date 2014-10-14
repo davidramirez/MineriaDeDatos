@@ -15,7 +15,7 @@ public class InicializacionAleatoriaVariante extends KMeans{
 	
 	
 	/**
-	 * 
+	 * Inicializa KMeans usando la inicialización aleatoria variada, esta inicialización examina los rangos entre los que se mueven las variables y asigna centroides aleatorios dentro de esos rangos.
 	 */
 	public void inicializar()
 	{

@@ -5,6 +5,7 @@ import java.util.Vector;
 public class Instancia {
 
 	private Vector<Double> vector;
+	
 	public Instancia(Vector<Double> pVector)
 	{
 		this.setVector(pVector);

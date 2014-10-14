@@ -76,7 +76,15 @@ public class ListaInstancias {
 		
 	}
 	
-
+	/**
+	 * Retorna el elmento pPosicion de la lista.
+	 * @param pPosicion
+	 * @return
+	 */
+	public Instancia getInstancia(int pPosicion) 
+	{
+		return this.listaInstancia.get(pPosicion);	
+	}
 	/*
 	 * GETTERS & SETTERS
 	 */
@@ -169,4 +177,7 @@ public class ListaInstancias {
 		
 		return (new Instancia(media));
 	}
+
+
+
 }
