@@ -118,5 +118,19 @@ public class ListaInstancias {
 			this.listaInstancia.addLast(pInstancia);
 		}
 	}
+	
+	/**
+	 * Devuelve el número de instancias que contiene la lista
+	 * @return
+	 * número de instancias de la lista
+	 */
+	public int getNumeroInstancias()
+	{
+		return this.listaInstancia.size();
+	}
 
+	public Iterator<Instancia> getIterador()
+	{
+		return this.listaInstancia.iterator();
+	}
 }

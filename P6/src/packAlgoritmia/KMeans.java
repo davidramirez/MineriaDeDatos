@@ -1,5 +1,7 @@
 package packAlgoritmia;
 
+import java.util.Iterator;
+
 import packCluster.ListaCluster;
 import packDistancias.Distancia;
 import packInstancias.Instancia;
@@ -49,8 +51,36 @@ public abstract class KMeans {
 	
 	protected abstract void inicializar();
 	
+	/**
+	 * Calcula a cual de los centroides está más próxima cada instancia. Se basa en el valor del atributo centroides
+	 *  y en la métrica establecida.
+	 *  
+	 *  Considera el caso de que una instancia pueda asociarse a varios codewords
+	 */
 	private void calcularPertenencias()
 	{
+		//inicializar la matriz de pertenencias, por defecto al crear la matriz, sus posiciones valen FALSE
+		this.matrizPertenencia = new boolean[this.instancias.getNumeroInstancias()][k];
+		
+		//Recorremos la lista de instancias
+		Iterator<Instancia> it = this.instancias.getIterador();
+		Instancia instanciaActual;
+		
+		while(it.hasNext())
+		{
+			instanciaActual = it.next();
+			
+			//calcuar la distancia respecto a cada codeword
+			for(int i = 0; i < centroides.length; i++)
+			{
+				try {
+					this.distancia.distancia(instanciaActual, centroides[i]);
+				} catch (Exception e) {
+					System.err.println("Error al calcular la distancia entre dos instancias: \n" + e.getMessage() + "\n El programa finalizará");
+					System.exit(1);
+				}
+			}
+		}
 		
 	}
 	
