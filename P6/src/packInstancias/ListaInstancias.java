@@ -133,4 +133,15 @@ public class ListaInstancias {
 	{
 		return this.listaInstancia.iterator();
 	}
+
+
+	/**
+	 * Devuelve una instancia cuyos atributos son iguales a la media de los de las instancias contenidas en esta lista
+	 * @return
+	 * La instancia media de la lista, el centroide
+	 */
+	public Instancia calcularInstanciaMedia() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

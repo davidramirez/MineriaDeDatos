@@ -119,7 +119,7 @@ public abstract class KMeans {
 	
 	protected void calcularCentroides()
 	{
-		
+		this.centroidesNuevos = this.clusters.calcularNuevosCentroides();
 	}
 	
 	public Instancia[] getCentroides() {

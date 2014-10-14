@@ -37,4 +37,8 @@ public class Cluster {
 	{
 		this.listaInstancias.anadirInstancia(pInstancia);
 	}
+
+	public Instancia calcularNuevoCentroide() {
+		return this.listaInstancias.calcularInstanciaMedia();
+	}
 }

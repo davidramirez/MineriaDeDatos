@@ -57,4 +57,15 @@ public class ListaCluster {
 			this.getListaCluster().get(pCluster).anadirInstancia(pInstancia);
 		}
 	}
+
+	public Instancia[] calcularNuevosCentroides() {
+		Instancia[] nuevosCentroides = new Instancia[this.getListaCluster().size()];
+		
+		for(int i = 0; i < nuevosCentroides.length; i++)
+		{
+			nuevosCentroides[i] = this.getListaCluster().get(i).calcularNuevoCentroide();
+		}
+		
+		return nuevosCentroides;
+	}
 }
