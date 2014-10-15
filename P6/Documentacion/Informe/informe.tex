@@ -57,18 +57,87 @@
 
 
 \chapter{Introducción}
-El presente documento constituye el resultado de la práctica realizada en base a la implementación del algoritmo de clasificación no supervisada \bf{KMeans clustering}. Este algoritmo trata el agrupamiento de un conjunto de instancias en base a su proximidad con las demás instancias contenidas en el espacio de muestra proporcionado al algoritmo para su ejecución.
+
+El presente documento constituye el resultado de la práctica realizada en base a la implementación del algoritmo de clasificación no supervisada \textbf{KMeans clustering}. Este algoritmo trata el agrupamiento de un conjunto de instancias en base a su proximidad con las demás instancias contenidas en el espacio de muestra proporcionado al algoritmo para su ejecución.
 
 Dentro del algoritmo cabe el estudio de diferentes variaciones en los distintos parámetros de que dispone. Nosotros hemos considerado variaciones sobre dos parámetros, el método de cálculo de la distancia entre los distintos elementos que posee el cluster y la inicialización de los distintos clusters, esta inicialización servirá como base de las sucesivas iteraciones que conforman el algoritmo.
+
 	\section{Clasificación no-supervisada}
 	La clasificación no supervisada es aquella que se lleva a cabo mediante el estudio de las diversas instancias que conforman el espacio de aplicación del algoritmo sin que estas instancias tengan que estar previamente clasificadas dentro de una clase.
+	
+	Se trata de una técnica de exploración de los datos en la que se intentan detectar estas clases desconocidas. Dependiendo de el algoritmo de clasificación utilizado, el número de clases debe o no ser especificado. Por ejemplo, en el algoritmo en que se basa este trabajo debe ser especificado, sin embargo en técnicas de \textbf{clusterig jerárquico} no.
+	
 	\section{Objetivo}
+	
 	Esta práctica tiene como objetivo principal la comprehensión de los procedimientos 
 \chapter{Algoritmo}
 
-
+	\section{K-means, algoritmo principal}
+	
+	\begin{verbatim}
+	inicializar
+	divergencia = infinito 
+	
+	Mientras(numiteraciones <= iteracionesIndicadas AND divergencia < delta)
+	{
+	    centroides = centroidesNuevos 
+	
+	    calcularPertenencias
+	    centroidesNuevos = calcularNuevosCentroides
+		
+	    calcularDivergencia(centroidesNuevos) 
+	}
+	\end{verbatim}
+	
+	\section{Subrutina inicialización}
+		\subsection{Inicialización aleatoria}
+		
+		\subsection{Pertenencia aleatoria}
+		
+		\subsection{División de espacio}
+		
+		\subsection{Generación aleatoria de codewords}
+	
+	\section{Subrutina calcularPertenencias}
+	
+	\begin{verbatim}
+	Crear nuevos clusters 
+	
+	Para cada instancia
+	{
+	    Para cada centroide
+	    {
+	        distancia entre la instancia y cada cluster
+	        Guardamos los mínimos 
+	    }    
+	    Para cada centroide obtenido
+	        Guardamos la instancia en el cluster correspondiente al centroide
+	}
+	\end{verbatim}
+	
+	\section{Subrutina calcularCentroides}
+	
+	\begin{verbatim}
+	Para cada cluster
+	
+	   Calcular la instancia media
+	   
+	return nuevosCentroides
+	\end{verbatim}
+	
+	\section{Subrutina calcularDivergencia}
+	
+	\begin{verbatim}
+	Para cada cluster 
+	   
+	   Calcular la distancia entre el centroide antiguo y el nuevo
+	   
+	return divergenciaAcumulada
+	\end{verbatim}
 
 \chapter{Diseño}
+
+
 
 \chapter{Resultados experimentales}
 
