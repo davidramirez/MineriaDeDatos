@@ -2,10 +2,12 @@ package packAlgoritmia;
 
 import javax.print.attribute.standard.PrinterResolution;
 
+import packCluster.ListaCluster;
 import packDistancias.Distancia;
 import packDistancias.DistanciaChebyshev;
 import packDistancias.DistanciaMinkowski;
 import packFicheros.CargadorFichero;
+import packInstancias.ListaInstancias;
 
 public class MDP6 {
 
@@ -13,32 +15,174 @@ public class MDP6 {
 		
 		if(args.length!=0)
 		{
-			
-			/* Bloque de carga de ruta. */
-			String ruta=args[0];
-			
-			CargadorFichero.getCargadorFichero().cargarFichero(ruta);
-			
-			/*Bloque de distancia*/
-			Distancia distancia;
-			
-			String tipoDistancia=obtenerParametro("-d", args);
-			
-			if(tipoDistancia.equals("M"))
+			/*Comprobar si se ha pedido la ayuda*/
+			if(obtenerParametro("-h", args) != null)
 			{
-				distancia=new DistanciaMinkowski(Double.parseDouble(args[buscarParametro("M", args)+1]));
+				//Se imprime y sale el programa
+				help();
+				System.exit(0);
 			}
-			else
-				if(tipoDistancia.equals("C"))
+			
+			//Objetos necesarios para el algoritmo y algunos de sus valores por defecto
+			String ruta = null;
+			ListaInstancias instancias = null;
+			int k = 0;
+			Distancia distancia = null;
+			KMeans algoritmo = null;
+			int numIteraciones = 0;
+			double delta = 0;
+			
+			
+			/******************** Bloque de carga de instancias ********************/
+			ruta = args[0];
+			
+			instancias = CargadorFichero.getCargadorFichero().cargarFichero(ruta);
+			
+			
+			
+			/******************** Bloque de distancia ************************************/
+			
+			String tipoDistancia = obtenerParametro("-d", args);
+			
+			if(tipoDistancia != null)
+			{
+				//si se especifica una distancia, miramos cuál es
+				if(tipoDistancia.equals("M"))
 				{
-					distancia=new DistanciaChebyshev();
+					try {
+						distancia = new DistanciaMinkowski(Double.parseDouble(args[buscarParametro("M", args)+1]));
+					} catch (NumberFormatException e) {
+						System.err.println("El parámetro m especificado para la distancia de Minkovski debe ser numérico");
+						System.exit(1);
+					} catch (Exception e) {
+						System.err.println(e.getMessage());
+						System.exit(1);
+					}
 				}
 				else
-				{
-					System.exit(-2);
+					if(tipoDistancia.equals("C"))
+					{
+						distancia=new DistanciaChebyshev();
+					}
+					else
+					{
+						//No se sabe qué distancia ha especificado el usuario, salimos
+						System.err.println("La especificación de la distancia es in correcta");
+						help();
+						System.exit(1);
+					}
+			}
+			else
+			{
+				//no se ha especificado ninguna distancia, se usa por defecto la Euclidea
+				try {
+					distancia = new DistanciaMinkowski(2);
+				} catch (Exception e) {}
+			}
+
+			/******************** Bloque param k ***********************************/
+			
+			int posK = buscarParametro("-k", args);
+			
+			if(posK != -1)
+			{
+				//obtenemos el numero de iteraciones a realizar
+				try{
+				k = Integer.parseInt(args[posK +1]);
+				} catch (NumberFormatException e){
+					System.err.println("El número de clusters debe ser especificado por un valor entero");
+					System.exit(1);
 				}
+			}
+			else
+			{
+				//no se ha especificado k
+				System.err.println("Debe especificar el parámetro K para poder realizar la ejecución del programa");
+				System.exit(1);
+			}
+			
+			
+			
+			/******************** Bloque de iteraciones y delta ********************/
+			int posIt = buscarParametro("-e", args);
+			int posDelta = buscarParametro("-c", args);
+			
+			if(posIt != -1)
+			{
+				//obtenemos el numero de iteraciones a realizar
+				try{
+				numIteraciones = Integer.parseInt(args[posIt +1]);
+				} catch (NumberFormatException e){
+					System.err.println("El número de iteraciones debe ser especificado por un valor entero");
+					System.exit(1);
+				}
+				
+				//Si no se ha especificado un delta, este se considera infinito y el algoritmo finalizará cuando acaben las iteraciones
+				if(posDelta == -1) delta = Double.MAX_VALUE;
+			}
+			
+			if(posDelta != -1)
+			{
+				//obtenemos la delta indicada
+				try{
+					delta = Double.parseDouble(args[posDelta +1]);
+					} catch (NumberFormatException e){
+						System.err.println("El delta debe ser especificado por un valor real");
+						System.exit(1);
+					}
+					
+					//Si no se ha especificado un num de iteraciones, este se considera infinito y el algoritmo finalizará cuando la divergencia entre codebooks sea menor que delta
+					if(posIt == -1) numIteraciones = Integer.MAX_VALUE;
+			}
+			
+			if(posDelta == -1 && posIt == -1)
+			{
+				//si ninguno de los dos parámetros ha sido especificado, por defecto se asignan los valores:
+				numIteraciones = 10;
+				delta = 0.00001;
+			}
+			
+			/******************** Bloque de inicialización ********************/
+			
+			int posIncializacion = buscarParametro("-i", args);
+			
+			if(posIncializacion != -1)
+			{
+				//si se ha especificado el tipo de inicialización, lo detectamos
+				switch (args[posIncializacion+1]) {
+				case "aleatoria":
+					algoritmo = new InicializacionAleatoria(k, distancia, instancias, numIteraciones, delta);
+					break;
+				case "pert_aleatoria":
+					algoritmo = new PertenenciaAleatoria(k, distancia, instancias, numIteraciones, delta);
+					break;
+				case "cent_aleat":
+					algoritmo = new InicializacionAleatoriaVariante(k, distancia, instancias, numIteraciones, delta);
+					break;
+				case "particionada":
+					algoritmo = new DivisionEspacio(k, distancia, instancias, numIteraciones, delta);
+					break;
 
+				default:
+					//no se reconoce la especificación
+					System.err.println("No se reconoce el tipo de inicialización especificado: "+args[posIncializacion+1]);	
+					help();
+					System.exit(1);
+					break;
+				}
+			}
+			
+			
+			/***************************Bloque ejecución******************************/
+			//En este punto ya podemos ejecutar el algoritmo
+			ListaCluster clusters = algoritmo.ejecutar();
 
+		}
+		else
+		{
+			System.err.println("No se han especificado parámetros, el programa no puede continuar");
+			help();
+			System.exit(1);
 		}
 
 	}
@@ -141,5 +285,13 @@ public class MDP6 {
 		{
 			return null;
 		}
+	}
+	
+	/**
+	 * Imprime la ayuda del programa
+	 */
+	private static void help()
+	{
+		
 	}
 }

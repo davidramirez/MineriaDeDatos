@@ -40,24 +40,38 @@ public abstract class KMeans {
 	
 	public ListaCluster ejecutar()
 	{
-				
+		//inicializamos el problema dependiendo de la opción elegida		
 		this.inicializar();
 		
-		//centroides = centriodesNuevos
+		//inicialmente queremos que se ejecute el algoritmo, establecemos la convergencia a un valor enorme
+		double convergencia = Double.MAX_VALUE;
+		int i = 1;//numero de iteración que relizamos
 		
-		//while convergencia > delta--> cluster calcula convergencia respecto a centroidesnuevos que recibirá por param y tener en cuenta iteraciones predefinidas
+		this.centroidesNuevos = this.centroides;
+				
+		while(convergencia > delta && i <= this.numIteraciones)
+		{
 		
-		//centroides = centroidesnuevos
+			//Actualizamos los centroides actuales
+			this.centroides = this.centroidesNuevos;
 		
 			this.calcularPertenencias();//crea nuevos clusters a partir  del atrib centroides
 			
 			this.calcularCentroides();//Calcula los nuevos, los dejara en centroidesnuevos
 			
+			convergencia = this.calcularDivergenciaCentroides();
+			
+		}
 		
 		return clusters;	
 			
 	}
 	
+	private double calcularDivergenciaCentroides() {
+		
+		return this.clusters.calcularDivergencia(this.centroidesNuevos, this.distancia);
+	}
+
 	protected abstract void inicializar();
 	
 	/**
@@ -125,6 +139,8 @@ public abstract class KMeans {
 	{
 		this.centroidesNuevos = this.clusters.calcularNuevosCentroides();
 	}
+	
+	
 	
 	public Instancia[] getCentroides() {
 		return centroides;
