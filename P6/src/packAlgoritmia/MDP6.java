@@ -16,7 +16,7 @@ public class MDP6 {
 		if(args.length!=0)
 		{
 			/*Comprobar si se ha pedido la ayuda*/
-			if(obtenerParametro("-h", args) != null)
+			if(buscarParametro("-h", args) != -1)
 			{
 				//Se imprime y sale el programa
 				help();
@@ -171,6 +171,11 @@ public class MDP6 {
 					break;
 				}
 			}
+			else
+			{
+				// Si no se ha especificado, por defecto usamos "aleatoria"
+				algoritmo = new InicializacionAleatoria(k, distancia, instancias, numIteraciones, delta);
+			}
 			
 			
 			/***************************Bloque ejecución******************************/
@@ -266,7 +271,7 @@ public class MDP6 {
 	 */
 	private static boolean existeParametro(String pParametro,String[] pArgumentos)
 	{
-		return buscarParametro(pParametro, pArgumentos)==-1?true:false;
+		return buscarParametro(pParametro, pArgumentos)==-1?false:true;
 	}
 	
 	/**
