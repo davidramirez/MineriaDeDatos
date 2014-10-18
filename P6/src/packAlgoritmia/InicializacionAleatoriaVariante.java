@@ -22,6 +22,7 @@ public class InicializacionAleatoriaVariante extends KMeans{
 		double maximos[];
 		double minimos[];
 		
+		//Obtengo los máximos y mínimos de cada dimensión.
 		maximos=this.getInstancias().getMaximos();
 		minimos=this.getInstancias().getMinimos();
 		
@@ -29,18 +30,26 @@ public class InicializacionAleatoriaVariante extends KMeans{
 		double instanciaAleatoria[] = new double[this.getInstancias().getDimension()];
 		Vector<Double> vectorTemporal = new Vector<Double>();
 		this.centroides = new Instancia[this.k];
+		
+		//Para cada partición.
 		for(int i=0;i<this.k;i++)
 		{
+			//Evaluo las distintas dimensiones.
 			for(int j=0;j<dimension;j++)
 			{
+				//Calculo una posición aleatoria dentro del rango en que está definido cada subespacio.
 				instanciaAleatoria[j] = Math.random()*(maximos[j]-minimos[j])+minimos[j];
 			}
 			for(int k=0;k<dimension;k++)
 			{
+				//Añado al vectorTemporal cada uno de los valores calculados.
 				vectorTemporal.add(instanciaAleatoria[k]);
 			}
+			//Añado el centroide creado al grupo de centroides
 			centroides[i] = new Instancia(vectorTemporal);
 		}
+		//Calculo las pertenencias para dejar el algoritmo preparado
+		this.calcularPertenencias();
 	}
 
 }

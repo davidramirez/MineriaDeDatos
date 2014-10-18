@@ -20,20 +20,27 @@ public class DivisionEspacio extends KMeans {
 	protected void inicializar() {
 		double maximos[];
 		double minimos[];
-		
+		//obtengo los valores máximos y mínimos de cada espacio
 		maximos=this.getInstancias().getMaximos();
 		minimos=this.getInstancias().getMinimos();
 		
 		int dimensionEspacial=this.getInstancias().getDimension();
 		Vector<Double> instanciaTemporal=new Vector<Double>();
-		for(int indice=0;indice<dimensionEspacial;indice++)
+		
+		//Mientras no haya creado k divisiones
+		for(int indice=0;indice<this.getK();indice++)
 		{
+			//Mientras no haya establecido todos los atributos
 			for(int indiceAtributos=0;indiceAtributos<dimensionEspacial;indiceAtributos++)
 			{
-				instanciaTemporal.add(((maximos[indiceAtributos]-minimos[indiceAtributos])/(this.k))-this.k/2);
+				//Divido la dimensión en K subespacios, extraigo los centros de esos subespacios y selecciono el correspondiente al subespacio que estamos creando.
+				instanciaTemporal.add(((((maximos[indiceAtributos]-minimos[indiceAtributos]))/(this.k))-this.k/2)*indice);
 			}
+			//Añado el centroide creado fruto de dividir el espacio.
 			this.centroides[indice]=new Instancia(instanciaTemporal);
 		}
+		//Al acabar calculo las pertenencias para dejar el algoritmo preparado.
+		this.calcularPertenencias();
 		
 	}
 
