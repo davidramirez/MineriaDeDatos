@@ -40,7 +40,7 @@ public class MDP6 {
 			
 			/******************** Bloque de distancia ************************************/
 			
-			String tipoDistancia = obtenerParametro("-d", args);
+			String tipoDistancia = args[buscarParametro("-d", args)+1];//obtenerParametro("-d", args);
 			
 			if(tipoDistancia != null)
 			{
