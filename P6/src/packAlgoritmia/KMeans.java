@@ -68,6 +68,10 @@ public abstract class KMeans {
 		double convergencia = Double.MAX_VALUE;
 		int i = 1;//numero de iteración que relizamos
 		
+		//error
+		double errorAnterior = Double.MAX_VALUE;
+		double errorActual;
+		
 		this.centroidesNuevos = this.centroides;
 				
 		while(convergencia > delta && i <= this.numIteraciones)
@@ -84,8 +88,11 @@ public abstract class KMeans {
 			//imprimimos el estado tras esta vuelta
 			this.clusters.imprimirEstado(System.out);
 			
-			convergencia = this.calcularDivergenciaCentroides();
+			errorActual = this.clusters.calcularErrorTotal();
+			convergencia = Math.abs(errorAnterior - errorActual);//this.calcularDivergenciaCentroides();
+			
 			i++;
+			errorAnterior = errorActual;
 		}
 		
 		return clusters;	

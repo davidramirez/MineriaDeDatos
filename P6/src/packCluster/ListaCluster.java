@@ -150,7 +150,7 @@ public class ListaCluster {
 		}
 		
 		ps.println();
-		ps.println("Error total: "+this.calcularErrorTotal());
+		ps.println("Error total: "+this.calcularErrorTotal() + "\n \n");
 	}
 
 	/**
@@ -158,7 +158,7 @@ public class ListaCluster {
 	 * @return
 	 * El error como la suma de los errores parciales cometidos en cada cluster
 	 */
-	private Double calcularErrorTotal() {
+	public Double calcularErrorTotal() {
 		
 		Iterator<Cluster> it = this.getIterator();
 		Cluster clusterActual;
@@ -168,7 +168,7 @@ public class ListaCluster {
 		{
 			clusterActual = it.next();
 			
-			error = clusterActual.getErrorAcumulado();
+			error = error + clusterActual.getErrorAcumuladoMedio();
 		}
 		return error;
 	}

@@ -105,12 +105,17 @@ public class Cluster {
 	 */
 	public void imprimirEstado(int pNumCluster, PrintStream ps) {
 		
-		ps.println(pNumCluster+"\t"+this.centroide.toString()+"\t"+ this.listaInstancias.getNumeroInstancias()+"\t"+this.errorAcumulado);
+		ps.println(pNumCluster+"\t"+this.centroide.toString()+"\t"+ this.listaInstancias.getNumeroInstancias()+"\t"+this.getErrorAcumuladoMedio());
 		
 	}
 
 
-	public double getErrorAcumulado() {
-		return this.errorAcumulado;
+	/**
+	 * Calcula el error medio de asignación cometido en el cluster
+	 * @return
+	 * el error acumulado entre el número de instancias asignadas al cluster
+	 */
+	public double getErrorAcumuladoMedio() {
+		return (this.errorAcumulado / this.listaInstancias.getNumeroInstancias());
 	}
 }
