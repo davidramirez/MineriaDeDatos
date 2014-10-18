@@ -9,8 +9,9 @@ import packInstancias.Instancia;
 import packInstancias.ListaInstancias;
 
 /**
+ * Clase abstracta que define la implementación del algoritmo K-means clustering
  * 
- * @author david
+ * La implementación de los diferentes tipos de inicialización del algoritmo se realiza en las diferentes cases hijas
  *
  */
 public abstract class KMeans {
@@ -25,6 +26,19 @@ public abstract class KMeans {
 	protected Instancia[] centroidesNuevos;
 	protected ListaCluster clusters;
 	
+	/**
+	 * Prepara una instancia para la ejecución del algoritmo k-means
+	 * @param pK
+	 * Número de clusters a formar
+	 * @param pDistancia
+	 * Función de distancia a utilizar en los cálcullos
+	 * @param pListaInstancias
+	 * Instancias sobre las que realizar el clustering
+	 * @param pNumIt
+	 * Número de iteraciones que el algoritmo realizará
+	 * @param pDelta
+	 * Margen de convergencia permitido entre los diferentes grupos de centroides de dos iteraciones contiguas. Cuando el margen quede satisfecho, finalizará el algoritmo
+	 */
 	public KMeans(int pK, Distancia pDistancia, ListaInstancias pListaInstancias, int pNumIt, double pDelta)
 	{
 		this.k = pK;
@@ -38,6 +52,12 @@ public abstract class KMeans {
 		this.clusters=new ListaCluster(centroides, instancias.getDimension());
 	}
 	
+	
+	/**
+	 * Algotimo k-means clustering
+	 * @return
+	 * Los k clusters obtenidos en el proceso
+	 */
 	public ListaCluster ejecutar()
 	{
 		//inicializamos el problema dependiendo de la opción elegida		
@@ -72,15 +92,24 @@ public abstract class KMeans {
 			
 	}
 	
+	/**
+	 * Calcula la suma de la diferencia entre las distancias de los centroides de los clusters identificados respecto a sus correspondientes 
+	 * de una lista de nuevos centroides
+	 * @return
+	 * La divergencia entre el nuevo conjunto de centroides y el antiguo
+	 */
 	private double calcularDivergenciaCentroides() {
 		
 		return this.clusters.calcularDivergencia(this.centroidesNuevos, this.distancia);
 	}
 
+	/**
+	 * Método abstracto que define la inicialización del algoritmo
+	 */
 	protected abstract void inicializar();
 	
 	/**
-	 * Calcula a cual de los centroides está más próxima cada instancia. Se basa en el valor del atributo centroides
+	 * Calcula a cuál de los centroides está más próxima cada instancia. Se basa en el valor del atributo centroides
 	 *  y en la métrica establecida.
 	 *  
 	 *  Considera el caso de que una instancia pueda asociarse a varios codewords
@@ -141,6 +170,9 @@ public abstract class KMeans {
 		
 	}
 	
+	/**
+	 * Calcula los nuevos centroides utilizando las instancias que han sido agrupadas en los diferentes clusters
+	 */
 	protected void calcularCentroides()
 	{
 		this.centroidesNuevos = this.clusters.calcularNuevosCentroides();
