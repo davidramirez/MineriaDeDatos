@@ -41,6 +41,7 @@ public abstract class KMeans {
 	public ListaCluster ejecutar()
 	{
 		//inicializamos el problema dependiendo de la opción elegida		
+		System.out.println("Ejecutando inicialización...");
 		this.inicializar();
 		
 		//inicialmente queremos que se ejecute el algoritmo, establecemos la convergencia a un valor enorme
@@ -51,6 +52,7 @@ public abstract class KMeans {
 				
 		while(convergencia > delta && i <= this.numIteraciones)
 		{
+			System.out.println("Irando... iteración: " + i);
 		
 			//Actualizamos los centroides actuales
 			this.centroides = this.centroidesNuevos;
