@@ -72,11 +72,11 @@ public class CargadorFichero {
 			boolean masComentarios = true;
 			while(masComentarios && sc.hasNext())
 			{
-				linea = sc.nextLine();
+				linea = obtenerLineaSinComentario(sc.nextLine());
 				
 				if(linea.length() > 0)
 				{//si la linea no está vacía
-					if(linea.matches("\\S") && !linea.matches("^%"))
+					if(linea.matches("\\S+"))
 					{//si la línea tiene algún caracter y no empieza por %
 						//hemos encontrado la primera línea válida
 						masComentarios = false;
@@ -85,7 +85,7 @@ public class CargadorFichero {
 			}
 			
 			//ya tenemos la primera linea con los nombres de los atributos
-			String[] atributos = obtenerLineaSinComentario(linea).split(";");
+			String[] atributos = obtenerLineaSinComentario(linea).split(",");
 			lista.setNombresAtributos(atributos);
 			
 			//obtenemos la dimension de las instancias
@@ -101,7 +101,7 @@ public class CargadorFichero {
 				
 				if(linea.length() > 0)
 				{
-					if(linea.matches("\\S"))
+					if(linea.matches("\\S+"))
 					{//tiene caracteres
 						String[] instancia = linea.split(",");
 						
@@ -137,6 +137,9 @@ public class CargadorFichero {
 					}
 				}
 			}
+			
+			//carga terminada
+			return lista;
 			
 			
 			
@@ -186,12 +189,16 @@ public class CargadorFichero {
 	 * @param pLinea
 	 * Linea a procesar
 	 * @return
-	 * La linea sin comentarios
+	 * La linea sin comentarios, vacía si el  comentario está al principio de la misma
 	 */
 	private String obtenerLineaSinComentario(String pLinea)
 	{
 		int indComent = pLinea.indexOf("%");
 		
+		if(indComent == 0)
+		{
+			return new String();//comentario al principio de la línea
+		}
 		if(indComent != -1)
 		{
 			//si la línea tiene un comentario, devolvemos la línea sin el comentario

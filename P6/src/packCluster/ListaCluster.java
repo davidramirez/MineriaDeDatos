@@ -16,7 +16,7 @@ public class ListaCluster {
 		
 		for(int i = 0; i < centroides.length; i++)
 		{
-			listaCluster.set(i, new Cluster(centroides[i]));
+			listaCluster.add(i, new Cluster(centroides[i]));
 		}
 	}
 
