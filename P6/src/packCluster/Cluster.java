@@ -1,5 +1,7 @@
 package packCluster;
 
+import java.io.PrintStream;
+
 import packDistancias.Distancia;
 import packInstancias.Instancia;
 import packInstancias.ListaInstancias;
@@ -50,5 +52,17 @@ public class Cluster {
 
 	public void acumularError(double pError) {
 		this.errorAcumulado = this.errorAcumulado + pError;
+	}
+
+
+	public void imprimirEstado(int pNumCluster, PrintStream ps) {
+		
+		ps.println(pNumCluster+"\t"+this.centroide.toString()+"\t"+ this.listaInstancias.getNumeroInstancias()+"\t"+this.errorAcumulado);
+		
+	}
+
+
+	public double getErrorAcumulado() {
+		return this.errorAcumulado;
 	}
 }

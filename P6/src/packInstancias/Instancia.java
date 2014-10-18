@@ -38,4 +38,10 @@ public class Instancia {
 	public void setVector(Vector<Double> vector) {
 		this.vector = vector;
 	}
+	
+	public String toString()
+	{
+		return this.vector.toString();
+		
+	}
 }

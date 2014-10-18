@@ -61,6 +61,9 @@ public abstract class KMeans {
 			
 			this.calcularCentroides();//Calcula los nuevos, los dejara en centroidesnuevos
 			
+			//imprimimos el estado tras esta vuelta
+			this.clusters.imprimirEstado(System.out);
+			
 			convergencia = this.calcularDivergenciaCentroides();
 			i++;
 		}

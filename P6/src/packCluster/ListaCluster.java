@@ -93,6 +93,35 @@ public class ListaCluster {
 		ps.println("Cluster \t Centroide \t NumInstancias \t Error");
 		
 		Iterator<Cluster> it = this.getIterator();
+		Cluster clusterActual;
+		int i = 1;
+		
+		while(it.hasNext())
+		{
+			clusterActual = it.next();
+			
+			clusterActual.imprimirEstado(i, ps);
+			
+			i++;
+		}
+		
+		ps.println();
+		ps.println("Error total: "+this.calcularErrorTotal());
+	}
+
+	private Double calcularErrorTotal() {
+		
+		Iterator<Cluster> it = this.getIterator();
+		Cluster clusterActual;
+		double error = 0.0;
+		
+		while(it.hasNext())
+		{
+			clusterActual = it.next();
+			
+			error = clusterActual.getErrorAcumulado();
+		}
+		return error;
 	}
 
 	public void acumularErrorEnCluster(int pCluster, double pError) {
