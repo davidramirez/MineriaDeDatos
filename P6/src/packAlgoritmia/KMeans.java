@@ -35,7 +35,7 @@ public abstract class KMeans {
 		
 		this.centroides=new Instancia[pK];
 		this.centroidesNuevos=new Instancia[pK];
-		this.clusters=new ListaCluster(centroides);
+		this.clusters=new ListaCluster(centroides, instancias.getDimension());
 	}
 	
 	public ListaCluster ejecutar()
@@ -52,7 +52,7 @@ public abstract class KMeans {
 				
 		while(convergencia > delta && i <= this.numIteraciones)
 		{
-			System.out.println("Irando... iteración: " + i);
+			System.out.println("Iterando... iteración: " + i);
 		
 			//Actualizamos los centroides actuales
 			this.centroides = this.centroidesNuevos;
@@ -62,7 +62,7 @@ public abstract class KMeans {
 			this.calcularCentroides();//Calcula los nuevos, los dejara en centroidesnuevos
 			
 			convergencia = this.calcularDivergenciaCentroides();
-			
+			i++;
 		}
 		
 		return clusters;	
@@ -85,7 +85,7 @@ public abstract class KMeans {
 	protected void calcularPertenencias()
 	{
 		//inicializar los clusters para esta vuelta
-		this.clusters = new ListaCluster(centroides);
+		this.clusters = new ListaCluster(centroides, instancias.getDimension());
 		
 		//Recorremos la lista de instancias
 		Iterator<Instancia> it = this.instancias.getIterador();

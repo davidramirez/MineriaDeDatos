@@ -10,13 +10,13 @@ public class ListaCluster {
 
 	private ArrayList<Cluster> listaCluster;
 	
-	public ListaCluster(Instancia[] centroides)
+	public ListaCluster(Instancia[] centroides, int pDimension)
 	{
 		listaCluster = new ArrayList<Cluster>(centroides.length);
 		
 		for(int i = 0; i < centroides.length; i++)
 		{
-			listaCluster.add(i, new Cluster(centroides[i]));
+			listaCluster.add(i, new Cluster(centroides[i], pDimension));
 		}
 	}
 

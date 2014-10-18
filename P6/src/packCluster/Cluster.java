@@ -8,9 +8,10 @@ public class Cluster {
 	 private Instancia centroide;
 	 private ListaInstancias listaInstancias;
 	 
-	 public Cluster(Instancia pCentroide)
+	 public Cluster(Instancia pCentroide, int pDimension)
 	 {
 		 this.listaInstancias = new ListaInstancias();
+		 this.listaInstancias.setDimension(pDimension);
 		 this.centroide = pCentroide;
 	 }
 	

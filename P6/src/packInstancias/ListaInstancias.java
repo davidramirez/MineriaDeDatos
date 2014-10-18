@@ -163,7 +163,11 @@ public class ListaInstancias {
 		Instancia instanciaActual;
 		
 		Vector<Double> media = new Vector<Double>(this.dimension);
-		
+		//inicializar el vector a 0
+		for(int i = 0; i < this.dimension; i++)
+		{
+			media.add(0.0);
+		}
 		//acumulamos los valores de cada uno de los atributos de cada instancia
 		while(it.hasNext())
 		{

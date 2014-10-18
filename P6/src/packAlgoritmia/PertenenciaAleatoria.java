@@ -18,7 +18,7 @@ public class PertenenciaAleatoria extends KMeans {
 	 */
 	protected void inicializar() {
 	
-		this.clusters=new ListaCluster(centroides);
+		this.clusters=new ListaCluster(centroides, instancias.getDimension());
 		
 		Iterator<Instancia> iteradorInstancias=this.instancias.getIterador();
 		Instancia instanciaAleatoria;

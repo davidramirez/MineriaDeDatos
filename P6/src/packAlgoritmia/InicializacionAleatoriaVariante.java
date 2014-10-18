@@ -27,13 +27,16 @@ public class InicializacionAleatoriaVariante extends KMeans{
 		minimos=this.getInstancias().getMinimos();
 		
 		int dimension=this.getInstancias().getDimension();
-		double instanciaAleatoria[] = new double[this.getInstancias().getDimension()];
-		Vector<Double> vectorTemporal = new Vector<Double>();
+		double instanciaAleatoria[];
+		Vector<Double> vectorTemporal;
 		this.centroides = new Instancia[this.k];
 		
 		//Para cada partición.
 		for(int i=0;i<this.k;i++)
 		{
+			instanciaAleatoria = new double[this.getInstancias().getDimension()];
+			vectorTemporal = new Vector<Double>();
+			
 			//Evaluo las distintas dimensiones.
 			for(int j=0;j<dimension;j++)
 			{
