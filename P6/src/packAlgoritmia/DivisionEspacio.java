@@ -25,11 +25,13 @@ public class DivisionEspacio extends KMeans {
 		minimos=this.getInstancias().getMinimos();
 		
 		int dimensionEspacial=this.getInstancias().getDimension();
-		Vector<Double> instanciaTemporal=new Vector<Double>();
+		Vector<Double> instanciaTemporal;
 		
 		//Mientras no haya creado k divisiones
 		for(int indice=0;indice<this.getK();indice++)
 		{
+			instanciaTemporal=new Vector<Double>();
+			
 			//Mientras no haya establecido todos los atributos
 			for(int indiceAtributos=0;indiceAtributos<dimensionEspacial;indiceAtributos++)
 			{

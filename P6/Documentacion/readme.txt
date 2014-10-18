@@ -1,6 +1,6 @@
 
 
-	java -jar MDP6.jar Fichero_Instancias -k num [-d (M m)|(C)] [-i (aleatoria|pert_aleatoria|cent_aleat|particonada)] [-e num] [-c num] [-h]
+	java -jar MDP6.jar Fichero_Instancias -k num [-d (M m)|(C)] [-i (aleatoria|pert_aleatoria|cent_aleat|particionada)] [-e num] [-c num] [-h]
 	
 	
 	-e num

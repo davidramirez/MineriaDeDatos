@@ -30,7 +30,7 @@ public class InicializacionAleatoria extends KMeans {
 			do
 			{
 				//Extraigo una instancia nueva.
-				extractorAleatorioInstancias=(int)Math.random()*(numeroInstancias);
+				extractorAleatorioInstancias = (int) (Math.random()*(numeroInstancias));
 			}while(instanciaExtraidas.contains(extractorAleatorioInstancias));
 			
 			//Añado la instancia extraida a las evaluadas.

@@ -27,7 +27,7 @@ public class PertenenciaAleatoria extends KMeans {
 		while(iteradorInstancias.hasNext())
 		{
 			//Calculo un número de cluster aleatorio dentro del rango.
-			introductorAleatorioCluster=(int)Math.random()*this.getK();
+			introductorAleatorioCluster=(int)(Math.random()*this.getK());
 			//Extraigo la siguiente instancia.
 			instanciaAleatoria=iteradorInstancias.next();
 			//Añado la instancia al cluster elegido.
@@ -35,6 +35,9 @@ public class PertenenciaAleatoria extends KMeans {
 		}
 		//Calculo los centroides para dejar el algoritmo preparado.
 		this.calcularCentroides();
+		
+		//Para que cuadre con el algoritmo principal (ejecutar de kmeans)
+		this.centroides = this.centroidesNuevos;
 		
 	}
 

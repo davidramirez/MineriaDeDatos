@@ -1,7 +1,5 @@
 package packAlgoritmia;
 
-import javax.print.attribute.standard.PrinterResolution;
-
 import packCluster.ListaCluster;
 import packDistancias.Distancia;
 import packDistancias.DistanciaChebyshev;
@@ -232,36 +230,6 @@ public class MDP6 {
 		return -1;
 	}
 	
-	/**
-	 * Dada la ruta de un fichero
-	 * comprueba si el fichero tiene la extensión indicada por parámetro
-	 * @param fichero
-	 * La ruta del fichero a comprobar
-	 * @param extension
-	 * La extensión de la que tiene que ser el fichero
-	 * @return
-	 * TRUE si el fichero es del tipo de extensión indicado
-	 * FALSE si es nulo o la extensión no se corresponde
-	 */
-	private static boolean comprobarExtension(String ruta, String extension) {
-		
-		if(ruta != null)
-		{
-			//el nombre debe ser más largo que la extensión
-			if(ruta.length() > extension.length())
-			{
-				//debug
-				//System.out.println(fichero.substring((fichero.length() - extension.length()),fichero.length()));
-				
-				//extraemos del string del fichero la extensión y comparamos
-				if(ruta.substring((ruta.length() - extension.length()),ruta.length()).compareTo(extension)  == 0)
-				{
-					return true;
-				}
-			}
-		}
-		return false;
-	}
 	
 	/**
 	 * Devuelve true si el parámetro que se busca está incluido en los argumentos.
