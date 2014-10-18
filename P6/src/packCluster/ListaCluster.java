@@ -1,5 +1,6 @@
 package packCluster;
 
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -85,5 +86,16 @@ public class ListaCluster {
 			i++;
 		}
 		return divergencia;
+	}
+	
+	public void imprimirEstado(PrintStream ps)
+	{
+		ps.println("Cluster \t Centroide \t NumInstancias \t Error");
+		
+		Iterator<Cluster> it = this.getIterator();
+	}
+
+	public void acumularErrorEnCluster(int pCluster, double pError) {
+		this.getListaCluster().get(pCluster).acumularError(pError);
 	}
 }

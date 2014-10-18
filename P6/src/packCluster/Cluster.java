@@ -7,18 +7,16 @@ import packInstancias.ListaInstancias;
 public class Cluster {
 	 private Instancia centroide;
 	 private ListaInstancias listaInstancias;
+	 private Double errorAcumulado;
 	 
 	 public Cluster(Instancia pCentroide, int pDimension)
 	 {
 		 this.listaInstancias = new ListaInstancias();
 		 this.listaInstancias.setDimension(pDimension);
 		 this.centroide = pCentroide;
+		 this.errorAcumulado = 0.0;
 	 }
 	
-	private double calcularError() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 	
 	/*
 	 * GETTERS & SETTERS
@@ -48,5 +46,9 @@ public class Cluster {
 		
 		//si algo falla, la divergencia devuelta ess infinita
 		return Double.MAX_VALUE;
+	}
+
+	public void acumularError(double pError) {
+		this.errorAcumulado = this.errorAcumulado + pError;
 	}
 }

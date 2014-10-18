@@ -124,7 +124,7 @@ public abstract class KMeans {
 				}
 			}
 			
-			//pasamos los resultados a La lista de clusters, asignando la instancia actual a su respectivo cluser
+			//pasamos los resultados a La lista de clusters, asignando la instancia actual a su respectivo cluser y acumulando el error
 			Iterator<Integer> iteradorCentroide = centroidesProximos.iterator();
 			int i;
 			
@@ -132,6 +132,7 @@ public abstract class KMeans {
 			{
 				i = iteradorCentroide.next();
 				this.clusters.anadirInstanciaACluster(i, instanciaActual);
+				this.clusters.acumularErrorEnCluster(i, distMin);
 			}
 		}
 		
