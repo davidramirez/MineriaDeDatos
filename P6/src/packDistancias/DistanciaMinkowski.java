@@ -15,7 +15,7 @@ public class DistanciaMinkowski extends Distancia {
 		}
 		else
 		{
-			throw new Exception("Exponente inválido, el parámetro debe ser >= 1");
+			throw new Exception("Exponente inválido, debe ser mayor o igual a 1");
 		}
 	}
 	

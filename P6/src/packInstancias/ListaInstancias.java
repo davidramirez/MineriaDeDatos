@@ -17,7 +17,11 @@ public class ListaInstancias {
 		nombreAtributos = null;
 	}
 	
-
+	/**
+	 * Calcula los valores máximos de cada dimensión para las instancias contenidas.
+	 * @return
+	 * Retorna un vector de double que contiene estos máximos para cada dimensión.
+	 */
 	public double[] getMaximos() {
 		double maximos[]=new double[getDimension()];
 		
@@ -46,6 +50,11 @@ public class ListaInstancias {
 		return maximos;
 	}	
 	
+	/**
+	 * Calcula los valores mínimos de cada dimensión para las instancias contenidas.
+	 * @return
+	 * Retorna un vector de double que contiene estos mínimos para cada dimensión.
+	 */
 	public double[] getMinimos() {
 		double minimos[]=new double[getDimension()];
 		

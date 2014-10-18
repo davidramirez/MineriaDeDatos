@@ -16,7 +16,7 @@ public class Instancia {
 	 * @return Retorna true si los vectores tienen misma dimensión, false en caso contrario
 	 */
 	public boolean mismaDimension(Instancia pInstancia) {
-		return this.getVector().size() == pInstancia.getVector().size();
+		return this.dimension() == pInstancia.dimension();
 	}
 	
 	/**
