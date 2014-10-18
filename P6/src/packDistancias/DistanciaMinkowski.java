@@ -28,9 +28,9 @@ public class DistanciaMinkowski extends Distancia {
 			
 			for(int i=0;i<dimensiones;i++)
 			{
-				acumuladorSumatorio+=Math.pow(Math.abs((pInstancia1.getVector().get(i)-pInstancia2.getVector().get(i))),1/this.getExponente());
+				acumuladorSumatorio+=Math.pow(Math.abs((pInstancia1.getVector().get(i)-pInstancia2.getVector().get(i))),this.getExponente());
 			}
-			return Math.pow(acumuladorSumatorio,this.getExponente());
+			return Math.pow(acumuladorSumatorio,1/this.getExponente());
 		}
 		else
 		{
@@ -57,7 +57,7 @@ public class DistanciaMinkowski extends Distancia {
 		return exponente;
 	}
 
-	public void setExponente(double exponente) {
+	private void setExponente(double exponente) {
 		this.exponente = exponente;
 	}
 
