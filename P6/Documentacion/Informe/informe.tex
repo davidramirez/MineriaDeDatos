@@ -181,7 +181,14 @@ Dentro del algoritmo cabe el estudio de diferentes variaciones en los distintos 
 
 \chapter{Diseño}
 
-
+En la figura \ref{fig:clases} se muestra el diagrama de clases final de la aplicación, extraido a partir del código mediante el software \textit{Visual Paradigm}. La especificación de cada uno de los métodos se puede encontrar en la documentación adjunta generada con \textit{Eclipse}, la carpeta doc contiene la \textit{javadoc} generada en forma de \textit{HTMLs} navegables.
+	
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=1.1\textwidth, clip=true,trim=1cm 8cm 1.2cm 1cm]{./figuras/clases.pdf}
+	\caption{Diagrama de clases y paquetes}
+	\label{fig:clases}
+\end{figure}
 
 \chapter{Resultados experimentales}
 
@@ -193,9 +200,28 @@ Dentro del algoritmo cabe el estudio de diferentes variaciones en los distintos 
 	
 	\section{Variabilidad de los resultados}
 	
-	El uso de generadores de valor aleatorios sin utilizar ningún tipo de mapeo, a diferencia de Weka, hace que la calidad de la solución varíe en exceso de una ejecución a otra. El uso de aleatorios se da en los casos de inicialización aleatoria, pertenencia aleatoria y generación aleatoria de codewords. Este problema no se da en el último tipo de inicialización, división de espacio, ya que ésta generará los mismos k centroides para un mismo conjunto de datos.
+	El uso de generadores de valor aleatorios sin utilizar ningún tipo de mapeo, a diferencia de Weka, hace que la calidad de \textbf{la solución varíe} en exceso de una ejecución a otra. El uso de aleatorios se da en los casos de inicialización aleatoria, pertenencia aleatoria y generación aleatoria de codewords. Este problema no se da en el último tipo de inicialización, división de espacio, ya que ésta generará los mismos k centroides para un mismo conjunto de datos.
 	
 	Para probar la variabilidad, se ha utilizado el fichero de pruebas food.csv con la inicialización aleatoria y la distancia euclídea generando 4 clusters. Se ha repetido esta misma operación 10000 veces y se han obtenido los resultados siguientes:
+	
+	\begin{verbatim}
+	     Min.:      4.148 
+	     1st Qu.:   6.014 
+	     Mediana:   6.335 
+	     Media:     6.181 
+	     3rd Qu.:   7.145 
+	     Max.:      7.843
+	     Varianza:  
+	\end{verbatim}
+	
+	Los valores del error en las 10000 repeticiones varían en el intervalo [4.148, 7.843], siendo la media 6.181. En la figura \ref{fig:error} se muestran de forma gráfica los resultados mediante un histograma con la densidad de los diferentes valores
+	
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[width=\textwidth]{./figuras/Densidad.png}
+		\caption{Histograma y frecuencia de los errores obtenidos}
+		\label{fig:error}
+	\end{figure}
 	
 	\section{Análisis crítico y discusión de resultados}
 	

@@ -13,16 +13,16 @@
 \contentsline {section}{\numberline {2.4}Subrutina calcularCentroides}{4}{section.2.4}
 \contentsline {section}{\numberline {2.5}Subrutina calcularDivergencia}{4}{section.2.5}
 \contentsline {chapter}{\numberline {3}Dise\IeC {\~n}o}{5}{chapter.3}
-\contentsline {chapter}{\numberline {4}Resultados experimentales}{6}{chapter.4}
-\contentsline {section}{\numberline {4.1}Banco de pruebas para la validaci\IeC {\'o}n de software y resultados}{6}{section.4.1}
-\contentsline {section}{\numberline {4.2}Resultados}{6}{section.4.2}
-\contentsline {section}{\numberline {4.3}Clasificaci\IeC {\'o}n supervisada respecto de otro software de referencia}{6}{section.4.3}
-\contentsline {section}{\numberline {4.4}Variabilidad de los resultados}{6}{section.4.4}
-\contentsline {section}{\numberline {4.5}An\IeC {\'a}lisis cr\IeC {\'\i }tico y discusi\IeC {\'o}n de resultados}{6}{section.4.5}
-\contentsline {section}{\numberline {4.6}Rendimiento del software}{6}{section.4.6}
-\contentsline {chapter}{\numberline {5}Conclusiones}{7}{chapter.5}
-\contentsline {section}{\numberline {5.1}Motivaci\IeC {\'o}n para la realizaci\IeC {\'o}n de \textit {Clustering}}{7}{section.5.1}
-\contentsline {section}{\numberline {5.2}Conclusiones de los resultados}{7}{section.5.2}
-\contentsline {section}{\numberline {5.3}Conclusiones generales}{7}{section.5.3}
-\contentsline {section}{\numberline {5.4}Propuestas de mejora}{7}{section.5.4}
-\contentsline {chapter}{\numberline {6}Valoraci\IeC {\'o}n subjetiva}{10}{chapter.6}
+\contentsline {chapter}{\numberline {4}Resultados experimentales}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}Banco de pruebas para la validaci\IeC {\'o}n de software y resultados}{7}{section.4.1}
+\contentsline {section}{\numberline {4.2}Resultados}{7}{section.4.2}
+\contentsline {section}{\numberline {4.3}Clasificaci\IeC {\'o}n supervisada respecto de otro software de referencia}{7}{section.4.3}
+\contentsline {section}{\numberline {4.4}Variabilidad de los resultados}{7}{section.4.4}
+\contentsline {section}{\numberline {4.5}An\IeC {\'a}lisis cr\IeC {\'\i }tico y discusi\IeC {\'o}n de resultados}{8}{section.4.5}
+\contentsline {section}{\numberline {4.6}Rendimiento del software}{8}{section.4.6}
+\contentsline {chapter}{\numberline {5}Conclusiones}{9}{chapter.5}
+\contentsline {section}{\numberline {5.1}Motivaci\IeC {\'o}n para la realizaci\IeC {\'o}n de \textit {Clustering}}{9}{section.5.1}
+\contentsline {section}{\numberline {5.2}Conclusiones de los resultados}{9}{section.5.2}
+\contentsline {section}{\numberline {5.3}Conclusiones generales}{9}{section.5.3}
+\contentsline {section}{\numberline {5.4}Propuestas de mejora}{9}{section.5.4}
+\contentsline {chapter}{\numberline {6}Valoraci\IeC {\'o}n subjetiva}{12}{chapter.6}
