@@ -185,10 +185,13 @@ public class ListaInstancias {
 			}
 		}
 		
-		//dividimos entre el total de instancias
-		for(int i = 0; i < this.dimension; i++)
+		//dividimos entre el total de instancias si la lista de instancias tiene algún elemento
+		if(this.getNumeroInstancias() > 0)
 		{
-			media.set(i, (media.get(i)/this.getNumeroInstancias()));
+			for(int i = 0; i < this.dimension; i++)
+			{
+				media.set(i, (media.get(i)/this.getNumeroInstancias()));
+			}
 		}
 		
 		
