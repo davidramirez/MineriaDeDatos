@@ -4,6 +4,10 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Vector;
 
+/**
+ * Contiene y gestiona un conjunto de instancias
+ *
+ */
 public class ListaInstancias {
 
 	private LinkedList<Instancia> listaInstancia;
@@ -210,6 +214,14 @@ public class ListaInstancias {
 		return atributos;
 	}
 
+	/**
+	 * Comprueba la existencia de una instancia concreta en la lista
+	 * @param pInstancia
+	 * La instancia a comprobar
+	 * @return
+	 * true - Si la instancia pertenece a la lista
+	 * false - Si la instancia no pertenece a la lista
+	 */
 	public boolean pertenece(Instancia pInstancia) {
 		return this.listaInstancia.contains(pInstancia);
 	}

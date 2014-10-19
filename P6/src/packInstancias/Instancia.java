@@ -2,10 +2,18 @@ package packInstancias;
 
 import java.util.Vector;
 
+/**
+ * Clase que representa a una instancia. Limitada a atributos únicamente numéricos
+ *
+ */
 public class Instancia {
 
 	private Vector<Double> vector;
 	
+	/**
+	 * Crea una instancia a partir de un vector de características
+	 * @param pVector
+	 */
 	public Instancia(Vector<Double> pVector)
 	{
 		this.setVector(pVector);
@@ -44,6 +52,12 @@ public class Instancia {
 		return this.vector.toString();
 		
 	}
+	
+	/**
+	 * Devuelve la instancia como un string
+	 * @return
+	 * La representación de la instancia como un string en formato CSV
+	 */
 	public String toCSV() {
 		String atributos = new String();
 		

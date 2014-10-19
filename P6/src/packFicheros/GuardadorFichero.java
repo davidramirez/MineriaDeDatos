@@ -4,6 +4,10 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
 
+/**
+ * Clase encargada de la gestión de ficheros de salida de la aplicación
+ *
+ */
 public class GuardadorFichero {
 
 	private String extensionFicheroCargado;

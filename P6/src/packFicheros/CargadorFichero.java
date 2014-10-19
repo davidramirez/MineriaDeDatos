@@ -8,6 +8,10 @@ import java.util.Vector;
 import packInstancias.Instancia;
 import packInstancias.ListaInstancias;
 
+/**
+ * Clase encargadada de la carga de instancias desde fichero
+ *
+ */
 public class CargadorFichero {
 	
 	private static CargadorFichero mCargadorFichero = new CargadorFichero();

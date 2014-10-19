@@ -13,6 +13,10 @@ import packDistancias.DistanciaChebyshev;
 import packDistancias.DistanciaMinkowski;
 import packInstancias.Instancia;
 
+/**
+ * Pequeño test de las diferentes distancias implementadas para comprobar su funcionamiento
+ *
+ */
 public class TestDistancia {
 
 	Vector<Double> val1;

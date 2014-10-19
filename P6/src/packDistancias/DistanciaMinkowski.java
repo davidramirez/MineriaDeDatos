@@ -2,6 +2,11 @@ package packDistancias;
 
 import packInstancias.Instancia;
 
+/**
+ * Implementación del cálculo de la distancia Minkowski
+ * @author david
+ *
+ */
 public class DistanciaMinkowski extends Distancia {
 
 	private double exponente;

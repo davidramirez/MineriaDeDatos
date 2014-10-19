@@ -1,5 +1,9 @@
 package packTiempo;
 
+/**
+ * Clase para realizar cuentas de tiempo
+ *
+ */
 public class StopWatch {
 		
 		private final long start;

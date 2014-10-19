@@ -2,6 +2,10 @@ package packDistancias;
 
 import packInstancias.Instancia;
 
+/**
+ * Implementación de la distancia Chebyshev
+ *
+ */
 public class DistanciaChebyshev extends Distancia {
 
 	
@@ -32,8 +36,8 @@ public class DistanciaChebyshev extends Distancia {
 	/**
 	 * 
 	 * @param pInstancia1: Instancia primera.
-	 * @param pInstancia2: Instancia segura.
-	 * @return Retorna true si es posible calcular la distancia entre dos instncias , false en caso contrario.
+	 * @param pInstancia2: Instancia segunda.
+	 * @return Retorna true si es posible calcular la distancia entre dos instancias , false en caso contrario.
 	 */
 	private boolean validar(Instancia pInstancia1,Instancia pInstancia2) 
 	{

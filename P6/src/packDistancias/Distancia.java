@@ -2,6 +2,10 @@ package packDistancias;
 
 import packInstancias.Instancia;
 
+/**
+ * Clase abstracta que especifica la función para el cálculo de distancias entre instancias
+ *
+ */
 public abstract class Distancia {
 
 	/**
