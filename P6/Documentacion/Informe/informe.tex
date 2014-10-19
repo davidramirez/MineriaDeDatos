@@ -207,11 +207,21 @@ Dentro del algoritmo cabe el estudio de diferentes variaciones en los distintos 
 	
 	El tiempo invertido en el proyecto ha sido mucho mayor conforme se acercaba la fecha de entrega. Debemos mejorar en organización, especialmente al principio de la práctica, donde un diseño poco especificado con ciertas cosas \textit{"en el aire"} nos llevaron a diseñar al implementar.
 	
-	También el hecho de probar y perfeccionar el funcionamiento de \textbf{todo} el código antes de comenzar con la extracción de resultados experimentales nos lkim
+	También el hecho de probar y perfeccionar el funcionamiento de \textbf{todo} el código antes de comenzar con la extracción de resultados experimentales nos limitó en el análisis de los mismos y en la retroalimentación del algoritmo implementado.
+	
+	Resumiendo, hay que mejorar la planificación, dividir el proyecto en partes para poder mejorarlo incrementalmente.
+	
+	Pese a los problemas, la solución implementada ofrece una variedad bastante amplia de parámetros posibles a utilizar, teniendo 4 tipos de inicialización, dos métricas diferentes - en el caso de la métrica Minkowski ofrece otro parámetro más que variar- y la posibilidad de controlar el número de iteraciones tanto por la especificación de un maximo de vueltas, como por la especificación del margen de variación que se debe alcanzar hasta dar por válidos los centroides identificados.
 	
 	\section{Propuestas de mejora}
 	
 	La entrada a nuestro programa es un factor un tanto restrictivo en el sentido de que el único tipo de fichero soportado es el \textbf{CSV}. Inicialmente, la intención era implementar también la carga de ficheros \textbf{ARFF}, que no ha sido posible hacerla por falta de planificación principalmente.
+	
+	En cuanto a inicializaciones, hemos implementado 4 tipos diferentes. De los tres, el correspondiente a la división de espacio es el que más puede mejorar, ya que para su implementación no hemos llegado a consultar bibliografía extra.
+	
+	La estimación del error es otro apartado en el que nos ha quedado duda, ya que el proceso de cálculo utilizado no ha sido el mismo que el usado por Weka y nos dificultaba la comparación de ambos algoritmos utilizando esta medida.
+	
+	Otra restricción se da por el tipo de datos tratados, el algoritmo solo es capaz de lidiar con atributos de tipo numérico, siendo imposible realizar la carga de instancias que contengan valores no numéricos.
 
 %Bibliografía
 
