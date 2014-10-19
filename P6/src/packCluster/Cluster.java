@@ -118,4 +118,9 @@ public class Cluster {
 	public double getErrorAcumuladoMedio() {
 		return (this.errorAcumulado / this.listaInstancias.getNumeroInstancias());
 	}
+
+
+	public int getNumInstancias() {
+		return this.listaInstancias.getNumeroInstancias();
+	}
 }

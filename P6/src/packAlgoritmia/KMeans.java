@@ -1,5 +1,6 @@
 package packAlgoritmia;
 
+import java.io.PrintStream;
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -7,6 +8,7 @@ import packCluster.ListaCluster;
 import packDistancias.Distancia;
 import packInstancias.Instancia;
 import packInstancias.ListaInstancias;
+import packTiempo.StopWatch;
 
 /**
  * Clase abstracta que define la implementación del algoritmo K-means clustering
@@ -55,11 +57,15 @@ public abstract class KMeans {
 	
 	/**
 	 * Algotimo k-means clustering
+	 * @param salidaInf 
 	 * @return
 	 * Los k clusters obtenidos en el proceso
 	 */
-	public ListaCluster ejecutar()
+	public void ejecutar(PrintStream salidaInf)
 	{
+		//contamos el tiempo total de ejecución
+		StopWatch tiempo = new StopWatch();
+		
 		//inicializamos el problema dependiendo de la opción elegida		
 		System.out.println("Ejecutando inicialización...");
 		this.inicializar();
@@ -87,6 +93,7 @@ public abstract class KMeans {
 			
 			//imprimimos el estado tras esta vuelta
 			this.clusters.imprimirEstado(System.out);
+			this.clusters.imprimirEstado(salidaInf);
 			
 			errorActual = this.clusters.calcularErrorTotal();
 			convergencia = Math.abs(errorAnterior - errorActual);//this.calcularDivergenciaCentroides();
@@ -95,7 +102,9 @@ public abstract class KMeans {
 			errorAnterior = errorActual;
 		}
 		
-		return clusters;	
+		System.out.println("Tiempo total en la ejecución de kmeans: "+tiempo.elapsedTime() + "segundos");
+		salidaInf.println("Tiempo total en la ejecución de kmeans: "+tiempo.elapsedTime() + "segundos");
+			
 			
 	}
 	

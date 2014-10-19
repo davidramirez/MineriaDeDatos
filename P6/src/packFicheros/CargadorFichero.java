@@ -40,6 +40,8 @@ public class CargadorFichero {
 		if(comprobarExtension(path, ".csv"))
 		{
 			lista = cargarCSV(path);
+			//Le decimos al guardador fichero la extensión de fichero que hemos cargado
+			GuardadorFichero.getGuardadorFichero().setExtensionFicheroCargado(".csv");
 		}
 		else
 		{

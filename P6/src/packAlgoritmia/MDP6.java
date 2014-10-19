@@ -1,10 +1,13 @@
 package packAlgoritmia;
 
+import java.io.PrintStream;
+
 import packCluster.ListaCluster;
 import packDistancias.Distancia;
 import packDistancias.DistanciaChebyshev;
 import packDistancias.DistanciaMinkowski;
 import packFicheros.CargadorFichero;
+import packFicheros.GuardadorFichero;
 import packInstancias.ListaInstancias;
 
 public class MDP6 {
@@ -175,10 +178,15 @@ public class MDP6 {
 				algoritmo = new InicializacionAleatoria(k, distancia, instancias, numIteraciones, delta);
 			}
 			
+			/***************************Preparar ficheros de salida******************/
+			
+			PrintStream salidaInf = GuardadorFichero.getGuardadorFichero().crearFichero(ruta, "-inf.txt");
+			PrintStream salidaEstimacion = GuardadorFichero.getGuardadorFichero().crearFichero(ruta, "-etiquetado.csv");
+			
 			
 			/***************************Bloque ejecución******************************/
 			//En este punto ya podemos ejecutar el algoritmo
-			ListaCluster clusters = algoritmo.ejecutar();
+			algoritmo.ejecutar(salidaInf);
 
 		}
 		else

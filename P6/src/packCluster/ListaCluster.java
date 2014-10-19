@@ -163,14 +163,16 @@ public class ListaCluster {
 		Iterator<Cluster> it = this.getIterator();
 		Cluster clusterActual;
 		double error = 0.0;
+		int instancias = 0;
 		
 		while(it.hasNext())
 		{
 			clusterActual = it.next();
 			
+			instancias = instancias + clusterActual.getNumInstancias();
 			error = error + clusterActual.getErrorAcumuladoMedio();
 		}
-		return error;
+		return (error/instancias);
 	}
 
 	/**
