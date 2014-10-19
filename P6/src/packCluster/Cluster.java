@@ -116,6 +116,7 @@ public class Cluster {
 	 * el error acumulado entre el número de instancias asignadas al cluster
 	 */
 	public double getErrorAcumuladoMedio() {
+		if(this.listaInstancias.getNumeroInstancias() == 0) return 0;
 		return (this.errorAcumulado / this.listaInstancias.getNumeroInstancias());
 	}
 
