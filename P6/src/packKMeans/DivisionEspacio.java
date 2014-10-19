@@ -41,7 +41,7 @@ public class DivisionEspacio extends KMeans {
 			for(int indiceAtributos=0;indiceAtributos<dimensionEspacial;indiceAtributos++)
 			{
 				//Divido la dimensión en K subespacios, extraigo los centros de esos subespacios y selecciono el correspondiente al subespacio que estamos creando.
-				instanciaTemporal.add(((((maximos[indiceAtributos]-minimos[indiceAtributos]))/(this.k))-this.k/2)*indice);
+				instanciaTemporal.add(((((maximos[indiceAtributos]-minimos[indiceAtributos]))/(this.k))-this.k/2)*(indice+1));
 			}
 			//Añado el centroide creado fruto de dividir el espacio.
 			this.centroides[indice]=new Instancia(instanciaTemporal);
