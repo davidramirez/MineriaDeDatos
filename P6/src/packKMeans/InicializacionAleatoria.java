@@ -1,4 +1,4 @@
-package packAlgoritmia;
+package packKMeans;
 
 import java.util.HashSet;
 import java.util.Vector;
@@ -7,6 +7,11 @@ import packDistancias.Distancia;
 import packInstancias.Instancia;
 import packInstancias.ListaInstancias;
 
+/**
+ * Clase que implementa la inicialización del algoritmo K-means mediante la extracción de k instancias de forma
+ *  aleatoria del conjunto de instancias proporcionado para que actúen de centroides
+ *
+ */
 public class InicializacionAleatoria extends KMeans {
 
 	public InicializacionAleatoria(int pK, Distancia pDistancia, ListaInstancias pListaInstancias, int pNumIt, double pDelta)

@@ -1,4 +1,4 @@
-package packAlgoritmia;
+package packKMeans;
 
 import java.io.PrintStream;
 import java.util.Iterator;
@@ -225,63 +225,15 @@ public abstract class KMeans {
 		}
 	}
 	
-	public Instancia[] getCentroides() {
-		return centroides;
-	}
-	
-	
-	public void setCentroides(Instancia[] centroides) {
-		this.centroides = centroides;
-	}
-	
 	
 	public int getK() {
 		return k;
 	}
-	
-	
-	public void setK(int k) {
-		this.k = k;
-	}
-	
-	
-	public Distancia getDistancia() {
-		return distancia;
-	}
-	
-	
-	public void setDistancia(Distancia distancia) {
-		this.distancia = distancia;
-	}
-	
 	
 	public ListaInstancias getInstancias() {
 		return instancias;
 	}
 	
 	
-	public void setInstancias(ListaInstancias instancias) {
-		this.instancias = instancias;
-	}
-	
-	
-	public int getNumIteraciones() {
-		return numIteraciones;
-	}
-	
-	
-	public void setNumIteraciones(int numIteraciones) {
-		this.numIteraciones = numIteraciones;
-	}
-	
-	
-	public double getDelta() {
-		return delta;
-	}
-	
-	
-	public void setDelta(double delta) {
-		this.delta = delta;
-	}
 
 }

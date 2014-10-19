@@ -1,4 +1,4 @@
-package packAlgoritmia;
+package packKMeans;
 
 import java.util.Iterator;
 
@@ -7,6 +7,11 @@ import packDistancias.Distancia;
 import packInstancias.Instancia;
 import packInstancias.ListaInstancias;
 
+/**
+ * Clase que implementa la inicialización del algoritmo K-means asignando cada instancia del conjunto
+ *  de trabajo a un cluster. Posteriormente se calculan los centroides resultantes
+ *
+ */
 public class PertenenciaAleatoria extends KMeans {
 
 	public PertenenciaAleatoria(int pK, Distancia pDistancia, ListaInstancias pListaInstancias, int pNumIt, double pDelta) {

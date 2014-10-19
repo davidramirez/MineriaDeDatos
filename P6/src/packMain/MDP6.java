@@ -1,15 +1,23 @@
-package packAlgoritmia;
+package packMain;
 
 import java.io.PrintStream;
 
-import packCluster.ListaCluster;
 import packDistancias.Distancia;
 import packDistancias.DistanciaChebyshev;
 import packDistancias.DistanciaMinkowski;
 import packFicheros.CargadorFichero;
 import packFicheros.GuardadorFichero;
 import packInstancias.ListaInstancias;
+import packKMeans.DivisionEspacio;
+import packKMeans.InicializacionAleatoria;
+import packKMeans.InicializacionAleatoriaVariante;
+import packKMeans.KMeans;
+import packKMeans.PertenenciaAleatoria;
 
+/**
+ * Clase principal del proyecto con el método principal para la ejecución del programa
+ *
+ */
 public class MDP6 {
 
 	public static void main(String[] args) {

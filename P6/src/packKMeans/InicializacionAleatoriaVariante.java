@@ -1,4 +1,4 @@
-package packAlgoritmia;
+package packKMeans;
 
 import java.util.Vector;
 
@@ -6,6 +6,11 @@ import packDistancias.Distancia;
 import packInstancias.Instancia;
 import packInstancias.ListaInstancias;
 
+/**
+ * Clase que implementa la incialización de K-means generando k instancias con valores aleatorios para sus atributos. 
+ * Estos valores están comprendidos entre el mínimo y máximo para cada componente de todas las instancias del conjunto de trabajo
+ *
+ */
 public class InicializacionAleatoriaVariante extends KMeans{
 	
 	public InicializacionAleatoriaVariante(int pK, Distancia pDistancia, ListaInstancias pListaInstancias, int pNumIt, double pDelta)

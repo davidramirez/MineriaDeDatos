@@ -1,4 +1,4 @@
-package packAlgoritmia;
+package packKMeans;
 
 import java.util.Vector;
 
@@ -7,6 +7,11 @@ import packFicheros.CargadorFichero;
 import packInstancias.Instancia;
 import packInstancias.ListaInstancias;
 
+/**
+ * Clase que implementa la inicialización del algoritmo K-means mediante 
+ * una división del espacio de atributos para la extracción de los centroides
+ *
+ */
 public class DivisionEspacio extends KMeans {
 
 	public DivisionEspacio(int pK, Distancia pDistancia, ListaInstancias pListaInstancias, int pNumIt, double pDelta) {
@@ -14,7 +19,7 @@ public class DivisionEspacio extends KMeans {
 	}
 
 	/**
-	 * Inicialización de KMeans que obtiene los parámetros usando una interpretación propia del algoritmo divisor del espacio que divide cada dimensión espacial es K partes y asigna el centro de cada parte a un atributo del atributo del vector de centroides.
+	 * Inicialización de KMeans que obtiene los centroides usando una interpretación propia del algoritmo divisor del espacio que divide cada dimensión espacial es K partes y asigna el centro de cada parte a un atributo del atributo del vector de centroides.
 	 * 
 	 */
 	protected void inicializar() {
