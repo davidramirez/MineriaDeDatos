@@ -189,7 +189,13 @@ Dentro del algoritmo cabe el estudio de diferentes variaciones en los distintos 
 	
 	\section{Resultados}
 	
-	\section{Clasificación supervisada respecto de otro software de refernecia}
+	\section{Clasificación supervisada respecto de otro software de referencia}
+	
+	\section{Variabilidad de los resultados}
+	
+	El uso de generadores de valor aleatorios sin utilizar ningún tipo de mapeo, a diferencia de Weka, hace que la calidad de la solución varíe en exceso de una ejecución a otra. El uso de aleatorios se da en los casos de inicialización aleatoria, pertenencia aleatoria y generación aleatoria de codewords. Este problema no se da en el último tipo de inicialización, división de espacio, ya que ésta generará los mismos k centroides para un mismo conjunto de datos.
+	
+	Para probar la variabilidad, se ha utilizado el fichero de pruebas food.csv con la inicialización aleatoria y la distancia euclídea generando 4 clusters. Se ha repetido esta misma operación 10000 veces y se han obtenido los resultados siguientes:
 	
 	\section{Análisis crítico y discusión de resultados}
 	
