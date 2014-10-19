@@ -45,4 +45,4 @@ Error total: 5.2670293362066865
 
 
 Instancias totales en la realización del clustering: 27
-Tiempo total en la ejecución de kmeans: 0.016  segundos
+Tiempo total en la ejecución de kmeans: 0.018  segundos

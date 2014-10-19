@@ -98,8 +98,14 @@ public class MDP6 {
 				//obtenemos el numero de iteraciones a realizar
 				try{
 				k = Integer.parseInt(args[posK +1]);
+				
+				if(k < 1)
+				{
+					//si la k no es correcta, lanzamos la misma excepción (eltratamiento es igual)
+					throw new NumberFormatException();
+				}
 				} catch (NumberFormatException e){
-					System.err.println("El número de clusters debe ser especificado por un valor entero");
+					System.err.println("El número de clusters debe ser especificado por un valor natural");
 					System.exit(1);
 				}
 			}
@@ -200,6 +206,9 @@ public class MDP6 {
 			//cerramos los ficheros
 			salidaEstimacion.close();
 			salidaInf.close();
+			
+			//finalizamos el programa
+			System.exit(0);
 
 		}
 		else
@@ -286,7 +295,35 @@ public class MDP6 {
 	 */
 	private static void help()
 	{
-		
+		System.out.println("Comando: java -jar MDP6.jar Fichero_Instancias -k num [-d (M m|C)] [-i (aleatoria|pert_aleatoria|cent_aleat|particionada)] [-e num] [-c num] [-h]"
+				+ "\n\nLeyenda:"
+				+ "\n	parametro					- parámetro de especificación obligatoria"
+				+ "\n	[parámetro]					- parámetro de especificación opcional"
+				+ "\n	param (opc1|opc2|..|opn)	- diferentes opciones para un parámetro, elegir una de ellas. Ej.: param opc2"
+				+ "\n\nArgumentos:"
+				+ "\n\n	Fichero_Instancias"
+				+ "\n		Fichero que contiene el conjunto de datos a utlilizar. En formato csv"
+				+ "\n\n	-k num"
+				+ "\n		Establece a num (valor natural) el número de clusters que se crearan en la ejecución del algoritmo"
+				+ "\n\n	[-d (M m|C)]"
+				+ "\n		Establece la métrica a utilizar en el desarrollo del algoritmo. Si no se especifica se usa por defecto la Euclidea"
+				+ "\n\n			Posibilidades:"
+				+ "\n				M m	- Distancia Minkowski con la especificación del parámetro m"
+				+ "\n				C	- Distancia Chebyshev"
+				+ "\n\n	[-i (aleatoria|pert_aleatoria|cent_aleat|particionada)]"
+				+ "\n		Establece el tipo de inicialización a utilizar en el algoritmo K-means. Si no se especifica, por defecto se utiliza la inicialización aleatoria"
+				+ "\n\n			Posibilidades"
+				+ "\n				aleatoria		- Elige al azar k instancias del conjunto de datos para actuar de centroides"
+				+ "\n				pert_aleatoria	- Por cada instancia, la incluye al azar en uno de los k clusters. Posteriormente se calculan los centroides"
+				+ "\n				cent_aleat		- Se recogen los rangos en que varían los atributos de todas las instancias. Posteriromente se crean k centrroides con valores al azar incluidos en los diferentes intervalos identificados"
+				+ "\n				particionada	- Se divide el espacio muestrald de acuerdo al número de clusters a crear y se identifican los centroides"
+				+ "\n\n	[-e num]"
+				+ "\n		Establece el número de iteraciones del algoritmo."
+				+ "\n\n	[-c num]"
+				+ "\n		Establece la delta usada para comparar la convergencia del error obtenido en dos iteraciones sucesivas (su variación permitida)"
+				+ "\n\n	Si no se indican ni e ni c, se consideran los valores por defecto 10 y 0.00001. En caso de que solo se especifique uno de ellos, únicamente ese se tendrá en cuenta como criterio de parada del algoritmo"
+				+ "\n\n	[-h]"
+				+ "\n		imprime la ayuda para la ejecución del programa. Si este parámetro se especifica, finaliza el programa tras mostrar la ayuda, independientemente del resto de parámetros especificados");
 	}
 	
 	private static String concatenarParametros(String[] param)
