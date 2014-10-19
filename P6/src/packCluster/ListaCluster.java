@@ -185,4 +185,37 @@ public class ListaCluster {
 	public void acumularErrorEnCluster(int pCluster, double pError) {
 		this.getListaCluster().get(pCluster).acumularError(pError);
 	}
+
+	/**
+	 * Dada una instancia, devuelve el cluster al que ha sido asignada
+	 * @param pInstancia
+	 * La instancia a buscar
+	 * @return
+	 * El índice del cluster al que la instancia está asignada, en el intervalo 1..k, 0 en caso 
+	 * de que la instancia no esté asignada
+	 */
+	public int getNumClusterAsignado(Instancia pInstancia) {
+		
+		Iterator<Cluster> it = this.getIterator();
+		Cluster clusterActual;
+		int i = 1;
+		boolean enc = false;
+		
+		while(it.hasNext() && !enc)
+		{
+			clusterActual = it.next();
+			
+			if(clusterActual.pertenece(pInstancia))
+			{
+				enc = true;
+			}
+			else
+			{
+				i++;
+			}
+		}
+		
+		if(enc == false) return 0;
+		else return i;
+	}
 }

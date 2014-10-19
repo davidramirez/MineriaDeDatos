@@ -191,6 +191,29 @@ public class ListaInstancias {
 		return (new Instancia(media));
 	}
 
+	/**
+	 * Devuelve los nombres de los atributos de las instancias contenidas en la lista en formato CSV
+	 * @return
+	 * Un string en formato CSV
+	 */
+	public String getNombresCSV() {
+		String atributos = new String();
+		
+		for(int i = 0; i < this.nombreAtributos.length; i++)
+		{
+			atributos = atributos+this.nombreAtributos[i];
+			if(i != this.nombreAtributos.length-1)
+			{
+				atributos = atributos + ",";
+			}
+		}
+		return atributos;
+	}
+
+	public boolean pertenece(Instancia pInstancia) {
+		return this.listaInstancia.contains(pInstancia);
+	}
+
 
 
 }

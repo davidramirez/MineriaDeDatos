@@ -123,4 +123,17 @@ public class Cluster {
 	public int getNumInstancias() {
 		return this.listaInstancias.getNumeroInstancias();
 	}
+
+
+	/**
+	 * Comprueba si la instancia pertenece al cluster
+	 * @param pInstancia
+	 * instancia a comprobar
+	 * @return
+	 * true - si la instancia pertenece al cluster
+	 * false - si no pertenece
+	 */
+	public boolean pertenece(Instancia pInstancia) {
+		return this.listaInstancias.pertenece(pInstancia);
+	}
 }

@@ -187,6 +187,11 @@ public class MDP6 {
 			/***************************Bloque ejecución******************************/
 			//En este punto ya podemos ejecutar el algoritmo
 			algoritmo.ejecutar(salidaInf);
+			algoritmo.guardarInstanciasClasificadas(salidaEstimacion, concatenarParametros(args));
+			
+			//cerramos los ficheros
+			salidaEstimacion.close();
+			salidaInf.close();
 
 		}
 		else
@@ -274,5 +279,16 @@ public class MDP6 {
 	private static void help()
 	{
 		
+	}
+	
+	private static String concatenarParametros(String[] param)
+	{
+		String parametros = new String();
+		
+		for(int i = 0; i < param.length; i++)
+		{
+			parametros = parametros+param[i] + " ";
+		}
+		return parametros;
 	}
 }

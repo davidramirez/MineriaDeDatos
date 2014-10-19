@@ -63,6 +63,8 @@ public abstract class KMeans {
 	 */
 	public void ejecutar(PrintStream salidaInf)
 	{
+		
+		
 		//contamos el tiempo total de ejecución
 		StopWatch tiempo = new StopWatch();
 		
@@ -83,6 +85,7 @@ public abstract class KMeans {
 		while(convergencia > delta && i <= this.numIteraciones)
 		{
 			System.out.println("Iterando... iteración: " + i);
+			salidaInf.println("Iterando... iteración: " + i);
 		
 			//Actualizamos los centroides actuales
 			this.centroides = this.centroidesNuevos;
@@ -101,9 +104,10 @@ public abstract class KMeans {
 			i++;
 			errorAnterior = errorActual;
 		}
-		
-		System.out.println("Tiempo total en la ejecución de kmeans: "+tiempo.elapsedTime() + "segundos");
-		salidaInf.println("Tiempo total en la ejecución de kmeans: "+tiempo.elapsedTime() + "segundos");
+		System.out.println("\nInstancias totales en la realización del clustering: "+this.instancias.getNumeroInstancias());
+		salidaInf.println("\nInstancias totales en la realización del clustering: "+this.instancias.getNumeroInstancias());
+		System.out.println("Tiempo total en la ejecución de kmeans: "+tiempo.elapsedTime() + "  segundos");
+		salidaInf.println("Tiempo total en la ejecución de kmeans: "+tiempo.elapsedTime() + "  segundos");
 			
 			
 	}
@@ -194,7 +198,32 @@ public abstract class KMeans {
 		this.centroidesNuevos = this.clusters.calcularNuevosCentroides();
 	}
 	
-	
+	/**
+	 * Guarda las instancias en el orden de carga añadiendo un atributo "clase" corresponidiente 
+	 * al cluster asignado tras la ejecución del algoritmo. El formato es CSV
+	 * 
+	 * Se debe llamar tras la ejecución del algoritmo, cuando la estrructura ListaCluster contiene el resultado
+	 * @param ps
+	 * El fichero en que guardar las instancias
+	 * @param string 
+	 */
+	public void guardarInstanciasClasificadas(PrintStream ps, String param)
+	{
+		ps.println("% Instancias clasificadas con el algoritmo K-means");
+		ps.println("% Parámetros de la llamada: "+ param +"\n\n");
+		
+		ps.println(this.instancias.getNombresCSV()+",clase\n\n");
+		
+		Iterator<Instancia> it = this.instancias.getIterador();
+		Instancia instanciaActual;
+		
+		while(it.hasNext())
+		{
+			instanciaActual = it.next();
+			
+			ps.println(instanciaActual.toCSV()+","+this.clusters.getNumClusterAsignado(instanciaActual));
+		}
+	}
 	
 	public Instancia[] getCentroides() {
 		return centroides;

@@ -44,4 +44,17 @@ public class Instancia {
 		return this.vector.toString();
 		
 	}
+	public String toCSV() {
+		String atributos = new String();
+		
+		for(int i = 0; i < this.vector.size(); i++)
+		{
+			atributos = atributos+this.vector.get(i);
+			if(i != this.vector.size()-1)
+			{
+				atributos = atributos + ",";
+			}
+		}
+		return atributos;
+	}
 }
