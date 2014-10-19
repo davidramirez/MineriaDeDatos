@@ -76,9 +76,6 @@ public abstract class KMeans {
 		double convergencia = Double.MAX_VALUE;
 		int i = 1;//numero de iteración que relizamos
 		
-		//error
-		double errorAnterior = Double.MAX_VALUE;
-		double errorActual;
 		
 		this.centroidesNuevos = this.centroides;
 				
@@ -98,11 +95,12 @@ public abstract class KMeans {
 			this.clusters.imprimirEstado(System.out);
 			this.clusters.imprimirEstado(salidaInf);
 			
-			errorActual = this.clusters.calcularErrorTotal();
-			convergencia = Math.abs(errorAnterior - errorActual);//this.calcularDivergenciaCentroides();
+			convergencia = this.calcularDivergenciaCentroides();
+			
+			System.out.println("Convergencia entre los centroides anteriores y nuevos: "+convergencia+"\n\n");
+			salidaInf.println("Convergencia entre los centroides anteriores y nuevos: "+convergencia+"\n\n");
 			
 			i++;
-			errorAnterior = errorActual;
 		}
 		System.out.println("\nInstancias totales en la realización del clustering: "+this.instancias.getNumeroInstancias());
 		salidaInf.println("\nInstancias totales en la realización del clustering: "+this.instancias.getNumeroInstancias());

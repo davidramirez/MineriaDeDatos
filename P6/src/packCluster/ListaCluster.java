@@ -150,7 +150,7 @@ public class ListaCluster {
 		}
 		
 		ps.println();
-		ps.println("Error total: "+this.calcularErrorTotal() + "\n \n");
+		ps.println("Error total: "+this.calcularErrorTotal());
 	}
 
 	/**

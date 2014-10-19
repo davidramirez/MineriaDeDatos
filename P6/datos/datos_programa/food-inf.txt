@@ -5,7 +5,8 @@ Cluster 	 Centroide 	 NumInstancias 	 Error
 3	[248.0, 10.666666666666666, 23.333333333333332, 239.33333333333334, 1.6666666666666665]	4	205.16666666666666
 
 Error total: 14.553872053872052
- 
+Convergencia entre los centroides anteriores y nuevos: 302.22727272727275
+
 
 Iterando... iteración: 2
 Cluster 	 Centroide 	 NumInstancias 	 Error
@@ -14,7 +15,8 @@ Cluster 	 Centroide 	 NumInstancias 	 Error
 3	[332.5, 18.75, 27.5, 98.0, 2.375]	8	111.75
 
 Error total: 7.587782587782588
- 
+Convergencia entre los centroides anteriores y nuevos: 121.07034632034632
+
 
 Iterando... iteración: 3
 Cluster 	 Centroide 	 NumInstancias 	 Error
@@ -23,7 +25,8 @@ Cluster 	 Centroide 	 NumInstancias 	 Error
 3	[331.25, 19.0, 27.5, 53.5, 2.425]	8	52.75
 
 Error total: 6.007632065171748
- 
+Convergencia entre los centroides anteriores y nuevos: 108.53571428571428
+
 
 Iterando... iteración: 4
 Cluster 	 Centroide 	 NumInstancias 	 Error
@@ -32,7 +35,8 @@ Cluster 	 Centroide 	 NumInstancias 	 Error
 3	[341.875, 18.75, 28.875, 8.75, 2.4374999999999996]	8	31.09375
 
 Error total: 5.135815187898522
- 
+Convergencia entre los centroides anteriores y nuevos: 23.387362637362656
+
 
 Iterando... iteración: 5
 Cluster 	 Centroide 	 NumInstancias 	 Error
@@ -41,8 +45,9 @@ Cluster 	 Centroide 	 NumInstancias 	 Error
 3	[341.875, 18.75, 28.875, 8.75, 2.4374999999999996]	8	31.09375
 
 Error total: 5.2670293362066865
- 
+Convergencia entre los centroides anteriores y nuevos: 0.0
+
 
 
 Instancias totales en la realización del clustering: 27
-Tiempo total en la ejecución de kmeans: 0.018  segundos
+Tiempo total en la ejecución de kmeans: 0.019  segundos
