@@ -3,7 +3,6 @@ package packKMeans;
 import java.util.Vector;
 
 import packDistancias.Distancia;
-import packFicheros.CargadorFichero;
 import packInstancias.Instancia;
 import packInstancias.ListaInstancias;
 

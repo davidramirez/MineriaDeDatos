@@ -143,7 +143,7 @@ public class CargadorFichero {
 					}
 				}
 			}
-			
+			sc.close();
 			//carga terminada
 			return lista;
 			

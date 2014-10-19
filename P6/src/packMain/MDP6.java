@@ -278,6 +278,7 @@ public class MDP6 {
 	 * @param pArgumentos
 	 * @return
 	 */
+	@SuppressWarnings("unused")
 	private static String obtenerParametro(String pParametro,String[] pArgumentos)
 	{
 		if(existeParametro(pParametro, pArgumentos))

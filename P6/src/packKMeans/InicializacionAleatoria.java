@@ -1,10 +1,7 @@
 package packKMeans;
 
 import java.util.HashSet;
-import java.util.Vector;
-
 import packDistancias.Distancia;
-import packInstancias.Instancia;
 import packInstancias.ListaInstancias;
 
 /**
