@@ -157,7 +157,7 @@ public class ListaCluster {
 	/**
 	 * Devuelve el error total cometido durante el clustering
 	 * @return
-	 * El error como la suma de los errores parciales cometidos en cada cluster
+	 * El error como la suma de los errores parciales cometidos en cada cluster entre el numero total de instancias
 	 */
 	public Double calcularErrorTotal() {
 		
