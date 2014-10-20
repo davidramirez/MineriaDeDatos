@@ -238,7 +238,11 @@ En la figura \ref{fig:clases} se muestra el diagrama de clases final de la aplic
 	
 	\FloatBarrier
 	\section{Clasificación supervisada respecto de otro software de referencia}
-	
+	\section{Clasigicación supervisada, Iris}
+		Para el fichero Iris, sabiendo de antemano que se quieren clasificar tres variedades de esta planta, el algoritmo utilizando la inicialización que escoge como centroides tres instancias aleatorias del espacio muestral consige un acierto de un 88.66\% basándonos en un único experimento.
+		
+		Los datos para la validación de este resultado se encuentran en la carpeta de resultados proporcianada.
+		
 	\section{Variabilidad de los resultados}
 	
 	El uso de generadores de valor aleatorios sin utilizar ningún tipo de mapeo, a diferencia de Weka, hace que la calidad de \textbf{la solución varíe} en exceso de una ejecución a otra. El uso de aleatorios se da en los casos de inicialización aleatoria, pertenencia aleatoria y generación aleatoria de codewords. Este problema no se da en el último tipo de inicialización, división de espacio, ya que ésta generará los mismos k centroides para un mismo conjunto de datos.
