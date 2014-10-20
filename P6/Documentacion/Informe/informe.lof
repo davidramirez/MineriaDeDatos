@@ -4,6 +4,8 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama de clases y paquetes}}{6}{figure.3.1}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Histograma y frecuencia de los errores obtenidos}}{8}{figure.4.1}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Resultados para el fichero de pruebas \textit {colon.csv}, \textit {Weka} con valores por defecto salvo \textit {K}}}{7}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Resultados para el fichero de pruebas \textit {food.csv}, \textit {Weka} con valores por defecto salvo \textit {K}}}{7}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Histograma y frecuencia de los errores obtenidos}}{8}{figure.4.3}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

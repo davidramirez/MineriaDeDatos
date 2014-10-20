@@ -178,7 +178,7 @@ public class ListaCluster {
 	/**
 	 * Acumula el error indicado en el cluster correspondiente
 	 * @param pCluster
-	 * El índice del cluster al que acume¡ular el error
+	 * El índice del cluster al que acumular el error
 	 * @param pError
 	 * El error a acumular. Valor real.
 	 */

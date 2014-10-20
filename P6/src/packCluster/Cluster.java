@@ -18,6 +18,7 @@ public class Cluster {
 	 private Instancia centroide;
 	 private ListaInstancias listaInstancias;
 	 private Double errorAcumulado;
+	 private Double errorCuadráticoAcumulado;
 	 
 	 /**
 	  * A partir de un centroide y la dimensión de las instancias a guardar crea el cluster. Crea un nuevo objeto 
@@ -33,6 +34,7 @@ public class Cluster {
 		 this.listaInstancias.setDimension(pDimension);
 		 this.centroide = pCentroide;
 		 this.errorAcumulado = 0.0;
+		 this.errorCuadráticoAcumulado = 0.0;
 	 }
 	
 	
@@ -87,12 +89,13 @@ public class Cluster {
 	}
 
 	/**
-	 * Dado un valor correspondiente con la distancia entre una instancia y un centroide, lo acumula
+	 * Dado un valor correspondiente con la distancia entre una instancia y un centroide, lo acumula, acumulando también su cuadrado
 	 * @param pError
 	 * Un valor real. Debería corresponder con la distancia entre una instancia y un centroide ambos pertenecieentes a este cluster
 	 */
 	public void acumularError(double pError) {
 		this.errorAcumulado = this.errorAcumulado + pError;
+		this.errorCuadráticoAcumulado += Math.pow(pError, 2);
 	}
 
 
@@ -117,7 +120,7 @@ public class Cluster {
 	 */
 	public double getErrorAcumuladoMedio() {
 		if(this.listaInstancias.getNumeroInstancias() == 0) return 0;
-		return (this.errorAcumulado / this.listaInstancias.getNumeroInstancias());
+		return (this.errorAcumulado/this.listaInstancias.getNumeroInstancias());
 	}
 
 
