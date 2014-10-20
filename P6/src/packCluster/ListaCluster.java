@@ -151,6 +151,7 @@ public class ListaCluster {
 		
 		ps.println();
 		ps.println("Error total: "+this.calcularErrorTotal());
+		ps.println("Error cuadrático medio: "+this.calcularErrorCuadraticoMedio());
 	}
 
 	/**
@@ -171,6 +172,29 @@ public class ListaCluster {
 			
 			instancias = instancias + clusterActual.getNumInstancias();
 			error = error + clusterActual.getErrorAcumuladoMedio();
+		}
+		return (error/instancias);
+	}
+	
+	
+	/**
+	 * Calcula el error cuadrático medio resultado del clustering realizado
+	 * @return
+	 * error cuadrático medio
+	 */
+	public Double calcularErrorCuadraticoMedio() {
+		
+		Iterator<Cluster> it = this.getIterator();
+		Cluster clusterActual;
+		double error = 0.0;
+		int instancias = 0;
+		
+		while(it.hasNext())
+		{
+			clusterActual = it.next();
+			
+			instancias = instancias + clusterActual.getNumInstancias();
+			error = error + clusterActual.getErrorCuadratico();
 		}
 		return (error/instancias);
 	}

@@ -18,7 +18,7 @@ public class Cluster {
 	 private Instancia centroide;
 	 private ListaInstancias listaInstancias;
 	 private Double errorAcumulado;
-	 private Double errorCuadráticoAcumulado;
+	 private Double errorCuadraticoAcumulado;
 	 
 	 /**
 	  * A partir de un centroide y la dimensión de las instancias a guardar crea el cluster. Crea un nuevo objeto 
@@ -34,7 +34,7 @@ public class Cluster {
 		 this.listaInstancias.setDimension(pDimension);
 		 this.centroide = pCentroide;
 		 this.errorAcumulado = 0.0;
-		 this.errorCuadráticoAcumulado = 0.0;
+		 this.errorCuadraticoAcumulado = 0.0;
 	 }
 	
 	
@@ -95,7 +95,7 @@ public class Cluster {
 	 */
 	public void acumularError(double pError) {
 		this.errorAcumulado = this.errorAcumulado + pError;
-		this.errorCuadráticoAcumulado += Math.pow(pError, 2);
+		this.errorCuadraticoAcumulado += Math.pow(pError, 2);
 	}
 
 
@@ -121,6 +121,15 @@ public class Cluster {
 	public double getErrorAcumuladoMedio() {
 		if(this.listaInstancias.getNumeroInstancias() == 0) return 0;
 		return (this.errorAcumulado/this.listaInstancias.getNumeroInstancias());
+	}
+	
+	/**
+	 * Devuelve el error cuadrático acumulado por cada instancia perteneciente al cluster
+	 * @return
+	 */
+	public double getErrorCuadratico()
+	{
+		return this.errorCuadraticoAcumulado;
 	}
 
 
