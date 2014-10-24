@@ -57,7 +57,7 @@ public class MDP6_var_res {
 				ficheros[i].println("Iteración \t Inic_aleatoria \t Pertenencia_aleatoria \t Cent_aleatorios \t División_espacio");
 			}
 			
-			/************************************Parámetros  pordefecto del algoritmo**********************/
+			/************************************Parámetros  por defecto del algoritmo**********************/
 			KMeans algoritmo = null;
 			
 			Distancia distancia = null;

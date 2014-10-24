@@ -106,7 +106,7 @@ Postcondiciones:
 			
 	Postconndiciones:
 	
-		Se generan 2 ficheros, cada uno contiene los resultados para una "K" concreta. Las establecidas por defecto son 3 y 8
+		Se generan 3 ficheros, cada uno contiene los resultados para una "K" concreta. Las establecidas por defecto son 3 , 5 y 8
 		En cada fichero se guarda un tabla con las iteraciones realizadas (10000 por defecto) y los 4 tipos de inicialización del algoritmo. Para cada una de estas combinaciones se almacena el error cuadrático medio resultado de la ejecución del algoritmo.
 		
 		Además, todos los mensajes de cada ejecución se muestran por consola.
