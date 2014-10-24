@@ -4,6 +4,7 @@ import java.io.PrintStream;
 import java.util.Iterator;
 import java.util.LinkedList;
 
+import packAuxiliar.Redondeo;
 import packCluster.ListaCluster;
 import packDistancias.Distancia;
 import packInstancias.Instancia;
@@ -97,8 +98,8 @@ public abstract class KMeans {
 			
 			convergencia = this.calcularDivergenciaCentroides();
 			
-			System.out.println("Convergencia entre los centroides anteriores y nuevos: "+convergencia+"\n\n");
-			salidaInf.println("Convergencia entre los centroides anteriores y nuevos: "+convergencia+"\n\n");
+			System.out.println("Convergencia entre los centroides anteriores y nuevos: "+Redondeo.getRedondeo().redondear(convergencia, 5)+"\n\n");
+			salidaInf.println("Convergencia entre los centroides anteriores y nuevos: "+Redondeo.getRedondeo().redondear(convergencia, 5)+"\n\n");
 			
 			i++;
 		}

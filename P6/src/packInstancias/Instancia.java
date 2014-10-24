@@ -2,6 +2,8 @@ package packInstancias;
 
 import java.util.Vector;
 
+import packAuxiliar.Redondeo;
+
 /**
  * Clase que representa a una instancia. Limitada a atributos únicamente numéricos
  *
@@ -47,10 +49,23 @@ public class Instancia {
 		this.vector = vector;
 	}
 	
+	/**
+	 * Imprime el vector de la instancia con sus atributos redondeados a 3 decimales
+	 */
 	public String toString()
 	{
-		return this.vector.toString();
+		String atributos = "(";
 		
+		for(int i = 0; i < this.vector.size(); i++)
+		{
+			atributos = atributos+ Redondeo.getRedondeo().redondear(this.vector.get(i));
+			if(i != this.vector.size()-1)
+			{
+				atributos = atributos + " ; ";
+			}
+		}
+		atributos = atributos + ")";
+		return atributos;
 	}
 	
 	/**

@@ -66,4 +66,6 @@ Postcondiciones:
 	Los resultados para unos mismos parámetros y datos son muy variantes debido a la inicialización aleatoria efectuada en la mayor parte de los casos.
 	Solo en el caso de la inicialización "particionada" se pueden obtener los mismos resultados en varias ejecuciones con los mismos parámetros y datos, ya que los centroides generados son siempre los mismos.
 	
+	Todo resultado correspondiente a un número real se muestra redondeado a 3 decimales. En el caso de la convergencia, el redondeo es de 5 decimales.
+	Los valores en el fichero etiquetado son los exactos recogidos en la carga de las instancias
 Ejemplos:

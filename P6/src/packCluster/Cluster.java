@@ -2,6 +2,7 @@ package packCluster;
 
 import java.io.PrintStream;
 
+import packAuxiliar.Redondeo;
 import packDistancias.Distancia;
 import packInstancias.Instancia;
 import packInstancias.ListaInstancias;
@@ -108,7 +109,7 @@ public class Cluster {
 	 */
 	public void imprimirEstado(int pNumCluster, PrintStream ps) {
 		
-		ps.println(pNumCluster+"\t"+this.centroide.toString()+"\t"+ this.listaInstancias.getNumeroInstancias()+"\t"+this.getErrorAcumuladoMedio());
+		ps.println(pNumCluster+"\t"+ this.listaInstancias.getNumeroInstancias()+"\t"+Redondeo.getRedondeo().redondear(this.getErrorAcumuladoMedio())+"\t"+this.centroide.toString());
 		
 	}
 

@@ -4,6 +4,7 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import packAuxiliar.Redondeo;
 import packDistancias.Distancia;
 import packInstancias.Instancia;
 
@@ -134,7 +135,7 @@ public class ListaCluster {
 	 */
 	public void imprimirEstado(PrintStream ps)
 	{
-		ps.println("Cluster \t Centroide \t NumInstancias \t Error");
+		ps.println("Cluster  \t NumInstancias \t Error \t Centroides");
 		
 		Iterator<Cluster> it = this.getIterator();
 		Cluster clusterActual;
@@ -150,14 +151,14 @@ public class ListaCluster {
 		}
 		
 		ps.println();
-		ps.println("Error total: "+this.calcularErrorTotal());
-		ps.println("Error cuadrático medio: "+this.calcularErrorCuadraticoMedio());
+		//ps.println("Error total: "+this.calcularErrorTotal());
+		ps.println("Error cuadrático medio: "+Redondeo.getRedondeo().redondear(this.calcularErrorCuadraticoMedio()));
 	}
 
 	/**
 	 * Devuelve el error total cometido durante el clustering
 	 * @return
-	 * El error como la suma de los errores parciales cometidos en cada cluster entre el numero total de instancias
+	 * El error como la suma de los errores medios parciales cometidos en cada cluster entre el numero total de instancias
 	 */
 	public Double calcularErrorTotal() {
 		
