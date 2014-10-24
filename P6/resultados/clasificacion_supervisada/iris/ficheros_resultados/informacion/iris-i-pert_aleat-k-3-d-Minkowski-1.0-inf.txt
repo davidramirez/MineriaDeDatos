@@ -1,0 +1,135 @@
+Iterando... iteración: 1
+Cluster  	 NumInstancias 	 Error 	 Centroides
+1	90	2.216	(5.953 ; 2.96 ; 4.089 ; 1.362)
+2	55	3.844	(5.764 ; 3.13 ; 3.536 ; 1.104)
+3	5	0.925	(5.824 ; 3.062 ; 3.684 ; 1.146)
+
+Error cuadrático medio: 9.719
+Error cuadrático: 1457.918
+Convergencia entre los centroides anteriores y nuevos: 6.2366
+
+
+Iterando... iteración: 2
+Cluster  	 NumInstancias 	 Error 	 Centroides
+1	71	1.485	(6.361 ; 2.917 ; 5.057 ; 1.742)
+2	50	0.888	(5.018 ; 3.322 ; 1.633 ; 0.315)
+3	29	1.015	(5.6 ; 2.58 ; 3.78 ; 1.14)
+
+Error cuadrático medio: 1.957
+Error cuadrático: 293.612
+Convergencia entre los centroides anteriores y nuevos: 1.30958
+
+
+Iterando... iteración: 3
+Cluster  	 NumInstancias 	 Error 	 Centroides
+1	66	1.435	(6.549 ; 2.973 ; 5.286 ; 1.858)
+2	50	0.774	(5.006 ; 3.418 ; 1.464 ; 0.244)
+3	34	1.016	(5.559 ; 2.624 ; 3.976 ; 1.231)
+
+Error cuadrático medio: 1.675
+Error cuadrático: 251.184
+Convergencia entre los centroides anteriores y nuevos: 0.3445
+
+
+Iterando... iteración: 4
+Cluster  	 NumInstancias 	 Error 	 Centroides
+1	62	1.407	(6.577 ; 2.991 ; 5.348 ; 1.895)
+2	50	0.774	(5.006 ; 3.418 ; 1.464 ; 0.244)
+3	38	1.067	(5.65 ; 2.641 ; 4.047 ; 1.25)
+
+Error cuadrático medio: 1.635
+Error cuadrático: 245.294
+Convergencia entre los centroides anteriores y nuevos: 0.26959
+
+
+Iterando... iteración: 5
+Cluster  	 NumInstancias 	 Error 	 Centroides
+1	60	1.395	(6.611 ; 2.998 ; 5.39 ; 1.923)
+2	50	0.774	(5.006 ; 3.418 ; 1.464 ; 0.244)
+3	40	1.083	(5.692 ; 2.666 ; 4.116 ; 1.274)
+
+Error cuadrático medio: 1.615
+Error cuadrático: 242.271
+Convergencia entre los centroides anteriores y nuevos: 0.14184
+
+
+Iterando... iteración: 6
+Cluster  	 NumInstancias 	 Error 	 Centroides
+1	56	1.383	(6.643 ; 3.01 ; 5.405 ; 1.92)
+2	50	0.774	(5.006 ; 3.418 ; 1.464 ; 0.244)
+3	44	1.126	(5.69 ; 2.665 ; 4.158 ; 1.31)
+
+Error cuadrático medio: 1.607
+Error cuadrático: 241.103
+Convergencia entre los centroides anteriores y nuevos: 0.25517
+
+
+Iterando... iteración: 7
+Cluster  	 NumInstancias 	 Error 	 Centroides
+1	51	1.357	(6.664 ; 3.029 ; 5.452 ; 1.95)
+2	50	0.774	(5.006 ; 3.418 ; 1.464 ; 0.244)
+3	49	1.172	(5.75 ; 2.673 ; 4.211 ; 1.327)
+
+Error cuadrático medio: 1.589
+Error cuadrático: 238.302
+Convergencia entre los centroides anteriores y nuevos: 0.31342
+
+
+Iterando... iteración: 8
+Cluster  	 NumInstancias 	 Error 	 Centroides
+1	47	1.316	(6.704 ; 3.039 ; 5.522 ; 1.984)
+2	50	0.774	(5.006 ; 3.418 ; 1.464 ; 0.244)
+3	53	1.197	(5.802 ; 2.698 ; 4.265 ; 1.355)
+
+Error cuadrático medio: 1.553
+Error cuadrático: 232.932
+Convergencia entre los centroides anteriores y nuevos: 0.25714
+
+
+Iterando... iteración: 9
+Cluster  	 NumInstancias 	 Error 	 Centroides
+1	41	1.259	(6.755 ; 3.036 ; 5.585 ; 2.004)
+2	50	0.774	(5.006 ; 3.418 ; 1.464 ; 0.244)
+3	59	1.236	(5.825 ; 2.726 ; 4.304 ; 1.385)
+
+Error cuadrático medio: 1.524
+Error cuadrático: 228.667
+Convergencia entre los centroides anteriores y nuevos: 0.38928
+
+
+Iterando... iteración: 10
+Cluster  	 NumInstancias 	 Error 	 Centroides
+1	38	1.224	(6.837 ; 3.063 ; 5.673 ; 2.037)
+2	50	0.774	(5.006 ; 3.418 ; 1.464 ; 0.244)
+3	62	1.249	(5.863 ; 2.739 ; 4.373 ; 1.425)
+
+Error cuadrático medio: 1.497
+Error cuadrático: 224.539
+Convergencia entre los centroides anteriores y nuevos: 0.21116
+
+
+Iterando... iteración: 11
+Cluster  	 NumInstancias 	 Error 	 Centroides
+1	37	1.207	(6.874 ; 3.089 ; 5.718 ; 2.071)
+2	50	0.774	(5.006 ; 3.418 ; 1.464 ; 0.244)
+3	63	1.254	(5.887 ; 2.739 ; 4.408 ; 1.434)
+
+Error cuadrático medio: 1.488
+Error cuadrático: 223.229
+Convergencia entre los centroides anteriores y nuevos: 0.08222
+
+
+Iterando... iteración: 12
+Cluster  	 NumInstancias 	 Error 	 Centroides
+1	37	1.207	(6.87 ; 3.086 ; 5.746 ; 2.089)
+2	50	0.774	(5.006 ; 3.418 ; 1.464 ; 0.244)
+3	63	1.253	(5.905 ; 2.746 ; 4.413 ; 1.433)
+
+Error cuadrático medio: 1.488
+Error cuadrático: 223.214
+Convergencia entre los centroides anteriores y nuevos: 0.0
+
+
+
+Instancias totales en la realización del clustering: 150
+Tiempo total en la ejecución de kmeans: 0.094  segundos

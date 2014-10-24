@@ -1,0 +1,113 @@
+Iterando... iteración: 1
+Cluster  	 NumInstancias 	 Error 	 Centroides
+1	51	0.568	(4.8 ; 3.4 ; 1.6 ; 0.2)
+2	69	0.948	(6.3 ; 2.7 ; 4.9 ; 1.8)
+3	30	0.983	(6.2 ; 2.2 ; 4.5 ; 1.5)
+
+Error cuadrático medio: 0.924
+Error cuadrático: 138.65
+Convergencia entre los centroides anteriores y nuevos: 1.6507
+
+
+Iterando... iteración: 2
+Cluster  	 NumInstancias 	 Error 	 Centroides
+1	50	0.485	(5.008 ; 3.4 ; 1.494 ; 0.261)
+2	63	0.827	(6.539 ; 2.999 ; 5.307 ; 1.874)
+3	37	0.605	(5.663 ; 2.593 ; 4.047 ; 1.24)
+
+Error cuadrático medio: 0.571
+Error cuadrático: 85.679
+Convergencia entre los centroides anteriores y nuevos: 0.24953
+
+
+Iterando... iteración: 3
+Cluster  	 NumInstancias 	 Error 	 Centroides
+1	50	0.484	(5.006 ; 3.418 ; 1.464 ; 0.244)
+2	59	0.811	(6.602 ; 2.986 ; 5.384 ; 1.916)
+3	41	0.637	(5.684 ; 2.678 ; 4.092 ; 1.268)
+
+Error cuadrático medio: 0.561
+Error cuadrático: 84.102
+Convergencia entre los centroides anteriores y nuevos: 0.14322
+
+
+Iterando... iteración: 4
+Cluster  	 NumInstancias 	 Error 	 Centroides
+1	50	0.484	(5.006 ; 3.418 ; 1.464 ; 0.244)
+2	54	0.791	(6.632 ; 2.998 ; 5.431 ; 1.937)
+3	46	0.674	(5.729 ; 2.69 ; 4.151 ; 1.3)
+
+Error cuadrático medio: 0.554
+Error cuadrático: 83.136
+Convergencia entre los centroides anteriores y nuevos: 0.1754
+
+
+Iterando... iteración: 5
+Cluster  	 NumInstancias 	 Error 	 Centroides
+1	50	0.484	(5.006 ; 3.418 ; 1.464 ; 0.244)
+2	50	0.78	(6.665 ; 3.007 ; 5.5 ; 1.969)
+3	50	0.687	(5.789 ; 2.713 ; 4.209 ; 1.333)
+
+Error cuadrático medio: 0.546
+Error cuadrático: 81.839
+Convergencia entre los centroides anteriores y nuevos: 0.13724
+
+
+Iterando... iteración: 6
+Cluster  	 NumInstancias 	 Error 	 Centroides
+1	50	0.484	(5.006 ; 3.418 ; 1.464 ; 0.244)
+2	46	0.764	(6.702 ; 3.016 ; 5.556 ; 1.992)
+3	54	0.704	(5.822 ; 2.728 ; 4.256 ; 1.36)
+
+Error cuadrático medio: 0.539
+Error cuadrático: 80.896
+Convergencia entre los centroides anteriores y nuevos: 0.15273
+
+
+Iterando... iteración: 7
+Cluster  	 NumInstancias 	 Error 	 Centroides
+1	50	0.484	(5.006 ; 3.418 ; 1.464 ; 0.244)
+2	43	0.753	(6.77 ; 3.037 ; 5.6 ; 2.009)
+3	57	0.715	(5.83 ; 2.731 ; 4.315 ; 1.393)
+
+Error cuadrático medio: 0.533
+Error cuadrático: 79.963
+Convergencia entre los centroides anteriores y nuevos: 0.10704
+
+
+Iterando... iteración: 8
+Cluster  	 NumInstancias 	 Error 	 Centroides
+1	50	0.484	(5.006 ; 3.418 ; 1.464 ; 0.244)
+2	40	0.738	(6.802 ; 3.044 ; 5.649 ; 2.03)
+3	60	0.725	(5.854 ; 2.742 ; 4.346 ; 1.409)
+
+Error cuadrático medio: 0.53
+Error cuadrático: 79.434
+Convergencia entre los centroides anteriores y nuevos: 0.11511
+
+
+Iterando... iteración: 9
+Cluster  	 NumInstancias 	 Error 	 Centroides
+1	50	0.484	(5.006 ; 3.418 ; 1.464 ; 0.244)
+2	39	0.728	(6.827 ; 3.07 ; 5.7 ; 2.062)
+3	61	0.731	(5.885 ; 2.74 ; 4.377 ; 1.418)
+
+Error cuadrático medio: 0.527
+Error cuadrático: 79.011
+Convergencia entre los centroides anteriores y nuevos: 0.05252
+
+
+Iterando... iteración: 10
+Cluster  	 NumInstancias 	 Error 	 Centroides
+1	50	0.484	(5.006 ; 3.418 ; 1.464 ; 0.244)
+2	39	0.732	(6.854 ; 3.077 ; 5.715 ; 2.054)
+3	61	0.731	(5.884 ; 2.741 ; 4.389 ; 1.434)
+
+Error cuadrático medio: 0.526
+Error cuadrático: 78.945
+Convergencia entre los centroides anteriores y nuevos: 0.0
+
+
+
+Instancias totales en la realización del clustering: 150
+Tiempo total en la ejecución de kmeans: 0.084  segundos
