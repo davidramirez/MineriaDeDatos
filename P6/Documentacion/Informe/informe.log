@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2014.2.3)  24 OCT 2014 21:01
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2014.2.3)  24 OCT 2014 23:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -820,20 +820,20 @@ Cap\'{\i }tulo 5.
 
 ]
 Cap\'{\i }tulo 6.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 333.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 335.
 [13
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 333.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 335.
  (./informe.aux
 LaTeX Info: Redefining \. on input line 21.
 LaTeX Info: Redefining \% on input line 21.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 333.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 333.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 335.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 335.
 Package rerunfilecheck Info: File `informe.out' has not changed.
 (rerunfilecheck)             Checksum: 95F3478972A86927586474F324C28A57;2055.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 333.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 335.
  ) 
 Here is how much of TeX's memory you used:
  7836 strings out of 495062
@@ -851,7 +851,7 @@ blic/lm/lmr10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/
 share/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf-dist/fonts/
 type1/public/lm/lmri7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.p
 fb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on informe.pdf (17 pages, 248305 bytes).
+Output written on informe.pdf (17 pages, 248955 bytes).
 PDF statistics:
  296 PDF objects out of 1000 (max. 8388607)
  261 compressed objects within 3 object streams

@@ -51,9 +51,10 @@ public class MDP6 {
 			
 			/******************** Bloque de distancia ************************************/
 			
+			boolean hayDistancia = (buscarParametro("-d", args) != -1);
 			String tipoDistancia = args[buscarParametro("-d", args)+1];//obtenerParametro("-d", args);
 			
-			if(tipoDistancia != null)
+			if(hayDistancia)
 			{
 				//si se especifica una distancia, miramos cuál es
 				if(tipoDistancia.equals("M"))
@@ -76,7 +77,7 @@ public class MDP6 {
 					else
 					{
 						//No se sabe qué distancia ha especificado el usuario, salimos
-						System.err.println("La especificación de la distancia es in correcta");
+						System.err.println("La especificación de la distancia es incorrecta");
 						help();
 						System.exit(1);
 					}

@@ -249,4 +249,14 @@ public abstract class KMeans {
 		return clusters.calcularErrorCuadraticoMedio();
 	}
 
+
+	/**
+	 * Devuelve el Error Cuadrático resultante tras la ejecución del algoritmo
+	 * @return
+	 * EC
+	 */
+	public double getEC() {
+		return this.clusters.calcularErrorCuadratico();
+	}
+
 }

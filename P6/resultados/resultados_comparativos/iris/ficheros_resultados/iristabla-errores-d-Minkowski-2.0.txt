@@ -1,0 +1,6 @@
+Error Cuadrático 	 Inic_aleatoria 	 Pertenencia_aleatoria 	 Cent_aleatorios 	 División_espacio
+K = 2	152.369	152.369	152.369	152.369
+K = 3	92.647	96.026	91.888	145.279
+K = 5	52.882	58.886	60.564	680.824
+K = 7	41.422	51.064	51.155	680.824
+K = 9	33.432	46.544	45.872	680.824

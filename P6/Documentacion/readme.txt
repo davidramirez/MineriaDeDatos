@@ -91,7 +91,7 @@ Postcondiciones:
 		
 	Ejecución:
 	
-		java -jar MDP6_var_res.jar Fichero_Instancias
+		Comando: java -jar MDP6_var_res.jar Fichero_Instancias
 		
 		Argumentos:
 	
@@ -101,8 +101,8 @@ Postcondiciones:
 	Precondiciones:
 
 		Disponer para su ejecución de la máquina virtual JAVA v7.
-	El fichero proporcionado tiene extensión y formato CSV y únicamente contiene instancias cuyos atributos son valores numéricos. No se permiten valores desconocidos para los atributos.
-	Además, se encuentra bien estructurado, puede contener comentarios (identificados por %, comentario hasta final de línea) y lineas vacías o con espacios en blanco en cualquier sitio del fichero. Es obligatorio que contenga una línea con los nombres de los atributos de las instancias (separados por comas) tras la cual se escecificarán los valores de una instancia por línea
+		El fichero proporcionado tiene extensión y formato CSV y únicamente contiene instancias cuyos atributos son valores numéricos. No se permiten valores desconocidos para los atributos.
+		Además, se encuentra bien estructurado, puede contener comentarios (identificados por %, comentario hasta final de línea) y lineas vacías o con espacios en blanco en cualquier sitio del fichero. Es obligatorio que contenga una línea con los nombres de los atributos de las instancias (separados por comas) tras la cual se escecificarán los valores de una instancia por línea
 			
 	Postconndiciones:
 	
@@ -110,3 +110,38 @@ Postcondiciones:
 		En cada fichero se guarda un tabla con las iteraciones realizadas (10000 por defecto) y los 4 tipos de inicialización del algoritmo. Para cada una de estas combinaciones se almacena el error cuadrático medio resultado de la ejecución del algoritmo.
 		
 		Además, todos los mensajes de cada ejecución se muestran por consola.
+
+****************************************MDP6_tab_errores.jar***************************************************
+
+	Objetivo:
+		Obtener una tabla en la que aparezca para una distancia contreta, variaciones de K y de la inicialización usada. Para cada configuración de K, inicialización y distancia se calculará el Error Cuadrático. Como hay inicializaciones que pueden variar sus resultados por el uso de aleatorios, cada una de estas combinaciones se ejecuta 100 veces y se obtiene la media de esos 100 Errores Cuadráticos, medida más estable que la de una sola ejecución del algoritmo.
+		
+		Esta tabla será comparable a la medida del error ofrecida por Weka solo en el caso de la distancia Euclídea.
+	
+	Ejecución:
+	
+		Comando: java -jar MDP6_tab_errores.jar Fichero_Instancias [-d (M m|C)]
+		
+	Argumentos:
+	
+		Fichero_Instancias
+			Fichero que contiene el conjunto de datos a utlilizar. En formato csv
+			
+		[-d (M m|C)]
+			Establece la métrica a utilizar en el desarrollo del algoritmo. Si no se especifica se usa por defecto la Euclidea
+				
+				Posibilidades:
+					M m	- Distancia Minkowski con la especificación del parámetro m
+					C	- Distancia Chebyshev
+		
+	Precondiciones:
+		
+		Disponer para su ejecución de la máquina virtual JAVA v7.
+		El fichero proporcionado tiene extensión y formato CSV y únicamente contiene instancias cuyos atributos son valores numéricos. No se permiten valores desconocidos para los atributos.
+		Además, se encuentra bien estructurado, puede contener comentarios (identificados por %, comentario hasta final de línea) y lineas vacías o con espacios en blanco en cualquier sitio del fichero. Es obligatorio que contenga una línea con los nombres de los atributos de las instancias (separados por comas) tras la cual se escecificarán los valores de una instancia por línea
+		
+	Postcondiciones:
+	
+		Se genera un fichero delmismo nombre que el fichero fuente con el sufijo "tabla-errores-distanciaUsada.txt"	
+		El fichero contiene una tabla en la que por cada combinación de k (2,3,5,7 y 9), cada una de las 4 inicializaciones disponibles y la distancia especificada, se calcula la media por cada combinación del algoritmo de 100 Errores Cuadráticos extraídos de una misma combinación de parámetros.
+		

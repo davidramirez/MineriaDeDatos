@@ -120,10 +120,17 @@ public class MDP6_var_res {
 				ficheros[i].close();
 			}
 		}
+		else
+		{
+			help();
+		}
 	}
 
 	private static void help() {
-		// TODO Auto-generated method stub
+		System.out.println("Comando: java -jar MDP6_var_res.jar Fichero_Instancias"
+				+ "\n\nArgumentos:"
+				+ "\n\nFichero_Instancias"
+				+ "\n\tFichero que contiene el conjunto de datos a utlilizar. En formato csv");
 		
 	}
 	
