@@ -239,5 +239,14 @@ public abstract class KMeans {
 	 */
 	public abstract String paramToString();
 	
+	/**
+	 * Devuelve el Error Cuadrático Medio resultante tras la ejecución del algoritmo
+	 * @return
+	 * ECM
+	 */
+	public double getECM()
+	{
+		return clusters.calcularErrorCuadraticoMedio();
+	}
 
 }

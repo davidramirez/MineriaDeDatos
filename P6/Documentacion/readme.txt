@@ -51,6 +51,7 @@ Ejecución:
 
 Precondiciones:
 
+	Disponer para su ejecución de la máquina virtual JAVA v7.
 	El fichero proporcionado tiene extensión y formato CSV y únicamente contiene instancias cuyos atributos son valores numéricos. No se permiten valores desconocidos para los atributos.
 	Además, se encuentra bien estructurado, puede contener comentarios (identificados por %, comentario hasta final de línea) y lineas vacías o con espacios en blanco en cualquier sitio del fichero. Es obligatorio que contenga una línea con los nombres de los atributos de las instancias (separados por comas) tras la cual se escecificarán los valores de una instancia por línea
 
@@ -68,3 +69,44 @@ Postcondiciones:
 	
 	Todo resultado correspondiente a un número real se muestra redondeado a 3 decimales. En el caso de la convergencia, el redondeo es de 5 decimales.
 	Los valores en el fichero etiquetado son los exactos recogidos en la carga de las instancias
+	
+	
+	
+***************************************MDP6_param_variator.sh****************************************************
+
+	Objetivo:
+		Script en BASH que hace variar los 4 tipos de inicializacion y 4 tipos de distancias para obtener los ficheros resultado
+	
+	Precondiciones:
+		Utilizar un sistema con el intérprete BASH
+		situar el ejecutable "MDP6.jar" y el fichero "iris.csv" en la misma carpeta que el fichero script.
+	
+	Postcondiciones:
+		Se ejecuta 16 veces el software desarrollado con diferentes parámetros, obteniéndose como resultado el par de ficheros generados por cada ejecución.
+		
+***************************************MDP6_var_res.jar*******************************************************
+
+	Objetivo:
+		Ejecutar muchas veces el algoritmo Kmeans, variando el tipo de inicialización del algoritmo usando la distancia euclidea
+		
+	Ejecución:
+	
+		java -jar MDP6_var_res.jar Fichero_Instancias
+		
+		Argumentos:
+	
+		Fichero_Instancias
+			Fichero que contiene el conjunto de datos a utlilizar. En formato csv
+	
+	Precondiciones:
+
+		Disponer para su ejecución de la máquina virtual JAVA v7.
+	El fichero proporcionado tiene extensión y formato CSV y únicamente contiene instancias cuyos atributos son valores numéricos. No se permiten valores desconocidos para los atributos.
+	Además, se encuentra bien estructurado, puede contener comentarios (identificados por %, comentario hasta final de línea) y lineas vacías o con espacios en blanco en cualquier sitio del fichero. Es obligatorio que contenga una línea con los nombres de los atributos de las instancias (separados por comas) tras la cual se escecificarán los valores de una instancia por línea
+			
+	Postconndiciones:
+	
+		Se generan 2 ficheros, cada uno contiene los resultados para una "K" concreta. Las establecidas por defecto son 3 y 8
+		En cada fichero se guarda un tabla con las iteraciones realizadas (10000 por defecto) y los 4 tipos de inicialización del algoritmo. Para cada una de estas combinaciones se almacena el error cuadrático medio resultado de la ejecución del algoritmo.
+		
+		Además, todos los mensajes de cada ejecución se muestran por consola.
