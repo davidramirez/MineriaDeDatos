@@ -194,79 +194,83 @@ En la figura \ref{fig:clases} se muestra el diagrama de clases final de la aplic
 
 	\section{Banco de pruebas para la validación de software y resultados}
 	
-	\section{Resultados}
+	Para la validación de nuestro software, MDP6, utilizaremos el software Weka usado en la asignatura. Ambos softwares, el propio y Weka, difieren en capacidad y soporte de funciones. Para la realización de pruebas, describimos las capacidades de cada uno de ellos:
 	
-	\begin{figure}[!h]
-		\centering
-		\begin{tabular}{|c|c|c|c|c|c|}
-		\hline
-		K	&	Aleatoria	&	Pert aleatoria	&	Cent aleatoria	&	Particionada	&	Weka \\
-		\hline
-		2	&	559.6037	&	555.6380	&	417.3507	&	555.6380 & 3732.1410\\
-		\hline
-		3	&	726.4665	&	799.9119	&	732.8291	&	759.2235 & 3177.5020\\
-		\hline
-		4	&	1011.9005	&	975.9922	&	1047.5332	&	730.4880 & 3424.5702\\
-		\hline
-		5	&	982.6874	&	1220.2895	&	917.7001	&	911.4739 & 2868.2795\\
-		\hline
-		\end{tabular}
-		
-		\caption{Resultados para el fichero de pruebas \textit{colon.csv}, \textit{Weka} con valores por defecto salvo \textit{K}}
-		\label{res_colon}
-	\end{figure}
 	
-	\begin{figure}[!h]
-		\centering
-		\begin{tabular}{|c|c|c|c|c|c|}
-			\hline
-		K	&	Aleatoria	&	Pert aleatoria	&	Cent aleatoria	&	Particionada & Weka\\
-		\hline
-		2	&	4.5291	&	4.5291	&	4.5291	&	4.5291 & 5.0693\\
-		\hline
-		3	&	5.6385	&	6.9322	&	6.6599	&	5.6385 & 4.0771\\
-		\hline
-		4	&	7.1510	&	4.1677	&	4.1480	&	4.1677 & 3.2290\\
-		\hline
-		5	&	4.7109	&	7.3777	&	4.2406	&	4.8980 & 2.77504\\
-		\hline
-		\end{tabular}
+	\begin{center}
+		\textbf{MDP6}
+	\end{center}
+	
+	\begin{itemize}
+		\item	\textbf{Inicializaciones}. Disponemos de 4 tipos de inicializaciones diferentes:
+			\begin{itemize}
+			\item	\textbf{Inicialización aleatoria}. Elige al azar k instancias del conjunto de datos para actuar de centroides
+			\item	\textbf{Inicialización por petenencia aleatoria}. Por cada instancia, la incluye al azar en uno de los k clusters. Posteriormente se calculan los centroides.
+			\item	\textbf{Inicialización por generación aleatoria de centroides}. Se recogen los rangos en que varían los atributos de todas las instancias. Posteriromente se crean k centroides con valores al azar incluidos en los diferentes intervalos identificados.
+			\item	\textbf{Inicialización por división de espacio}. Se divide el espacio muestral de acuerdo al número de clusters a crear y se identifican los centroides.
+			\end{itemize}
+			
+		\item	\textbf{Distancias}. Se han implementado dos tipos de métricas capaces de trabajar con el algoritmo
+			\begin{itemize}
+			\item	\textbf{Distancia Minkowski}. Implementada para cualquier valor del parámetro \textit{m} (siempre que sea un real positivo mayor o igual de 1).
+			\item	\textbf{Distancia Chebyshev}.
+			\end{itemize}
+			
+		\item	\textbf{Criterio de parada}. Se ofrece la posibilidad de establecer un límite de iteraciones para la ejecución del algoritmo o bien el uso de un valor a satisfacer para la divergencia entre conjuntos de centroides de dos iteraciones diferentes. También se pueden combinar ambos valores de forma que el primero en satisfacerse determine el fin del algoritmo.
 		
-		\caption{Resultados para el fichero de pruebas \textit{food.csv}, \textit{Weka} con valores por defecto salvo \textit{K}}
-		\label{res_food}
-	\end{figure}
+		\item	\textbf{Tipos de atributos}. Únicamente se permiten valores numéricos y conocidos para los atributos de las instancias. Todo fichero que vaya a ser cargado debe satisfacer esta condición. No se ofrece funcionalidad como la normalización de atributos.
+		
+		\item	\textbf{Medidas de calidad}. Como medida del error tras el proceso de clustering se ofrece tanto el \textbf{Error Cuadrático} como el \textbf{Error Cuadrático Medio}.
+		
+		\item	\textbf{Clasificación de instancias}. Se puede generar un archivo conteniendo las instancias cargadas (en el mismo orden al de entrada) en formato CSV. En este fichero de salida, a cada instancia se le ha añadido un atributo que indica el custer al que finalmente fue asociada tras la ejecución del algoritmo.
+		
+		\item	\textbf{Repetición de pruebas}. Como se explicará posteriormente, las pruebas realizadas con tipos de inicializaciones que utilicen generación de valores aleatorios no pueden ser repetidas ya que los valores variarán en cada ejecución.
+	\end{itemize}
+	
+	\begin{center}
+		\textbf{Weka}
+	\end{center}
+	
+	\begin{itemize}
+		\item	\textbf{Inicializaciones}. No ofrece más que un tipo de inicialización.
+		
+		\item	\textbf{Distancias}. Las distancias disponibles para el agoritmo son Minkowski 1 y Minkowski 2 (Euclídea y Manhattan respectivamente). Además, cada una de estas dos distancias permite normalizarlas.
+		
+		\item	\textbf{Criterio de parada}. Permite establecer el número máximo de iteraciones que realizará el algoritmo.
+		\item	\textbf{Tipos de atributos}. Soporta nominales, numéricos, binarios, unarios, con valores desconocidos o nominales vacíos.
+		\item	\textbf{Medidas de calidad}. En el caso de la distancia \textbf{Euclídea}, se ofrece el \textbf{Error Cuadrático} como medida de error. En el caso de la distancia \textbf{Manhathan}, la medida ofrecida es la \textbf{suma de las distancias dentro del cluster}.
+		\item	\textbf{Clasificación de instancias}. Tras ejecutar el algoritmo, se puede visualizar el resultado de la agrupación de las instancias y guardarlas en formato \textbf{ARFF} con un atributo más correspondiente al cluster con que la instancia ha sido asociada.
+		
+		\item	\textbf{Repetición de pruebas}. Weka permite que para una misma semilla (parámetro configurable) los valores generados carezcan de variación, de forma que se puede repetir el mismo experimento una y otra vez para una misma semilla.
+	\end{itemize}
+	
+	Los ficheros utilizados como fuente de instancias han sido \textbf{previamente procesados} con \textit{Weka} para adaptarlos a nuestro software. Se ha procedido a \textbf{eliminar el atributo clase} en aquellos ficheros que la tuvieran y se han guardao las instancias en \textbf{formato CVS}.
+	
+	Así mismo, en algunos casos ha sido necesario utilizar además un \textbf{procesador de texto} para poder obtener los resultados deseados. También se ha usado el software \textbf{R} para obtener ciertos resultados estadísticos y realizar comparaciones de valores. Para automatizar el proceso de obtención de datos, se han desarrollado programas \textbf{JAVA} extra y se ha utilizado un script del interprete \textbf{BASH}.
+	
+	\subsection{Pruebas realizadas}
+	
+	Se han realizado tres tipos diferentes de pruebas para comprobar la validez y rendimiento del software desarrollado. En cada una de estas pruebas los indicadores de referencia utilizados han sido:
+	
+		\begin{itemize}
+			\item	\textbf{Medidas de error}. Comparación directa del error generado en el proceso de clustering. Prueba desarrollada en el apartado \ref{rescomparativos}, se utiliza el \textbf{Error Cuadrático} para realizar comparar directamente el software con Weka.
+			
+			\item	\textbf{Medidas de precisión}. Comparación de la \textbf{precisión} capaz de alcanzar nuestro software con la que Weka es capaz de alcanzar. El proceso se desarrolla y explica en el apartado \ref{resprecision}.
+			
+			\item	\textbf{Medidas estadísticas}. Uso de medidas como máximo, mínimo, media y varianza de un conjunto de datos para determinar la variabilidad de las repeticiones sucesivas de un determinado experimento con nuestro software. Proceso desarrollado en el apartado \ref{resestadisticos}.
+		\end{itemize}
+	
+	\section{Resultados comparativos}
+	\label{rescomparativos}
+	
 	
 	\FloatBarrier
 	\section{Clasificación supervisada respecto de otro software de referencia}
-	\section{Clasigicación supervisada, Iris}
-		Para el fichero Iris, sabiendo de antemano que se quieren clasificar tres variedades de esta planta, el algoritmo utilizando la inicialización que escoge como centroides tres instancias aleatorias del espacio muestral consige un acierto de un 88.66\% basándonos en un único experimento.
-		
-		Los datos para la validación de este resultado se encuentran en la carpeta de resultados proporcianada.
+	\label{resprecision}
 		
 	\section{Variabilidad de los resultados}
-	
-	El uso de generadores de valor aleatorios sin utilizar ningún tipo de mapeo, a diferencia de Weka, hace que la calidad de \textbf{la solución varíe} en exceso de una ejecución a otra. El uso de aleatorios se da en los casos de inicialización aleatoria, pertenencia aleatoria y generación aleatoria de codewords. Este problema no se da en el último tipo de inicialización, división de espacio, ya que ésta generará los mismos k centroides para un mismo conjunto de datos.
-	
-	Para probar la variabilidad, se ha utilizado el fichero de pruebas food.csv con la inicialización aleatoria y la distancia euclídea generando 4 clusters. Se ha repetido esta misma operación 10000 veces y se han obtenido los resultados siguientes:
-	
-	\begin{verbatim}
-	     Min.:      4.148 
-	     1st Qu.:   6.014 
-	     Mediana:   6.335 
-	     Media:     6.181 
-	     3rd Qu.:   7.145 
-	     Max.:      7.843
-	     Varianza:  1.073
-	\end{verbatim}
-	
-	Los valores del error en las 10000 repeticiones varían en el intervalo [4.148, 7.843], siendo la media 6.181. En la figura \ref{fig:error} se muestran de forma gráfica los resultados mediante un histograma con la densidad de los diferentes valores. A pesar de el uso  de aleatorios, la varianza en las 10000 pruebas extraídas no es excesivamente grande.
-	
-	\begin{figure}[!h]
-		\centering
-		\includegraphics[width=\textwidth]{./Figuras/Densidad.png}
-		\caption{Histograma y frecuencia de los errores obtenidos}
-		\label{fig:error}
-	\end{figure}
+	\label{resestadisticos}
+
 	
 	\section{Análisis crítico y discusión de resultados}
 	

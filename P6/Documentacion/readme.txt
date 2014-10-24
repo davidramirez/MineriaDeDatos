@@ -35,7 +35,7 @@ Ejecución:
 					aleatoria		- Elige al azar k instancias del conjunto de datos para actuar de centroides
 					pert_aleatoria	- Por cada instancia, la incluye al azar en uno de los k clusters. Posteriormente se calculan los centroides
 					cent_aleat		- Se recogen los rangos en que varían los atributos de todas las instancias. Posteriromente se crean k centrroides con valores al azar incluidos en los diferentes intervalos identificados
-					particionada	- Se divide el espacio muestrald de acuerdo al número de clusters a crear y se identifican los centroides
+					particionada	- Se divide el espacio muestral de acuerdo al número de clusters a crear y se identifican los centroides
 		
 		[-e num]
 			Establece el número de iteraciones del algoritmo.
