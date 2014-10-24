@@ -61,11 +61,10 @@ Postcondiciones:
 	
 	Además, se generan dos ficheros resultado:
 		- nomficherooriginal-inf.txt		Contiene la información de los clusters por cada iteración con el resultado de la iteración final.
-		- nomficherooriginal-etiquetado.csv	Contiene las instancias en formato CSV en el mismo orden que fueron cargadas. A cada instancia se le añade un valor correspondiente con el cluster al que finalmente ha sido asociada. Además, se indica en la cabecera el comando con los parámetros utilizados para llamar al programa
+		- nomficherooriginal-etiquetado.csv	Contiene las instancias en formato CSV en el mismo orden que fueron cargadas. A cada instancia se le añade un valor correspondiente con el índice del cluster al que finalmente ha sido asociada. Además, se indica en la cabecera el comando con los parámetros utilizados para llamar al programa
 	
 	Los resultados para unos mismos parámetros y datos son muy variantes debido a la inicialización aleatoria efectuada en la mayor parte de los casos.
 	Solo en el caso de la inicialización "particionada" se pueden obtener los mismos resultados en varias ejecuciones con los mismos parámetros y datos, ya que los centroides generados son siempre los mismos.
 	
 	Todo resultado correspondiente a un número real se muestra redondeado a 3 decimales. En el caso de la convergencia, el redondeo es de 5 decimales.
 	Los valores en el fichero etiquetado son los exactos recogidos en la carga de las instancias
-Ejemplos:

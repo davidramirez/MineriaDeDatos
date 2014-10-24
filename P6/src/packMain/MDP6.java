@@ -193,9 +193,9 @@ public class MDP6 {
 			}
 			
 			/***************************Preparar ficheros de salida******************/
-			
-			PrintStream salidaInf = GuardadorFichero.getGuardadorFichero().crearFichero(ruta, "-inf.txt");
-			PrintStream salidaEstimacion = GuardadorFichero.getGuardadorFichero().crearFichero(ruta, "-etiquetado.csv");
+			String parametrosResumidos = algoritmo.paramToString();
+			PrintStream salidaInf = GuardadorFichero.getGuardadorFichero().crearFichero(ruta, parametrosResumidos+"-inf.txt");
+			PrintStream salidaEstimacion = GuardadorFichero.getGuardadorFichero().crearFichero(ruta, parametrosResumidos+"-etiquetado.csv");
 			
 			
 			/***************************Bloque ejecución******************************/

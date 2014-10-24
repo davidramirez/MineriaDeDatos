@@ -66,6 +66,11 @@ public class DistanciaMinkowski extends Distancia {
 		this.exponente = exponente;
 	}
 
+	@Override
+	public String paramToString() {
+		return ("-d-Minkowski-"+this.exponente);
+	}
+
 
 	
 

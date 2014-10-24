@@ -60,4 +60,10 @@ public class InicializacionAleatoriaVariante extends KMeans{
 		this.calcularPertenencias();
 	}
 
+	
+	@Override
+	public String paramToString() {
+		return "-i-cent_aleat-k-"+this.k+this.distancia.paramToString();
+	}
+
 }

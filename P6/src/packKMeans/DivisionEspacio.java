@@ -50,4 +50,9 @@ public class DivisionEspacio extends KMeans {
 		
 	}
 
+	@Override
+	public String paramToString() {
+		return "-i-particionada-k-"+this.k+this.distancia.paramToString();
+	}
+
 }

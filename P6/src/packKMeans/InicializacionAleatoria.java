@@ -1,6 +1,7 @@
 package packKMeans;
 
 import java.util.HashSet;
+
 import packDistancias.Distancia;
 import packInstancias.ListaInstancias;
 
@@ -45,6 +46,10 @@ public class InicializacionAleatoria extends KMeans {
 		
 	}
 	
+	@Override
+	public String paramToString() {
+		return "-i-aleatoria-k-"+this.k+this.distancia.paramToString();
+	}
 
 
 	

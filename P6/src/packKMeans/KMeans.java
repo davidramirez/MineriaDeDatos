@@ -233,6 +233,11 @@ public abstract class KMeans {
 		return instancias;
 	}
 	
+	/**
+	 * Devuelve un string que indica la configuración de parámetros del algoritmo
+	 * @return
+	 */
+	public abstract String paramToString();
 	
 
 }

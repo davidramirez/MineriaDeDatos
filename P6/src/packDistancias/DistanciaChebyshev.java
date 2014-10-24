@@ -43,4 +43,9 @@ public class DistanciaChebyshev extends Distancia {
 	{
 		return pInstancia1.mismaDimension(pInstancia2);
 	}
+
+	@Override
+	public String paramToString() {
+		return "-d-Chebyshev";
+	}
 }

@@ -46,4 +46,10 @@ public class PertenenciaAleatoria extends KMeans {
 		
 	}
 
+	
+	@Override
+	public String paramToString() {
+		return "-i-pert_aleat-k-"+this.k+this.distancia.paramToString();
+	}
+
 }

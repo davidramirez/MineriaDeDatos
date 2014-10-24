@@ -19,4 +19,10 @@ public abstract class Distancia {
 	 */
 	public abstract double distancia(Instancia pInstancia1,Instancia pInstancia2) throws Exception;
 	
+	
+	/**
+	 * Devuelve un string que contiene la configuración de parámetros de la distancia
+	 * @return
+	 */
+	public abstract String paramToString();
 }

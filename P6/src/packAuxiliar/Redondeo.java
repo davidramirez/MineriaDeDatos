@@ -3,6 +3,8 @@ package packAuxiliar;
 /**
  * Clase que contiene funciones auxiliares de redondeo extraidas de
  * http://www.ahristov.com/tutoriales/Trucos%2Bcortos%2Bde%2BJava/Redondear%2Bun%2Bn%FAmero%2Ba%2BN%2Bdecimales.html
+ * 
+ * Otra opción sería utilizar la clase BigDecimal
  *
  */
 public class Redondeo {

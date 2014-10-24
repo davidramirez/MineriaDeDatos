@@ -153,6 +153,7 @@ public class ListaCluster {
 		ps.println();
 		//ps.println("Error total: "+this.calcularErrorTotal());
 		ps.println("Error cuadrático medio: "+Redondeo.getRedondeo().redondear(this.calcularErrorCuadraticoMedio()));
+		ps.println("Error cuadrático: "+Redondeo.getRedondeo().redondear(this.calcularErrorCuadratico()));
 	}
 
 	/**
@@ -198,6 +199,27 @@ public class ListaCluster {
 			error = error + clusterActual.getErrorCuadratico();
 		}
 		return (error/instancias);
+	}
+	
+	/**
+	 * Calcula el error cuadrático resultado del clustering realizado. Esta medida
+	 *  es comparable a la del Software Weka
+	 * @return
+	 * error cuadrático medio
+	 */
+	public Double calcularErrorCuadratico() {
+		
+		Iterator<Cluster> it = this.getIterator();
+		Cluster clusterActual;
+		double error = 0.0;
+		
+		while(it.hasNext())
+		{
+			clusterActual = it.next();
+			
+			error = error + clusterActual.getErrorCuadratico();
+		}
+		return error;
 	}
 
 	/**
