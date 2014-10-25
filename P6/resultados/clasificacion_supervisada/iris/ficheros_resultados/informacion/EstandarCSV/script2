@@ -1,0 +1,6 @@
+for file in *.csv;
+do
+	echo "Procesando $file";
+	Rscript /home/andoni/git/MineriaDeDatos/P6/resultados/AnalizadorResultados.R $file ../../../fichero_original/iris.csv > ../Estadísticas/$file.txt;
+	
+done;

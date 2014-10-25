@@ -1,0 +1,12 @@
+     clase     
+ Min.   :2.00  
+ 1st Qu.:2.00  
+ Median :3.00  
+ Mean   :2.66  
+ 3rd Qu.:3.00  
+ Max.   :3.00  
+   clase        
+ Mode :logical  
+ FALSE:99       
+ TRUE :51       
+ NA's :0        

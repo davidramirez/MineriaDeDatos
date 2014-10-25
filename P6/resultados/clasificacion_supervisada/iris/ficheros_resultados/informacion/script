@@ -1,0 +1,8 @@
+i=0;
+for f in *.csv; 
+	do 
+	let i=$i+1;
+	echo "Processing $f file..";
+	cat $f | sed '/^$/d;s/[[:blank:]]//g' > ./EstandarCSV/$f;
+
+done
