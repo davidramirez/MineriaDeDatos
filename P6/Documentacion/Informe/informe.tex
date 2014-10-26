@@ -291,6 +291,9 @@ En la figura \ref{fig:clases} se muestra el diagrama de clases final de la aplic
 	
 	Los ficheros resultado de este experimento se encuentran en \textit{/resultados/clasificación\_supervisada}, siguiendo la misma estructuración que los del apartado anterior.
 	
+	En este caso los resultados son bastante similares los unos a otros, la mayoría de casos fallan 17 instancias de clasificación, un 8.6\%. La única ejecución que obtiene una mayor tasa de aciertos es la realizada mediante centroides aleatorios para tres clusteres y sobre distancia euclídea que resulta en solo 16 fallos. Por lo demás, existe también un gran grupo de resultados que aciertan 100 instancias nada más, cuestión que puede deberse a la limitación de iteraciones o a un mal resultado en la selección aleatoria de centroides inicales que resultan en una convergencia no deseable.
+	
+	
 	\FloatBarrier
 		
 	\section{Variabilidad de los resultados}
@@ -299,11 +302,11 @@ En la figura \ref{fig:clases} se muestra el diagrama de clases final de la aplic
 	
 	Las pruebas se han realizado con el uso de la distancia Euclídea, variando el parámetro K en el conjunto \{3, 5, 8\} y la inicialización entre las 4 posibilidades disponibles.
 	
-	Para cada una de las combinaciones de parámetros tratadas,  se ha ejecutado 1000 veces, obteniéndose en cada una el valor del error cuadrático medio.
+	Para cada una de las combinaciones de parámetros tratadas,  se ha ejecutado 10000 veces, obteniéndose en cada una el valor del error cuadrático medio.
 	
 	El proceso se ha automatizado y ejecutado mediante el ejecutable \textit{MDP6\_var\_res.jar}, desarrollado especialmente para la tarea.
 	
-	Posteriormente, los 1000 valores de cada ejecución se han tratado con el software R para obtener  las medidas estadísticas deseadas.
+	Posteriormente, los 10000 valores de cada ejecución se han tratado con el software R para obtener  las medidas estadísticas deseadas.
 	
 	Los ficheros resultado de este experimento se encuentran en \textit{/resultados/variabilidad\_resultados}, siguiendo la misma estructuración que los del apartado \ref{rescomparativos}. A continuación se muestran los resultados obtenidos.
 	
@@ -317,9 +320,13 @@ En la figura \ref{fig:clases} se muestra el diagrama de clases final de la aplic
 	
 	Si comparamos los índices estadísticos, observamos que los algoritmos que mejor puntuan en base a su media son los de pertenencia y centroides aleatorios para aquellas pruebas realizadas sobre 3 y 5 clusters, sin embargo, la puntuación de la inicialización aleatoria es mejor para 8 clusters.
 	
-	La división del espacio otorga siempre el mismo resultado teniendo por tanto varianza cero. Este algoritmo no ha puntuado como último en ninguna de las pruebas (misma mediana k3)
+	La división del espacio otorga siempre el mismo resultado teniendo por tanto varianza cero. Este algoritmo no ha puntuado como último en ninguna de las pruebas por lo que podría ser un candidato a cota realista del desempeño posible. Por otra parte, en el caso de k=3 encontramos curioso el hecho de que todas las medianas sean iguales y coincida exáctamente con el resultado arrojado por la división del espacio. Esto se puede deber a que el algoritmo converga en un valor de 4093 para una gran cantidad de condiciones iniciales distintas siendo esta cifra ,por tanto , un atractor clásico.
 
+	El algoritmo que mayor varianza arroja en todos los experimentos ha sido el de inicalización aleatoria siendo la varianza de los otros dos algoritmos evaluables en función de este parámetro similar entre si. Pese a tener la tendencia a arrojar un mejor resultado con un número grande de clusters hay que tener en cuenta esta gran variabilidad de resultados para el algoritmo de inicialización aleatoria.
 	
+	También parece claro que un mayor número de clusters favorece una disminución de la varianza para el algoritmo de inicialización aleatoria. Esto tiene sentido si entendemos que a mayor número de clusters la distancia de las distintas instancias al centroide del cluster es menor en comparativa y dado que seleccionamos una instancia como centroide, es más probable que exista una convergencia rápida.
+	
+	Sin embargo, para los algoritmos de pertenencia aleatoria y centroides aleatorios parece que sucede al contrario esto puede deberse al hecho de que las pruebas se han realizado sobre un número limitado de iteraciones siendo estos dos algoritmos de convergencia más lenta.
 	\section{Análisis crítico y discusión de resultados}
 	
 	\section{Rendimiento del software}
@@ -352,7 +359,7 @@ En la figura \ref{fig:clases} se muestra el diagrama de clases final de la aplic
 	
 	Una restricción que podríamos eliminar está asociada al tipo de datos tratados, el algoritmo solo es capaz de lidiar con atributos de tipo numérico, siendo imposible realizar la carga de instancias que contengan valores no numéricos. De hecho, algunos de los ficheros han tenido que ser preprocesados para poder trabajar con ellos.
 	
-	También teníamos un problema con la representación de los resutados, ya que los valores reales se presentaban con todos los decimales que tuvieran. Esto fue solucionado en la semana extra, haciendo que al imprimir los vallores, se redondeasen previamente a 3 o 5 decimales.
+	También teníamos un problema con la representación de los resutados, ya que los valores reales se presentaban con todos los decimales que tuvieran. Esto fue solucionado en la semana extra, haciendo que al imprimir los valores, se redondeasen previamente a 3 o 5 decimales.
 
 %Bibliografía
 
