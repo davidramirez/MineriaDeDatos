@@ -420,8 +420,7 @@ En la figura \ref{fig:clases} se muestra el diagrama de clases final de la aplic
 	\begin{figure}
 		\centering
 		\includegraphics[width=0.7\linewidth]{Figuras/Franjas}
-		\caption[Franjas de convergencia]{}
-		\caption{}
+		\caption{Franjas de convergencia}
 		\label{fig:Franjas}
 	\end{figure}
 
@@ -436,45 +435,66 @@ En la figura \ref{fig:clases} se muestra el diagrama de clases final de la aplic
 	
 	Sin embargo, para los algoritmos de pertenencia aleatoria y centroides aleatorios parece que sucede al contrario esto puede deberse al hecho de que las pruebas se han realizado sobre un número limitado de iteraciones siendo estos dos algoritmos de convergencia más lenta.
 	\section{Análisis crítico y discusión de resultados}
-	Los resultados de la aplicación de este programa sobre los datos de prueba han sido variados y complejos en muchos casos.La gran variedad de parámetros de entrada establece una gran forma de realizar múltiples pruebas de precisión consiguiendo en muchos casos unos resultados que resultan óptimos siempre y cuando seamos capáces de adaptar los parámetros del programa a las necesidades del conjunto de instancias estudiadas.
+	Los resultados de la aplicación de este programa sobre los datos de prueba han sido variados y complejos en muchos casos. La gran variedad de parámetros de entrada establece una gran forma de realizar múltiples pruebas de precisión consiguiendo en muchos casos unos resultados que resultan óptimos siempre y cuando seamos capaces de adaptar los parámetros del programa a las necesidades del conjunto de instancias estudiadas.
 	
 	Los diferentes algoritmos de inicialización ofrecen distintas características a tener en cuenta. Para algunos algoritmos encontramos que funcionan mejor comparativamente para aquellas situaciones en las que menos clusters haya, tal es así en el caso de los centroides aleatorios y la pertenencia aleatoria. 
 	
 	Sin embargo, se da la circunstancia de que para una mayor cantidad de clusters el algoritmo de inicialización que parece adaptarse mejor es el clásico de inicialización aleatoria.
 	
-	Este no es el único parámetro a tener en cuenta ya que también conviene estudiar la varianza de las distintas inicializaciones para estudiar si lo que se busca es una solución precisa a la vez que estable. La cantidad de atributos influye también en la selección del método de inicialización ya que ciertos algoritmos tinen una mayor precisión comparativa cuando se aumenta el número de dimensiones\footnote{Hecho que aún no hemos estudiado en profundidad}.
+	Este no es el único parámetro a tener en cuenta ya que también conviene estudiar la varianza de las distintas inicializaciones para considerar si lo que se busca es una solución precisa a la vez que estable. La cantidad de atributos influye también en la selección del método de inicialización ya que ciertos algoritmos tienen una mayor precisión comparativa cuando se aumenta el número de dimensiones\footnote{Hecho que aún no hemos estudiado en profundidad}.
 	
 	Por otro lado, el software desarrollado comparado con el programa \textbf{Weka}, con el que trabajamos en clase, arroja resultados similares, en ciertas ocasiones mejores y en otras peores debido sobre todo a que con la variedad de posibilidades que implementa nuestro software somos capaces de adaptarnos mejor a las situaciones que plantean los distintos espacios en estudio.
 	
-	Por último, cabe señalar la cantidad de resultados reseñables que hemos sido capáces de alcanzar gracias al estudio en masa de los resultados proporcionados, estos resultados no siempre están reflejados en la práctica por ser resultados parciales e intermedios.
+	Por último, cabe señalar la cantidad de resultados reseñables que hemos sido capaces de alcanzar gracias al estudio en masa de los resultados proporcionados, estos resultados no siempre están reflejados en la práctica por ser resultados parciales e intermedios.
 	\section{Rendimiento del software}
-	El software desarrollado posee una complejidad computacional que difiere en función del algoritmo de inicializacison. El algoritmo de clustering que usamos, por si mismo, posee un orden computacional $kn$ siendo k el número de iteraciones que realiza el software y n el número de instancias en evaluación.
+	El software desarrollado posee una complejidad computacional que difiere en función del algoritmo de inicialización. El algoritmo de clustering que usamos, por si mismo, posee un orden computacional $kn$ siendo k el número de iteraciones que realiza el software y n el número de instancias en evaluación.
 	
 	Para las inicializaciones de centroide aleatorio, división del espacio e inicialización aleatoria, el software no necesita recorrer las instancias que se encuentran en evaluación, sin embargo, para el de pertenencia aleatoria es necesario acceder a todas estas instancias.
 	
 	Esta necesidad de acceso no varía el orden de magnitud aunque aplicado al algoritmo tenemos que el orden resultante es de $k(1+n)$ interpretando las variables de la misma forma que el enunciado anterior.
 	
 	Dicho esto, el algoritmo en cualquiera de sus vertientes y sobre los archivos de prueba que hemos usado, aún en el caso de realización sistemática de experimentos, no ha presentado ningún inconveniente temporal. Este rendimiento podría ser evaluado de nuevo sobre archivos con una mayor cantidad de información para conocer realmente en qué cotas es inviable su aplicación y debería ser reestructurado siguiendo criterios de rendimiento.
+
 \chapter{Conclusiones}
 
-	\section{Motivación para la realización de \textit{Clustering}}
-	
-	Explorar un conjunto de instancias con el objetivo de 
-	
-	\section{Conclusiones de los resultados}
-	
-	\section{Conclusiones generales}
-	
-	El tiempo invertido en el proyecto ha sido mucho mayor conforme se acercaba la fecha de entrega. Debemos mejorar en organización, especialmente al principio de la práctica, donde un diseño poco especificado con ciertas cosas \textit{"en el aire"} nos llevaron a diseñar al implementar.
-	
-	También el hecho de probar y perfeccionar el funcionamiento de \textbf{todo} el código antes de comenzar con la extracción de resultados experimentales nos limitó en el análisis de los mismos y en la retroalimentación del algoritmo implementado.
-	
-	Resumiendo, hay que mejorar la planificación, dividir el proyecto en partes para poder mejorarlo incrementalmente.
-	
-	Pese a los problemas, la solución implementada ofrece una variedad bastante amplia de parámetros posibles a utilizar, teniendo 4 tipos de inicialización, dos métricas diferentes - en el caso de la métrica Minkowski ofrece otro parámetro más que variar- y la posibilidad de controlar el número de iteraciones tanto por la especificación de un maximo de vueltas, como por la especificación del margen de variación que se debe alcanzar hasta dar por válidos los centroides identificados.
-	
-	La semana extra de trabajo nos ha servido para exponer resultados útiles que ayuden a determinar la calidad de nuestro software, resultados para los cuales se ha observado la gran utilidad que tiene la automatización de la obtención de las mismas para ser capaces de procesar un gran volumen de datos obteniendo los resumen concluyentes.
-	
+\section{Motivación para la realización de \textit{Clustering}}
+
+Explorar un conjunto de instancias con el objetivo de crear agrupaciones (clusters) donde todas tienen algo en común, alguna característica similar.
+
+Hay diferentes estrategias a considerar. Si, por ejemplo, queremos clasificar datos, digamos 1000 instancias, en tres clases diferentes sin tener que examinarlas una por una, podemos hacer clustering k-medias con k = 3, y obtendríamos directamente los tres grupos. Como contrapartida, puede que muchas instancias hayan quedado mal clasificadas en la clase que no le corresponde. Este es el enfoque que hemos llevado en el desarrollo de nuestro software.
+
+En este mismo ejemplo, otra opción es crear más clusters, digamos 10. Posteriormente, podríamos examinar una instancia de cada cluster (o dos o tres para tener más certeza) de forma  que a todas las instancias de ese cluster les asignamos la clase resultante de esa instancia. De esta forma se reducen los errores al etiquetar las 1000 instancias, pero en vez de examinarlas todas, únicamente se deben examinar 10, 20 o 30 de las 1000 instancias originales.
+
+\section{Conclusiones de los resultados}
+
+El software desarrollado es \textbf{válido}, cuanto menos, realiza el mismo trabajo que Weka, \textbf{mejorándolo} en algunos casos, si bien las instancias de trabajo están \textbf{limitadas} a aquellas definidas por atributos \textbf{numéricos}.
+
+A destacar el hecho de que, en el experimento de clasificación supervisada, las diferentes combinaciones de parámetros obtengan la misma tasa de aciertos. Si bien es un hecho que no sabemos explicar muy bien, también es cierto que en la prueba nos hemos limitado al fichero \textit{iris} sin probar otras opciones.
+
+\section{Conclusiones generales}
+
+El tiempo invertido en el proyecto ha sido mucho mayor conforme se acercaba la fecha de entrega original. Debemos mejorar en organización, especialmente al principio de la práctica, donde un diseño poco especificado con ciertas cosas \textit{"en el aire"} nos llevaron a diseñar al implementar.
+
+También el hecho de probar y perfeccionar el funcionamiento de \textbf{todo} el código antes de comenzar con la extracción de resultados experimentales nos limitó en el análisis de los mismos y en la retroalimentación del algoritmo implementado.
+
+Resumiendo, hay que mejorar la planificación, dividir el proyecto en partes para poder mejorarlo incrementalmente.
+
+Pese a los problemas, la solución implementada ofrece una variedad bastante amplia de parámetros posibles a utilizar, teniendo 4 tipos de inicialización, dos métricas diferentes - en el caso de la métrica Minkowski ofrece otro parámetro más que variar- y la posibilidad de controlar el número de iteraciones tanto por la especificación de un maximo de vueltas, como por la especificación del margen de variación que se debe alcanzar hasta dar por válidos los centroides identificados.
+
+La semana extra de trabajo nos ha servido para exponer resultados útiles que ayuden a determinar la calidad de nuestro software, resultados para los cuales se ha observado la gran utilidad que tiene la automatización de la obtención de las mismas para ser capaces de procesar un gran volumen de datos obteniendo los resumen concluyentes.
+
+\section{Propuestas de mejora}
+
+La entrada a nuestro programa es un factor un tanto restrictivo en el sentido de que el único tipo de fichero soportado es el \textbf{CSV}. Inicialmente, la intención era implementar también la carga de ficheros \textbf{ARFF}, que no ha sido posible hacerla por falta de planificación principalmente.
+
+En cuanto a inicializaciones, hemos implementado 4 tipos diferentes. De los tres, el correspondiente a la división de espacio es el que más puede mejorar, ya que para su implementación no hemos llegado a consultar bibliografía extra. El mapeo de aleatorios sería otra mejora que garantizaría estabilidad a tres de las inicializaciones.
+
+Una restricción que podríamos eliminar está asociada al tipo de datos tratados, el algoritmo solo es capaz de lidiar con atributos de tipo numérico, siendo imposible realizar la carga de instancias que contengan valores no numéricos. De hecho, algunos de los ficheros han tenido que ser preprocesados para poder trabajar con ellos.
+
+También teníamos un problema con la representación de los resutados, ya que los valores reales se presentaban con todos los decimales que tuvieran. Esto fue solucionado en la semana extra, haciendo que al imprimir los valores, se redondeasen previamente a 3 o 5 decimales.
+
+Por último, cabe mejorar el apartado de resultados del algoritmo utilizando métodos concretos de la evaluación de clusters. Por ejemplo, la implementación del índice silueta, que sería un indicador mejor que el error cuadrático y nos permitiría saber directamente lo bien o mal que nuestro algoritmo realiza el clustering.
+
 	\section{Propuestas de mejora}
 	
 	La entrada a nuestro programa es un factor un tanto restrictivo en el sentido de que el único tipo de fichero soportado es el \textbf{CSV}. Inicialmente, la intención era implementar también la carga de ficheros \textbf{ARFF}, que no ha sido posible hacerla por falta de planificación principalmente.
