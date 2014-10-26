@@ -274,6 +274,59 @@ En la figura \ref{fig:clases} se muestra el diagrama de clases final de la aplic
 	
 	Los ficheros correspondientes a este apartado están disponibles en la carpeta \textit{/resultados/resultados\_comparativos}. Se encuentran los ficheros originales, los ficheros operativos y los fichero resultado obtenidos. El resumen de los resultados se encuentra a continuación.
 	
+	\begin{table}[htbp]
+	\begin{center}
+	\begin{tabular}{|l|r|r|r|r|r|}
+	\hline
+	Error Cuadrático & Inic\_aleatoria & Pertenencia\_aleatoria & Cent\_aleatorios & División\_espacio & Weka \\ \hline
+	K = 2 & 17.022.812.094,779 & 16.662.529.293,188 & 16.662.595.771,055 & 16.662.529.293,188 & 16.662.529.293,188 \\ \hline
+	K = 3 & 15.367.892.995,782 & 15.308.965.075,088 & 15.276.313.379,049 & 15.068.933.772,772 & 15.347.180.933,720 \\ \hline
+	K = 5 & 13.194.207.465,418 & 13.100.202.144,746 & 13.055.014.852,916 & 14.786.712.947,628 & 13.128.804.126,107 \\ \hline
+	K = 7 & 11.748.015.592,402 & 11.590.997.272,742 & 11.685.296.452,310 & 13.886.614.328,470 & 12.208.057.266,416 \\ \hline
+	K = 9 & 10.626.841.728,292 & 10.711.671.635,239 & 10.678.692.422,634 & 13.537.274.017,576 & 11.151.380.874,620 \\ \hline
+	\end{tabular}
+	\end{center}
+	\caption{Error cuadrático para el fichero colon.arff. Distancia Euclídea}
+	\label{rescompcolon}
+	\end{table}
+	
+	
+	\begin{table}[htbp]
+	\begin{center}
+	\begin{tabular}{|l|r|r|r|r|r|}
+	\hline
+	Error Cuadrático & Inic\_aleatoria & Pertenencia\_aleatoria & Cent\_aleatorios & División\_espacio & Weka \\ \hline
+	K = 2 & 218.924,945 & 209.417,829 & 210.407,601 & 202.489,423 & 202.489,423 \\ \hline
+	K = 3 & 119.441,033 & 108.167,063 & 107.651,418 & 110.504,153 & 110.504,153 \\ \hline
+	K = 5 & 55.416,837 & 52.625,441 & 52.134,900 & 36.139,549 & 35.296,151 \\ \hline
+	K = 7 & 36.428,538 & 39.363,275 & 40.904,587 & 35.296,151 & 15.905,814 \\ \hline
+	K = 9 & 23.140,147 & 29.075,157 & 31.384,815 & 24.104,840 & 10.600,845 \\ \hline
+	\end{tabular}
+	\end{center}
+	\caption{Error cuadrático para el fichero food.arff. Distancia Euclídea}
+	\label{rescompfood}
+	\end{table}
+	
+	
+	\begin{table}[htbp]
+	\begin{center}
+	\begin{tabular}{|l|r|r|r|r|r|}
+	\hline
+	Error Cuadrático & Inic\_aleatoria & Pertenencia\_aleatoria & Cent\_aleatorios & División\_espacio & Weka \\ \hline
+	K = 2 & 152,369 & 152,369 & 152,369 & 152,369 & 152,369 \\ \hline
+	K = 3 & 92,647 & 96,026 & 91,888 & 145,279 & 78,941 \\ \hline
+	K = 5 & 52,882 & 58,886 & 60,564 & 680,824 & 53,007 \\ \hline
+	K = 7 & 41,422 & 51,064 & 51,155 & 680,824 & 38,926 \\ \hline
+	K = 9 & 33,432 & 46,544 & 45,872 & 680,824 & 28,474 \\ \hline
+	\end{tabular}
+	\end{center}
+	\caption{Error cuadrático para el fichero iris.arff. Distancia Euclídea}
+	\label{rescompiris}
+	\end{table}
+	
+
+	
+	
 	\FloatBarrier
 	\section{Clasificación supervisada respecto de otro software de referencia}
 	\label{resprecision}
