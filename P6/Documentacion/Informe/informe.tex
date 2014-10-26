@@ -436,7 +436,17 @@ En la figura \ref{fig:clases} se muestra el diagrama de clases final de la aplic
 	
 	Sin embargo, para los algoritmos de pertenencia aleatoria y centroides aleatorios parece que sucede al contrario esto puede deberse al hecho de que las pruebas se han realizado sobre un número limitado de iteraciones siendo estos dos algoritmos de convergencia más lenta.
 	\section{Análisis crítico y discusión de resultados}
+	Los resultados de la aplicación de este programa sobre los datos de prueba han sido variados y complejos en muchos casos.La gran variedad de parámetros de entrada establece una gran forma de realizar múltiples pruebas de precisión consiguiendo en muchos casos unos resultados que resultan óptimos siempre y cuando seamos capáces de adaptar los parámetros del programa a las necesidades del conjunto de instancias estudiadas.
 	
+	Los diferentes algoritmos de inicialización ofrecen distintas características a tener en cuenta. Para algunos algoritmos encontramos que funcionan mejor comparativamente para aquellas situaciones en las que menos clusters haya, tal es así en el caso de los centroides aleatorios y la pertenencia aleatoria. 
+	
+	Sin embargo, se da la circunstancia de que para una mayor cantidad de clusters el algoritmo de inicialización que parece adaptarse mejor es el clásico de inicialización aleatoria.
+	
+	Este no es el único parámetro a tener en cuenta ya que también conviene estudiar la varianza de las distintas inicializaciones para estudiar si lo que se busca es una solución precisa a la vez que estable. La cantidad de atributos influye también en la selección del método de inicialización ya que ciertos algoritmos tinen una mayor precisión comparativa cuando se aumenta el número de dimensiones\footnote{Hecho que aún no hemos estudiado en profundidad}.
+	
+	Por otro lado, el software desarrollado comparado con el programa \textbf{Weka}, con el que trabajamos en clase, arroja resultados similares, en ciertas ocasiones mejores y en otras peores debido sobre todo a que con la variedad de posibilidades que implementa nuestro software somos capaces de adaptarnos mejor a las situaciones que plantean los distintos espacios en estudio.
+	
+	Por último, cabe señalar la cantidad de resultados reseñables que hemos sido capáces de alcanzar gracias al estudio en masa de los resultados proporcionados, estos resultados no siempre están reflejados en la práctica por ser resultados parciales e intermedios.
 	\section{Rendimiento del software}
 
 \chapter{Conclusiones}
