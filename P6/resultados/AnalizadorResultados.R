@@ -5,15 +5,16 @@ compararCSV<-function(fileCSV,realCSV)
   
   clases<-read.csv(realCSV,header=FALSE);
   
+  names(archivo[5])<-c("clase");
   clase1<-median(archivo$clase[1:50]);
   clase2<-median(archivo$clase[50:100]);
   clase3<-median(archivo$clase[101:150]);
-  
+
   archivo$clase=chartr(archivo$clase,old=paste(clase1,clase2,clase3,sep=""),new="123");
   archivo$clase=as.numeric(archivo$clase);
   
-  print(summary(archivo[5]));
-  print(summary(archivo[5]-clases[5]==0));
+  print(summary(archivo$clase));
+  print(summary(archivo$clase-clases[5]==0));
 }
 
 args <- commandArgs(trailingOnly = TRUE);
