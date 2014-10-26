@@ -18,7 +18,7 @@
 \contentsline {subsection}{\numberline {4.1.1}Pruebas realizadas}{8}{subsection.4.1.1}
 \contentsline {section}{\numberline {4.2}Resultados comparativos}{9}{section.4.2}
 \contentsline {section}{\numberline {4.3}Clasificaci\IeC {\'o}n supervisada respecto de otro software de referencia}{10}{section.4.3}
-\contentsline {section}{\numberline {4.4}Variabilidad de los resultados}{11}{section.4.4}
+\contentsline {section}{\numberline {4.4}Variabilidad de los resultados}{10}{section.4.4}
 \contentsline {section}{\numberline {4.5}An\IeC {\'a}lisis cr\IeC {\'\i }tico y discusi\IeC {\'o}n de resultados}{12}{section.4.5}
 \contentsline {section}{\numberline {4.6}Rendimiento del software}{12}{section.4.6}
 \contentsline {chapter}{\numberline {5}Conclusiones}{13}{chapter.5}

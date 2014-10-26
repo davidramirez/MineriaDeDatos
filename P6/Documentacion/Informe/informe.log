@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2014.2.3)  26 OCT 2014 16:50
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2014.2.3)  26 OCT 2014 17:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -576,44 +576,52 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 )
 (/usr/share/texmf-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen127
+)
+(/usr/share/texmf-dist/tex/latex/rotating/rotating.sty
+Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
+\c@r@tfl@t=\count115
+\rotFPtop=\skip63
+\rotFPbot=\skip64
+\rot@float@box=\box33
+\rot@mess@toks=\toks24
 ) (./informe.aux
 LaTeX Info: Redefining \. on input line 21.
 LaTeX Info: Redefining \% on input line 21.
 )
 \openout1 = `informe.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 43.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 44.
 
 (/usr/share/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (/usr/share/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count115
+\scratchcounter=\count116
 \scratchdimen=\dimen128
-\scratchbox=\box33
-\nofMPsegments=\count116
-\nofMParguments=\count117
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count118
+\scratchbox=\box34
+\nofMPsegments=\count117
+\nofMParguments=\count118
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count119
 \MPscratchDim=\dimen129
-\MPnumerator=\count119
-\makeMPintoPDFobject=\count120
-\everyMPtoPDFconversion=\toks25
+\MPnumerator=\count120
+\makeMPintoPDFobject=\count121
+\everyMPtoPDFconversion=\toks26
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -663,61 +671,61 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box34
-Package hyperref Info: Link coloring ON on input line 43.
+\AtBeginShipoutBox=\box35
+Package hyperref Info: Link coloring ON on input line 44.
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
 (/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count121
+\c@section@level=\count122
 )
-LaTeX Info: Redefining \ref on input line 43.
-LaTeX Info: Redefining \pageref on input line 43.
-LaTeX Info: Redefining \nameref on input line 43.
+LaTeX Info: Redefining \ref on input line 44.
+LaTeX Info: Redefining \pageref on input line 44.
+LaTeX Info: Redefining \nameref on input line 44.
  (./informe.out) (./informe.out)
 \@outlinefile=\write3
 \openout3 = `informe.out'.
 
-LaTeX Info: Redefining \. on input line 43.
-LaTeX Info: Redefining \% on input line 43.
+LaTeX Info: Redefining \. on input line 44.
+LaTeX Info: Redefining \% on input line 44.
 
 <./Figuras/KMeans-density-data.png, id=116, 346.29375pt x 348.30125pt>
 File: ./Figuras/KMeans-density-data.png Graphic file (type png)
 
 <use ./Figuras/KMeans-density-data.png>
 Package pdftex.def Info: ./Figuras/KMeans-density-data.png used on input line 4
-5.
+6.
 (pdftex.def)             Requested size: 346.2929pt x 348.3004pt.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 45.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 46.
 
 (/usr/share/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 45.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 46.
 
 (/usr/share/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 45.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 46.
 
 
 (/usr/share/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 45.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 46.
 
 
 (/usr/share/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 45.
+(Font)              <12> on input line 46.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 45.
+(Font)              <8> on input line 46.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 45.
+(Font)              <6> on input line 46.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Figuras/KMeans-density-d
@@ -757,23 +765,23 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.75 \chapter
+l.76 \chapter
              {Algoritmo} [1
 
 ]
 Cap\'{\i }tulo 2.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 79.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 80.
 (/usr/share/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.117 			\end{verbatim}
+l.118 			\end{verbatim}
                         [2
 
 ]
-Overfull \hbox (3.7074pt too wide) in paragraph at lines 131--131
+Overfull \hbox (3.7074pt too wide) in paragraph at lines 132--132
 []      \T1/lmtt/m/n/10 Asigno el centro del subespacio dividido correspondient
 e al índice del bucle[] 
  []
@@ -782,17 +790,17 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.170 		\end{verbatim}
+l.171 		\end{verbatim}
                        [3] [4]
 Cap\'{\i }tulo 3.
-<./Figuras/clases.pdf, id=191, 597.23125pt x 845.1575pt>
+<./Figuras/clases.pdf, id=197, 597.23125pt x 845.1575pt>
 File: ./Figuras/clases.pdf Graphic file (type pdf)
 
 <use ./Figuras/clases.pdf>
-Package pdftex.def Info: ./Figuras/clases.pdf used on input line 188.
+Package pdftex.def Info: ./Figuras/clases.pdf used on input line 189.
 (pdftex.def)             Requested size: 469.47308pt x 517.2888pt.
 
-Overfull \hbox (42.68173pt too wide) in paragraph at lines 188--189
+Overfull \hbox (42.68173pt too wide) in paragraph at lines 189--190
  [][] 
  []
 
@@ -803,58 +811,58 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ] [6 <./Figuras/clases.pdf>]
 Cap\'{\i }tulo 4.
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 207.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 208.
 
 (/usr/share/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 207.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 208.
  [7
 
 ] [8]
-Overfull \hbox (77.41379pt too wide) in paragraph at lines 275--276
+Overfull \hbox (77.41379pt too wide) in paragraph at lines 276--277
 []\T1/lmr/m/n/10 Los ficheros cor-re-spon-di-entes a este aparta-do es-tán disp
 onibles en la car-pe-ta \T1/lmr/m/it/10 /re-sul-ta-dos/resultados_comparativos\
 T1/lmr/m/n/10 .
  []
 
 
-Overfull \hbox (144.00832pt too wide) in paragraph at lines 279--288
+Overfull \hbox (35.18346pt too wide) in paragraph at lines 291--292
  [] 
  []
 
 
-Overfull \hbox (76.31458pt too wide) in paragraph at lines 296--305
+Overfull \hbox (32.00085pt too wide) in paragraph at lines 310--311
  [] 
  []
 
 
-Overfull \hbox (58.53682pt too wide) in paragraph at lines 313--322
+Overfull \hbox (25.84299pt too wide) in paragraph at lines 329--330
  [] 
  []
 
 [9]
-Overfull \hbox (4.10962pt too wide) in paragraph at lines 339--340
+Overfull \hbox (4.10962pt too wide) in paragraph at lines 347--348
 []\T1/lmr/m/n/10 Para obten-er las in-stan-cias eti-que-tadas en nue-stro soft-
 ware se ha uti-liza-do el eje-cutable \T1/lmr/m/it/10 MDP6.jar
  []
 
 
-Overfull \hbox (39.04695pt too wide) in paragraph at lines 339--340
+Overfull \hbox (39.04695pt too wide) in paragraph at lines 347--348
 \T1/lmr/m/n/10 di-ente. La variación de parámetro se ha ll-e-va-do a cabo me-di
 -ante un script BASH, \T1/lmr/m/it/10 MDP6_param_variator.sh\T1/lmr/m/n/10 ,
  []
 
 
-Overfull \hbox (9.00203pt too wide) in paragraph at lines 345--346
+Overfull \hbox (9.00203pt too wide) in paragraph at lines 353--354
 []\T1/lmr/m/n/10 Los ficheros re-sul-ta-do de este ex-per-i-men-to se en-cuen-t
 ran en \T1/lmr/m/it/10 /re-sul-ta-dos/clasificación_supervisada\T1/lmr/m/n/10 ,
 
  []
 
 [10]
-Overfull \hbox (0.18552pt too wide) in paragraph at lines 364--365
+Overfull \hbox (0.18552pt too wide) in paragraph at lines 372--373
 []\T1/lmr/m/n/10 Los ficheros re-sul-ta-do de este ex-per-i-men-to se en-cuen-t
 ran en \T1/lmr/m/it/10 /re-sul-ta-dos/variabilidad_resultados\T1/lmr/m/n/10 ,
  []
@@ -867,29 +875,29 @@ Cap\'{\i }tulo 5.
 
 ]
 Cap\'{\i }tulo 6.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 441.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 487.
 [16
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 441.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 487.
  (./informe.aux
 LaTeX Info: Redefining \. on input line 21.
 LaTeX Info: Redefining \% on input line 21.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 441.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 441.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 487.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 487.
 Package rerunfilecheck Info: File `informe.out' has not changed.
 (rerunfilecheck)             Checksum: 95F3478972A86927586474F324C28A57;2055.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 441.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 487.
  ) 
 Here is how much of TeX's memory you used:
- 7845 strings out of 495062
- 111439 string characters out of 3182745
- 215063 words of memory out of 3000000
- 10813 multiletter control sequences out of 15000+200000
- 75353 words of font info for 50 fonts, out of 3000000 for 9000
+ 7914 strings out of 495062
+ 112402 string characters out of 3182745
+ 226296 words of memory out of 3000000
+ 10877 multiletter control sequences out of 15000+200000
+ 79624 words of font info for 51 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 34i,11n,43p,624b,545s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,12n,43p,624b,547s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf-dist/fo
 nts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf-dist/fonts/type1/public/lm/lmb
 x10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/tex
@@ -898,10 +906,10 @@ blic/lm/lmr10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/
 share/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf-dist/fonts/
 type1/public/lm/lmri7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.p
 fb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on informe.pdf (20 pages, 268809 bytes).
+Output written on informe.pdf (20 pages, 274967 bytes).
 PDF statistics:
- 314 PDF objects out of 1000 (max. 8388607)
- 276 compressed objects within 3 object streams
- 59 named destinations out of 1000 (max. 500000)
+ 318 PDF objects out of 1000 (max. 8388607)
+ 280 compressed objects within 3 object streams
+ 60 named destinations out of 1000 (max. 500000)
  241 words of extra memory for PDF output out of 10000 (max. 10000000)
 
