@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.19)  26 OCT 2014 21:12
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.19)  26 OCT 2014 21:33
 entering extended mode
 **informe.tex
 (C:\Users\David\git\MineriaDeDatos\P6\Documentacion\Informe\informe.tex
@@ -733,7 +733,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.24 ...numberline {5}Conclusiones}{14}{chapter.5}
+l.24 ...numberline {5}Conclusiones}{15}{chapter.5}
                                                    [1
 
 ])
@@ -778,7 +778,7 @@ been already used, duplicate ignored
 l.171 		\end{verbatim}
                        [3] [4]
 Cap\'{\i }tulo 3.
-<./Figuras/clases.pdf, id=197, 597.23125pt x 845.1575pt>
+<./Figuras/clases.pdf, id=201, 597.23125pt x 845.1575pt>
 File: ./Figuras/clases.pdf Graphic file (type pdf)
 
 <use ./Figuras/clases.pdf>
@@ -848,57 +848,55 @@ n-tran en \T1/lmr/m/it/10 /re-sul-ta-dos/clasificación_supervisada\T1/lmr/m/n/1
 0 ,
  []
 
+
+Overfull \hbox (5.52379pt too wide) in paragraph at lines 357--381
+ [] 
+ []
+
 [10]
-Overfull \hbox (0.18552pt too wide) in paragraph at lines 372--373
+Overfull \hbox (0.18552pt too wide) in paragraph at lines 406--407
 []\T1/lmr/m/n/10 Los fi-che-ros re-sul-ta-do de es-te ex-pe-ri-men-to se en-cue
 n-tran en \T1/lmr/m/it/10 /re-sul-ta-dos/variabilidad_resultados\T1/lmr/m/n/10 
 ,
  []
 
-<Figuras/Franjas.png, id=235, 514.92375pt x 382.42876pt>
+<Figuras/Franjas.png, id=239, 514.92375pt x 382.42876pt>
 File: Figuras/Franjas.png Graphic file (type png)
 
 <use Figuras/Franjas.png>
-Package pdftex.def Info: Figuras/Franjas.png used on input line 422.
+Package pdftex.def Info: Figuras/Franjas.png used on input line 456.
 (pdftex.def)             Requested size: 298.75264pt x 221.88469pt.
- [11] [12 <C:/Users/David/git/MineriaDeDatos/P6/Documentacion/Informe/Figuras/F
-ranjas.png>] [13]
+ [11] [12] [13 <C:/Users/David/git/MineriaDeDatos/P6/Documentacion/Informe/Figu
+ras/Franjas.png>] [14]
 Cap\'{\i }tulo 5.
-[14
+[15
 
-] [15] [16]
+] [16]
 (C:\Users\David\git\MineriaDeDatos\P6\Documentacion\Informe\informe.bbl)
 [17
 
 ]
 Cap\'{\i }tulo 6.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 532.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 560.
 [18
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 532.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 560.
  (C:\Users\David\git\MineriaDeDatos\P6\Documentacion\Informe\informe.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 532.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 532.
-
-
-Package rerunfilecheck Warning: File `informe.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `informe.out':
-(rerunfilecheck)             Before: A932A92DCF8427D8EC44AC146F27FE0C;2083
-(rerunfilecheck)             After:  F04141D79C7FE972A6548D0CB9ACEB4D;2151.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 532.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 560.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 560.
+Package rerunfilecheck Info: File `informe.out' has not changed.
+(rerunfilecheck)             Checksum: A932A92DCF8427D8EC44AC146F27FE0C;2083.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 560.
  ) 
 Here is how much of TeX's memory you used:
- 7928 strings out of 493921
- 114379 string characters out of 3147281
- 215397 words of memory out of 3000000
- 10995 multiletter control sequences out of 15000+200000
+ 7929 strings out of 493921
+ 114402 string characters out of 3147281
+ 224479 words of memory out of 3000000
+ 10996 multiletter control sequences out of 15000+200000
  88596 words of font info for 54 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 34i,11n,43p,624b,524s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,11n,43p,625b,524s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
 iKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/d
 vips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy
@@ -913,9 +911,9 @@ fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/lm/lmri7.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/l
 m/lmtt10.pfb>
-Output written on informe.pdf (22 pages, 402006 bytes).
+Output written on informe.pdf (22 pages, 404875 bytes).
 PDF statistics:
- 350 PDF objects out of 1000 (max. 8388607)
+ 352 PDF objects out of 1000 (max. 8388607)
  65 named destinations out of 1000 (max. 500000)
  246 words of extra memory for PDF output out of 10000 (max. 10000000)
 

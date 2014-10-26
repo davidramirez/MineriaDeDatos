@@ -54,7 +54,7 @@
 \thispagestyle{empty}
 \newpage
 
-\setcounter{page}{1}%Para reinizar el contador de páginas en la página deseada
+\setcounter{page}{1}%Para reiniciar el contador de páginas en la página deseada
 
 
 \chapter{Introducción}
@@ -182,7 +182,7 @@ Dentro del algoritmo cabe el estudio de diferentes variaciones en los distintos 
 
 \chapter{Diseño}
 
-En la figura \ref{fig:clases} se muestra el diagrama de clases final de la aplicación, extraido a partir del código mediante el software \textit{Visual Paradigm}. La especificación de cada uno de los métodos se puede encontrar en la documentación adjunta generada con \textit{Eclipse}, la carpeta doc contiene la \textit{javadoc} generada en forma de \textit{HTMLs} navegables.
+En la figura \ref{fig:clases} se muestra el diagrama de clases final de la aplicación, extraído a partir del código mediante el software \textit{Visual Paradigm}. La especificación de cada uno de los métodos se puede encontrar en la documentación adjunta generada con \textit{Eclipse}, la carpeta \textit{doc} contiene la \textit{javadoc} generada en forma de \textit{HTMLs} navegables.
 	
 \begin{figure}[!h]
 	\centering
@@ -205,9 +205,9 @@ En la figura \ref{fig:clases} se muestra el diagrama de clases final de la aplic
 	\begin{itemize}
 		\item	\textbf{Inicializaciones}. Disponemos de 4 tipos de inicializaciones diferentes:
 			\begin{itemize}
-			\item	\textbf{Inicialización aleatoria}. Elige al azar k instancias del conjunto de datos para actuar de centroides
+			\item	\textbf{Inicialización aleatoria}. Elige al azar k instancias del conjunto de datos para actuar de centroides.
 			\item	\textbf{Inicialización por petenencia aleatoria}. Por cada instancia, la incluye al azar en uno de los k clusters. Posteriormente se calculan los centroides.
-			\item	\textbf{Inicialización por generación aleatoria de centroides}. Se recogen los rangos en que varían los atributos de todas las instancias. Posteriromente se crean k centroides con valores al azar incluidos en los diferentes intervalos identificados.
+			\item	\textbf{Inicialización por generación aleatoria de centroides}. Se recogen los rangos en que varían los atributos de todas las instancias. Posteriormente se crean k centroides con valores al azar incluidos en los diferentes intervalos identificados.
 			\item	\textbf{Inicialización por división de espacio}. Se divide el espacio muestral de acuerdo al número de clusters a crear y se identifican los centroides.
 			\end{itemize}
 			
@@ -223,7 +223,7 @@ En la figura \ref{fig:clases} se muestra el diagrama de clases final de la aplic
 		
 		\item	\textbf{Medidas de calidad}. Como medida del error tras el proceso de clustering se ofrece tanto el \textbf{Error Cuadrático} como el \textbf{Error Cuadrático Medio}.
 		
-		\item	\textbf{Clasificación de instancias}. Se puede generar un archivo conteniendo las instancias cargadas (en el mismo orden al de entrada) en formato CSV. En este fichero de salida, a cada instancia se le ha añadido un atributo que indica el custer al que finalmente fue asociada tras la ejecución del algoritmo.
+		\item	\textbf{Clasificación de instancias}. Se puede generar un archivo conteniendo las instancias cargadas (en el mismo orden al de entrada) en formato CSV. En este fichero de salida, a cada instancia se le ha añadido un atributo que indica el cluster al que finalmente fue asociada tras la ejecución del algoritmo.
 		
 		\item	\textbf{Repetición de pruebas}. Como se explicará posteriormente, las pruebas realizadas con tipos de inicializaciones que utilicen generación de valores aleatorios no pueden ser repetidas ya que los valores variarán en cada ejecución.
 	\end{itemize}
@@ -235,7 +235,7 @@ En la figura \ref{fig:clases} se muestra el diagrama de clases final de la aplic
 	\begin{itemize}
 		\item	\textbf{Inicializaciones}. No ofrece más que un tipo de inicialización.
 		
-		\item	\textbf{Distancias}. Las distancias disponibles para el agoritmo son Minkowski 1 y Minkowski 2 (Euclídea y Manhattan respectivamente). Además, cada una de estas dos distancias permite normalizarlas.
+		\item	\textbf{Distancias}. Las distancias disponibles para el algoritmo son Minkowski 1 y Minkowski 2 (Euclídea y Manhattan respectivamente). Además, cada una de estas dos distancias permite normalizarlas.
 		
 		\item	\textbf{Criterio de parada}. Permite establecer el número máximo de iteraciones que realizará el algoritmo.
 		\item	\textbf{Tipos de atributos}. Soporta nominales, numéricos, binarios, unarios, con valores desconocidos o nominales vacíos.
@@ -245,7 +245,7 @@ En la figura \ref{fig:clases} se muestra el diagrama de clases final de la aplic
 		\item	\textbf{Repetición de pruebas}. Weka permite que para una misma semilla (parámetro configurable) los valores generados carezcan de variación, de forma que se puede repetir el mismo experimento una y otra vez para una misma semilla.
 	\end{itemize}
 	
-	Los ficheros utilizados como fuente de instancias han sido \textbf{previamente procesados} con \textit{Weka} para adaptarlos a nuestro software. Se ha procedido a \textbf{eliminar el atributo clase} en aquellos ficheros que la tuvieran y se han guardao las instancias en \textbf{formato CVS}.
+	Los ficheros utilizados como fuente de instancias han sido \textbf{previamente procesados} con \textit{Weka} para adaptarlos a nuestro software. Se ha procedido a \textbf{eliminar el atributo clase} en aquellos ficheros que la tuvieran y se han guardado las instancias en \textbf{formato CVS}.
 	
 	Así mismo, en algunos casos ha sido necesario utilizar además un \textbf{procesador de texto} para poder obtener los resultados deseados. También se ha usado el software \textbf{R} para obtener ciertos resultados estadísticos y realizar comparaciones de valores. Para automatizar el proceso de obtención de datos, se han desarrollado programas \textbf{JAVA} extra y se ha utilizado un script del interprete \textbf{BASH}.
 	
@@ -352,7 +352,41 @@ En la figura \ref{fig:clases} se muestra el diagrama de clases final de la aplic
 	
 	Los ficheros resultado de este experimento se encuentran en \textit{/resultados/clasificación\_supervisada}, siguiendo la misma estructuración que los del apartado anterior.
 	
-	En este caso los resultados son bastante similares los unos a otros, la mayoría de casos fallan 17 instancias de clasificación, un 8.6\%. La única ejecución que obtiene una mayor tasa de aciertos es la realizada mediante centroides aleatorios para tres clusteres y sobre distancia euclídea que resulta en solo 16 fallos. Por lo demás, existe también un gran grupo de resultados que aciertan 100 instancias nada más, cuestión que puede deberse a la limitación de iteraciones o a un mal resultado en la selección aleatoria de centroides inicales que resultan en una convergencia no deseable.
+	\begin{figure}[htbp]
+		\begin{center}
+			\begin{tabular}{|l|l|l|l|r|r|r|}
+				\hline
+				\textbf{Software} & \textbf{Inicialización} & \textbf{Distancia} & \textbf{Norm} & \multicolumn{1}{l|}{\textbf{\% aciertos}} & \multicolumn{1}{l|}{\textbf{\% errores}} & \multicolumn{1}{l|}{\textbf{E cuad}} \\ \hline
+				Weka & Aleatoria & Minkowski 1 & False & 88,67 & 11,33 & 159,3 * \\ \hline
+				Weka & Aleatoria & Minkowski 1 & True & 89,33 & 10,67 & 47,779 * \\ \hline
+				Weka & Aleatoria & Minkowski 2 & False & 88,67 & 11,33 & 78,94 \\ \hline
+				Weka & Aleatoria & Minkowski 2 & True & 89,33 & 10,67 & 7 \\ \hline
+				MDP6 & Aleatoria & Minkowski 1 & False & 88,67 & 11,33 & 223,21 \\ \hline
+				MDP6 & Aleatoria & Minkowski 2 & False & 88,67 & 11,33 & 78,95 \\ \hline
+				MDP6 & Aleatoria & Minkowski 7'5 & False & 88,67 & 11,33 & 50,06 \\ \hline
+				MDP6 & Aleatoria & Chebyshev & False & 88,67 & 11,33 & 82,2 \\ \hline
+				MDP6 & Pert\_aleatoria & Minkowski 1 & False & 88,67 & 11,33 & 223,21 \\ \hline
+				MDP6 & Pert\_aleatoria & Minkowski 2 & False & 89,33 & 10,67 & 78,95 \\ \hline
+				MDP6 & Pert\_aleatoria & Minkowski 7'5 & False & 88,67 & 11,33 & 50,06 \\ \hline
+				MDP6 & Pert\_aleatoria & Chebyshev & False & 66,67 & 33,33 & 48,36 \\ \hline
+				MDP6 & Cent\_aleatorios & Minkowski 1 & False & 88,67 & 11,33 & 223,21 \\ \hline
+				MDP6 & Cent\_aleatorios & Minkowski 2 & False & 66,67 & 33,33 & 78,94 \\ \hline
+				MDP6 & Cent\_aleatorios & Minkowski 7'5 & False & 88,67 & 11,33 & 50,08 \\ \hline
+				MDP6 & Cent\_aleatorios & Chebyshev & False & 51,33 & 48,67 & 87,51 \\ \hline
+				MDP6 & Div\_espacio & Minkowski 1 & False & 88,67 & 11,33 & 223,21 \\ \hline
+				MDP6 & Div\_espacio & Minkowski 2 & False & 66,67 & 33,33 & 145,28 \\ \hline
+				MDP6 & Div\_espacio & Minkowski 7'5 & False & 66,67 & 33,33 & 91,2 \\ \hline
+				MDP6 & Div\_espacio & Chebyshev & False & 66,67 & 33,33 & 87,51 \\ \hline
+			\end{tabular}
+			
+		\end{center}
+		*Sum of within clusters distances.
+		\caption{Resultados de clasificación para el fichero iris.arff}
+		\label{resiris_clasificacion}
+	\end{figure}
+	
+	
+	En este caso los resultados son bastante similares los unos a otros, la mayoría de casos fallan 17 instancias de clasificación, un 8.6\%. La única ejecución que obtiene una mayor tasa de aciertos es la realizada mediante centroides aleatorios para tres clusteres y sobre distancia euclídea que resulta en solo 16 fallos. Por lo demás, existe también un gran grupo de resultados que aciertan 100 instancias nada más, cuestión que puede deberse a la limitación de iteraciones o a un mal resultado en la selección aleatoria de centroides iniciales que resultan en una convergencia no deseable.
 	
 	
 	\FloatBarrier
@@ -372,7 +406,7 @@ En la figura \ref{fig:clases} se muestra el diagrama de clases final de la aplic
 	Los ficheros resultado de este experimento se encuentran en \textit{/resultados/variabilidad\_resultados}, siguiendo la misma estructuración que los del apartado \ref{rescomparativos}. A continuación se muestran los resultados obtenidos.
 	
 	
-	\begin{table}[htbp]
+	\begin{figure}[htbp]
 	\begin{center}
 	\begin{tabular}{|c|l|r|r|r|}
 	\hline
@@ -409,7 +443,7 @@ En la figura \ref{fig:clases} se muestra el diagrama de clases final de la aplic
 	\end{center}
 	\caption{Medidas estadísticas para las diferentes pruebas}
 	\label{tablavar}
-	\end{table}
+	\end{figure}
 	
 	
 	
@@ -425,9 +459,9 @@ En la figura \ref{fig:clases} se muestra el diagrama de clases final de la aplic
 	\end{figure}
 
 	
-	Si comparamos los índices estadísticos, observamos que los algoritmos que mejor puntuan en base a su media son los de pertenencia y centroides aleatorios para aquellas pruebas realizadas sobre 3 y 5 clusters, sin embargo, la puntuación de la inicialización aleatoria es mejor para 8 clusters.
+	Si comparamos los índices estadísticos, observamos que los algoritmos que mejor puntúan en base a su media son los de pertenencia y centroides aleatorios para aquellas pruebas realizadas sobre 3 y 5 clusters, sin embargo, la puntuación de la inicialización aleatoria es mejor para 8 clusters.
 	
-	La división del espacio otorga siempre el mismo resultado teniendo por tanto varianza cero. Este algoritmo no ha puntuado como último en ninguna de las pruebas por lo que podría ser un candidato a cota realista del desempeño posible. Por otra parte, en el caso de k=3 encontramos curioso el hecho de que todas las medianas sean iguales y coincida exáctamente con el resultado arrojado por la división del espacio. Esto se puede deber a que el algoritmo converga en un valor de 4093 para una gran cantidad de condiciones iniciales distintas siendo esta cifra ,por tanto , un atractor clásico.
+	La división del espacio otorga siempre el mismo resultado teniendo por tanto varianza cero. Este algoritmo no ha puntuado como último en ninguna de las pruebas por lo que podría ser un candidato a cota realista del desempeño posible. Por otra parte, en el caso de k=3 encontramos curioso el hecho de que todas las medianas sean iguales y coincida exactamente con el resultado arrojado por la división del espacio. Esto se puede deber a que el algoritmo converja en un valor de 4093 para una gran cantidad de condiciones iniciales distintas siendo esta cifra ,por tanto , un atractor clásico.
 
 	El algoritmo que mayor varianza arroja en todos los experimentos ha sido el de inicalización aleatoria siendo la varianza de los otros dos algoritmos evaluables en función de este parámetro similar entre si. Pese a tener la tendencia a arrojar un mejor resultado con un número grande de clusters hay que tener en cuenta esta gran variabilidad de resultados para el algoritmo de inicialización aleatoria.
 	
@@ -479,7 +513,7 @@ También el hecho de probar y perfeccionar el funcionamiento de \textbf{todo} el
 
 Resumiendo, hay que mejorar la planificación, dividir el proyecto en partes para poder mejorarlo incrementalmente.
 
-Pese a los problemas, la solución implementada ofrece una variedad bastante amplia de parámetros posibles a utilizar, teniendo 4 tipos de inicialización, dos métricas diferentes - en el caso de la métrica Minkowski ofrece otro parámetro más que variar- y la posibilidad de controlar el número de iteraciones tanto por la especificación de un maximo de vueltas, como por la especificación del margen de variación que se debe alcanzar hasta dar por válidos los centroides identificados.
+Pese a los problemas, la solución implementada ofrece una variedad bastante amplia de parámetros posibles a utilizar, teniendo 4 tipos de inicialización, dos métricas diferentes - en el caso de la métrica Minkowski ofrece otro parámetro más que variar- y la posibilidad de controlar el número de iteraciones tanto por la especificación de un máximo de vueltas, como por la especificación del margen de variación que se debe alcanzar hasta dar por válidos los centroides identificados.
 
 La semana extra de trabajo nos ha servido para exponer resultados útiles que ayuden a determinar la calidad de nuestro software, resultados para los cuales se ha observado la gran utilidad que tiene la automatización de la obtención de las mismas para ser capaces de procesar un gran volumen de datos obteniendo los resumen concluyentes.
 
@@ -493,17 +527,11 @@ Una restricción que podríamos eliminar está asociada al tipo de datos tratado
 
 También teníamos un problema con la representación de los resutados, ya que los valores reales se presentaban con todos los decimales que tuvieran. Esto fue solucionado en la semana extra, haciendo que al imprimir los valores, se redondeasen previamente a 3 o 5 decimales.
 
+Se podrían mejorar los programas auxiliares creados, de forma que permitan configurar más parámetros (las Ks a usar por ejemplo) y permitan experimentar a los usuarios de la aplicación.
+
 Por último, cabe mejorar el apartado de resultados del algoritmo utilizando métodos concretos de la evaluación de clusters. Por ejemplo, la implementación del índice silueta, que sería un indicador mejor que el error cuadrático y nos permitiría saber directamente lo bien o mal que nuestro algoritmo realiza el clustering.
 
-	\section{Propuestas de mejora}
-	
-	La entrada a nuestro programa es un factor un tanto restrictivo en el sentido de que el único tipo de fichero soportado es el \textbf{CSV}. Inicialmente, la intención era implementar también la carga de ficheros \textbf{ARFF}, que no ha sido posible hacerla por falta de planificación principalmente.
-	
-	En cuanto a inicializaciones, hemos implementado 4 tipos diferentes. De los tres, el correspondiente a la división de espacio es el que más puede mejorar, ya que para su implementación no hemos llegado a consultar bibliografía extra. El mapeo de aleatorios sería otra mejora que garantizaría estabilidad a tres de las inicializaciones.
-	
-	Una restricción que podríamos eliminar está asociada al tipo de datos tratados, el algoritmo solo es capaz de lidiar con atributos de tipo numérico, siendo imposible realizar la carga de instancias que contengan valores no numéricos. De hecho, algunos de los ficheros han tenido que ser preprocesados para poder trabajar con ellos.
-	
-	También teníamos un problema con la representación de los resutados, ya que los valores reales se presentaban con todos los decimales que tuvieran. Esto fue solucionado en la semana extra, haciendo que al imprimir los valores, se redondeasen previamente a 3 o 5 decimales.
+
 
 %Bibliografía
 
