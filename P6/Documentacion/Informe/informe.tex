@@ -264,19 +264,56 @@ En la figura \ref{fig:clases} se muestra el diagrama de clases final de la aplic
 	
 	\section{Resultados comparativos}
 	\label{rescomparativos}
+	En este apartado comparamos el software implementado con el algoritmo Kmeans de Weka por medio del error cuadrático. Este indicador de error solo se muestra en Weka al utilizar la distancia Euclídea, por lo tanto las comparaciones se limitan a este tipo de distancia. Además, nuestro software no es capaz de normalizar las instancias, así que desactivaremos esta opción al trabajar con Weka.
 	
+	En cuanto al resto de parámetros, para cada uno de los ficheros de pruebas se ha variado el parámetro \textbf{K} en el conjunto \{2,3,5,7,9\}. Por otro lado, el tipo de inicialización en Weka es único, pero con nuestro software hemos utilizado las 4 posibles.
+	
+	Otro dato a tener en cuenta es la gran dificultad de repetir un mismo resultado, para una misma configuración de parámetros, en nuestro software por el uso de aleatorios. Esto genera el problema de comparar el error variable de nuestro software con el de Weka.
+	
+	Para solucionarlo, hemos hecho 100 ejecuciones de cada combinación de parámetros posible y hemos utilizado la media de los diferentes errores obtenidos para conseguir un valor más estable del error cometido por nuestro software. El proceso con el ejecutable estándar desarrollado sería muy costoso, así que hemos desarrollado el programa \textit{MDP6\_tab\_errores.jar} para automatizar dicho proceso.
+	
+	Los ficheros correspondientes a este apartado están disponibles en la carpeta \textit{/resultados/resultados\_comparativos}. Se encuentran los ficheros originales, los ficheros operativos y los fichero resultado obtenidos. El resumen de los resultados se encuentra a continuación.
 	
 	\FloatBarrier
 	\section{Clasificación supervisada respecto de otro software de referencia}
 	\label{resprecision}
+	En este apartado observamos el cluster asignado a cada instancia de un fichero por ambos softwares comparándolo con la clase que la instancia tenía en el fichero original. El objetivo es obtener la tasa de aciertos que los diferentes softwares son capaces de alcanzar.
+	
+	En este caso no se han tenido en cuenta la variabilidad de los resultados de nuestro software y se ha comparado el de una sola ejecución.
+	
+	En cuanto a parámetros, se han tenido en cuanta las diferentes inicializaciones de nuestro software y varias distancias de las soportadas. En Weka se han utilizado las dos distancias soportadas (Manhattan y Euclídea) y por cada una se ha probado con y sin normalización.En cuanto al parámetro K, se establece igual al número de clases diferentes del fichero original. Estas pruebas se han basado en el fichero \textit{iris.arff}, por lo que el valor de K usado ha sido \textbf{3}.
+	
+	Para obtener las instancias etiquetadas en nuestro software se ha utilizado el ejecutable \textit{MDP6.jar} que automáticamente genera un fichero conteniendo las diferentes instancias y su cluster correspondiente. La variación de parámetro se ha llevado a cabo mediante un script BASH, \textit{MDP6\_param\_variator.sh},  con el que hemos obtenido los diferentes ficheros resultados.
+	
+	En el caso de Weka, el proceso se ha realizado de forma manual mediante su interfaz, ya que eran solo 4 las diferentes combinaciones de parámetros a probar.
+	
+	Para realizar la comparación con el fichero original de instancias ha sido preciso reetiquetar los valores de la clase estimados de forma que las clases se correspondieran en la mejor medida posible al fichero original. El fichero original también ha sido procesado para la comparación, variando el formato a CSV y cambiando el valor nominal de las clases por un valor numérico.
+	
+	Los ficheros resultado de este experimento se encuentran en \textit{/resultados/clasificación\_supervisada}, siguiendo la misma estructuración que los del apartado anterior.
+	
+	\FloatBarrier
 		
 	\section{Variabilidad de los resultados}
 	\label{resestadisticos}
-	Para analizar la variabilidad de los resultados ofrecidos por nuestro programa, hemos realizado 10000 experimentos con cada inicialización para los parámetros por defecto variando únicamente el número de clusters que se desea obtener.
+	Este apartado se dedica única y exclusivamente a la observación de la variabilidad de los resultados de una ejecución a otra, con los mismos parámetros, de nuestro software.
+	
+	Las pruebas se han realizado con el uso de la distancia Euclídea, variando el parámetro K en el conjunto \{3, 5, 8\} y la inicialización entre las 4 posibilidades disponibles.
+	
+	Para cada una de las combinaciones de parámetros tratadas,  se ha ejecutado 1000 veces, obteniéndose en cada una el valor del error cuadrático medio.
+	
+	El proceso se ha automatizado y ejecutado mediante el ejecutable \textit{MDP6\_var\_res.jar}, desarrollado especialmente para la tarea.
+	
+	Posteriormente, los 1000 valores de cada ejecución se han tratado con el software R para obtener  las medidas estadísticas deseadas.
+	
+	Los ficheros resultado de este experimento se encuentran en \textit{/resultados/variabilidad\_resultados}, siguiendo la misma estructuración que los del apartado \ref{rescomparativos}. A continuación se muestran los resultados obtenidos.
+	
+	
+	%poner tablas
+	
 	
 	Los resultados obtenidos por los algoritmos en los que intervienen variables de carácter aleatorio arrojan resultados distintos en cada repetición mientras que el algoritmo de inicialización por división del espacio resulta siempre en un resultado idéntico siempre que tratemos con el mismo fichero de datos.
 	
-	La distribución de los resultados se muestra gráficamente mediante franjas en los valores en los que tienen tendencia a converger los resultados de la aplicación de los algoritmos. ^!!!AÑADIR FIGURAS""!! Estas franjas son similares entre el algoritmo de pertenencia aleatoria y el de centroides aleatorios.
+	La distribución de los resultados se muestra gráficamente mediante franjas en los valores en los que tienen tendencia a converger los resultados de la aplicación de los algoritmos. !!!AÑADIR FIGURAS""!! Estas franjas son similares entre el algoritmo de pertenencia aleatoria y el de centroides aleatorios.
 	
 	Si comparamos los índices estadísticos, observamos que los algoritmos que mejor puntuan en base a su media son los de pertenencia y centroides aleatorios para aquellas pruebas realizadas sobre 3 y 5 clusters, sin embargo, la puntuación de la inicialización aleatoria es mejor para 8 clusters.
 	

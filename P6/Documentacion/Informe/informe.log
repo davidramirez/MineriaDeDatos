@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2014.2.3)  24 OCT 2014 23:19
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2014.2.3)  26 OCT 2014 11:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -734,7 +734,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.24 ...numberline {5}Conclusiones}{10}{chapter.5}
+l.24 ...numberline {5}Conclusiones}{12}{chapter.5}
                                                    [1
 
 ])
@@ -812,33 +812,65 @@ LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 207.
  [7
 
-] [8] [9]
-Cap\'{\i }tulo 5.
-[10
+] [8]
+Overfull \hbox (77.41379pt too wide) in paragraph at lines 275--276
+[]\T1/lmr/m/n/10 Los ficheros cor-re-spon-di-entes a este aparta-do es-tán disp
+onibles en la car-pe-ta \T1/lmr/m/it/10 /re-sul-ta-dos/resultados_comparativos\
+T1/lmr/m/n/10 .
+ []
 
-] [11] (./informe.bbl) [12
+
+Overfull \hbox (4.10962pt too wide) in paragraph at lines 286--287
+[]\T1/lmr/m/n/10 Para obten-er las in-stan-cias eti-que-tadas en nue-stro soft-
+ware se ha uti-liza-do el eje-cutable \T1/lmr/m/it/10 MDP6.jar
+ []
+
+
+Overfull \hbox (39.04695pt too wide) in paragraph at lines 286--287
+\T1/lmr/m/n/10 di-ente. La variación de parámetro se ha ll-e-va-do a cabo me-di
+-ante un script BASH, \T1/lmr/m/it/10 MDP6_param_variator.sh\T1/lmr/m/n/10 ,
+ []
+
+[9]
+Overfull \hbox (9.00203pt too wide) in paragraph at lines 292--293
+[]\T1/lmr/m/n/10 Los ficheros re-sul-ta-do de este ex-per-i-men-to se en-cuen-t
+ran en \T1/lmr/m/it/10 /re-sul-ta-dos/clasificación_supervisada\T1/lmr/m/n/10 ,
+
+ []
+
+
+Overfull \hbox (0.18552pt too wide) in paragraph at lines 308--309
+[]\T1/lmr/m/n/10 Los ficheros re-sul-ta-do de este ex-per-i-men-to se en-cuen-t
+ran en \T1/lmr/m/it/10 /re-sul-ta-dos/variabilidad_resultados\T1/lmr/m/n/10 ,
+ []
+
+[10] [11]
+Cap\'{\i }tulo 5.
+[12
+
+] [13] (./informe.bbl) [14
 
 ]
 Cap\'{\i }tulo 6.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 335.
-[13
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 381.
+[15
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 335.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 381.
  (./informe.aux
 LaTeX Info: Redefining \. on input line 21.
 LaTeX Info: Redefining \% on input line 21.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 335.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 335.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 381.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 381.
 Package rerunfilecheck Info: File `informe.out' has not changed.
 (rerunfilecheck)             Checksum: 95F3478972A86927586474F324C28A57;2055.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 335.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 381.
  ) 
 Here is how much of TeX's memory you used:
- 7836 strings out of 495062
- 111351 string characters out of 3182745
- 208788 words of memory out of 3000000
+ 7838 strings out of 495062
+ 111365 string characters out of 3182745
+ 208789 words of memory out of 3000000
  10810 multiletter control sequences out of 15000+200000
  75353 words of font info for 50 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -851,10 +883,10 @@ blic/lm/lmr10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/
 share/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf-dist/fonts/
 type1/public/lm/lmri7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.p
 fb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on informe.pdf (17 pages, 248955 bytes).
+Output written on informe.pdf (19 pages, 256772 bytes).
 PDF statistics:
- 296 PDF objects out of 1000 (max. 8388607)
- 261 compressed objects within 3 object streams
- 53 named destinations out of 1000 (max. 500000)
+ 307 PDF objects out of 1000 (max. 8388607)
+ 270 compressed objects within 3 object streams
+ 55 named destinations out of 1000 (max. 500000)
  241 words of extra memory for PDF output out of 10000 (max. 10000000)
 
