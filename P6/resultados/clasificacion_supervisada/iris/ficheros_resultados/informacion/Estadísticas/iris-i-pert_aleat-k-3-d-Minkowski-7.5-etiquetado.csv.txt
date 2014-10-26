@@ -7,6 +7,6 @@
  Max.   :3.00  
    clase        
  Mode :logical  
- FALSE:146      
- TRUE :4        
+ FALSE:17       
+ TRUE :133      
  NA's :0        

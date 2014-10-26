@@ -3,10 +3,10 @@
  1st Qu.:1.000  
  Median :2.000  
  Mean   :1.913  
- 3rd Qu.:3.000  
+ 3rd Qu.:2.000  
  Max.   :3.000  
    clase        
  Mode :logical  
- FALSE:148      
- TRUE :2        
+ FALSE:17       
+ TRUE :133      
  NA's :0        

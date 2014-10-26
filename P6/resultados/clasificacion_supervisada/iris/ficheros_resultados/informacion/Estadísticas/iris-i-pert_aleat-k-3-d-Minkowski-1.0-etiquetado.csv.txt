@@ -1,12 +1,12 @@
      clase      
  Min.   :1.000  
- 1st Qu.:2.000  
+ 1st Qu.:1.000  
  Median :2.000  
- Mean   :2.173  
- 3rd Qu.:3.000  
+ Mean   :1.913  
+ 3rd Qu.:2.000  
  Max.   :3.000  
    clase        
  Mode :logical  
- FALSE:135      
- TRUE :15       
+ FALSE:17       
+ TRUE :133      
  NA's :0        

@@ -1,7 +1,12 @@
-       X2       
+     clase      
  Min.   :1.000  
  1st Qu.:2.000  
  Median :3.000  
- Mean   :2.459  
+ Mean   :2.447  
  3rd Qu.:3.000  
  Max.   :3.000  
+   clase        
+ Mode :logical  
+ FALSE:73       
+ TRUE :77       
+ NA's :0        
