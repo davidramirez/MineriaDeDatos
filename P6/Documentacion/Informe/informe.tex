@@ -342,17 +342,17 @@ En la figura \ref{fig:clases} se muestra el diagrama de clases final de la aplic
 	
 	Pese a los problemas, la solución implementada ofrece una variedad bastante amplia de parámetros posibles a utilizar, teniendo 4 tipos de inicialización, dos métricas diferentes - en el caso de la métrica Minkowski ofrece otro parámetro más que variar- y la posibilidad de controlar el número de iteraciones tanto por la especificación de un maximo de vueltas, como por la especificación del margen de variación que se debe alcanzar hasta dar por válidos los centroides identificados.
 	
+	La semana extra de trabajo nos ha servido para exponer resultados útiles que ayuden a determinar la calidad de nuestro software, resultados para los cuales se ha observado la gran utilidad que tiene la automatización de la obtención de las mismas para ser capaces de procesar un gran volumen de datos obteniendo los resumen concluyentes.
+	
 	\section{Propuestas de mejora}
 	
 	La entrada a nuestro programa es un factor un tanto restrictivo en el sentido de que el único tipo de fichero soportado es el \textbf{CSV}. Inicialmente, la intención era implementar también la carga de ficheros \textbf{ARFF}, que no ha sido posible hacerla por falta de planificación principalmente.
 	
-	En cuanto a inicializaciones, hemos implementado 4 tipos diferentes. De los tres, el correspondiente a la división de espacio es el que más puede mejorar, ya que para su implementación no hemos llegado a consultar bibliografía extra.
+	En cuanto a inicializaciones, hemos implementado 4 tipos diferentes. De los tres, el correspondiente a la división de espacio es el que más puede mejorar, ya que para su implementación no hemos llegado a consultar bibliografía extra. El mapeo de aleatorios sería otra mejora que garantizaría estabilidad a tres de las inicializaciones.
 	
-	La \textbf{estimación del error} es otro apartado en el que nos ha quedado duda, ya que el proceso de cálculo utilizado no ha sido el mismo que el usado por Weka y nos dificultaba la comparación de ambos algoritmos utilizando esta medida.
+	Una restricción que podríamos eliminar está asociada al tipo de datos tratados, el algoritmo solo es capaz de lidiar con atributos de tipo numérico, siendo imposible realizar la carga de instancias que contengan valores no numéricos. De hecho, algunos de los ficheros han tenido que ser preprocesados para poder trabajar con ellos.
 	
-	Otra restricción se da por el tipo de datos tratados, el algoritmo solo es capaz de lidiar con atributos de tipo numérico, siendo imposible realizar la carga de instancias que contengan valores no numéricos. De hecho, algunos de los ficheros han tenido que ser preprocesados para poder trabajar con ellos.
-	
-	Otro problema ya arrastrado de trabajos anteriores, es la \textbf{presentación de resultados}. No en cuanto a la información presentada, sino a como se presentan concretamente los\textbf{ valores reales}, que deberían ser redondeados a, por ejemplo, 3 decimales. Esto permitiría que los informes generados sean más fáciles de leer e interpretar.
+	También teníamos un problema con la representación de los resutados, ya que los valores reales se presentaban con todos los decimales que tuvieran. Esto fue solucionado en la semana extra, haciendo que al imprimir los vallores, se redondeasen previamente a 3 o 5 decimales.
 
 %Bibliografía
 

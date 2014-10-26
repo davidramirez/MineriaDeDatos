@@ -25,5 +25,5 @@
 \contentsline {section}{\numberline {5.1}Motivaci\IeC {\'o}n para la realizaci\IeC {\'o}n de \textit {Clustering}}{12}{section.5.1}
 \contentsline {section}{\numberline {5.2}Conclusiones de los resultados}{12}{section.5.2}
 \contentsline {section}{\numberline {5.3}Conclusiones generales}{12}{section.5.3}
-\contentsline {section}{\numberline {5.4}Propuestas de mejora}{12}{section.5.4}
+\contentsline {section}{\numberline {5.4}Propuestas de mejora}{13}{section.5.4}
 \contentsline {chapter}{\numberline {6}Valoraci\IeC {\'o}n subjetiva}{15}{chapter.6}
