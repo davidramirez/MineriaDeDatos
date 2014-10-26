@@ -448,7 +448,13 @@ En la figura \ref{fig:clases} se muestra el diagrama de clases final de la aplic
 	
 	Por último, cabe señalar la cantidad de resultados reseñables que hemos sido capáces de alcanzar gracias al estudio en masa de los resultados proporcionados, estos resultados no siempre están reflejados en la práctica por ser resultados parciales e intermedios.
 	\section{Rendimiento del software}
-
+	El software desarrollado posee una complejidad computacional que difiere en función del algoritmo de inicializacison. El algoritmo de clustering que usamos, por si mismo, posee un orden computacional $kn$ siendo k el número de iteraciones que realiza el software y n el número de instancias en evaluación.
+	
+	Para las inicializaciones de centroide aleatorio, división del espacio e inicialización aleatoria, el software no necesita recorrer las instancias que se encuentran en evaluación, sin embargo, para el de pertenencia aleatoria es necesario acceder a todas estas instancias.
+	
+	Esta necesidad de acceso no varía el orden de magnitud aunque aplicado al algoritmo tenemos que el orden resultante es de $k(1+n)$ interpretando las variables de la misma forma que el enunciado anterior.
+	
+	Dicho esto, el algoritmo en cualquiera de sus vertientes y sobre los archivos de prueba que hemos usado, aún en el caso de realización sistemática de experimentos, no ha presentado ningún inconveniente temporal. Este rendimiento podría ser evaluado de nuevo sobre archivos con una mayor cantidad de información para conocer realmente en qué cotas es inviable su aplicación y debería ser reestructurado siguiendo criterios de rendimiento.
 \chapter{Conclusiones}
 
 	\section{Motivación para la realización de \textit{Clustering}}
