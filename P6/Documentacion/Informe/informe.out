@@ -1,28 +1,29 @@
 \BOOKMARK [0][-]{chapter.1}{Introducci\363n}{}% 1
 \BOOKMARK [1][-]{section.1.1}{Clasificaci\363n no-supervisada}{chapter.1}% 2
 \BOOKMARK [1][-]{section.1.2}{Objetivo}{chapter.1}% 3
-\BOOKMARK [0][-]{chapter.2}{Algoritmo}{}% 4
-\BOOKMARK [1][-]{section.2.1}{K-means, algoritmo principal}{chapter.2}% 5
-\BOOKMARK [1][-]{section.2.2}{Subrutina inicializaci\363n}{chapter.2}% 6
-\BOOKMARK [2][-]{subsection.2.2.1}{Inicializaci\363n aleatoria}{section.2.2}% 7
-\BOOKMARK [2][-]{subsection.2.2.2}{Pertenencia aleatoria}{section.2.2}% 8
-\BOOKMARK [2][-]{subsection.2.2.3}{Divisi\363n de espacio}{section.2.2}% 9
-\BOOKMARK [2][-]{subsection.2.2.4}{Generaci\363n aleatoria de codewords}{section.2.2}% 10
-\BOOKMARK [1][-]{section.2.3}{Subrutina calcularPertenencias}{chapter.2}% 11
-\BOOKMARK [1][-]{section.2.4}{Subrutina calcularCentroides}{chapter.2}% 12
-\BOOKMARK [1][-]{section.2.5}{Subrutina calcularDivergencia}{chapter.2}% 13
-\BOOKMARK [0][-]{chapter.3}{Dise\361o}{}% 14
-\BOOKMARK [0][-]{chapter.4}{Resultados experimentales}{}% 15
-\BOOKMARK [1][-]{section.4.1}{Banco de pruebas para la validaci\363n de software y resultados}{chapter.4}% 16
-\BOOKMARK [2][-]{subsection.4.1.1}{Pruebas realizadas}{section.4.1}% 17
-\BOOKMARK [1][-]{section.4.2}{Resultados comparativos}{chapter.4}% 18
-\BOOKMARK [1][-]{section.4.3}{Clasificaci\363n supervisada respecto de otro software de referencia}{chapter.4}% 19
-\BOOKMARK [1][-]{section.4.4}{Variabilidad de los resultados}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.5}{An\341lisis cr\355tico y discusi\363n de resultados}{chapter.4}% 21
-\BOOKMARK [1][-]{section.4.6}{Rendimiento del software}{chapter.4}% 22
-\BOOKMARK [0][-]{chapter.5}{Conclusiones}{}% 23
-\BOOKMARK [1][-]{section.5.1}{Motivaci\363n para la realizaci\363n de Clustering}{chapter.5}% 24
-\BOOKMARK [1][-]{section.5.2}{Conclusiones de los resultados}{chapter.5}% 25
-\BOOKMARK [1][-]{section.5.3}{Conclusiones generales}{chapter.5}% 26
-\BOOKMARK [1][-]{section.5.4}{Propuestas de mejora}{chapter.5}% 27
-\BOOKMARK [0][-]{chapter.6}{Valoraci\363n subjetiva}{}% 28
+\BOOKMARK [1][-]{section.1.3}{C\363digo fuente}{chapter.1}% 4
+\BOOKMARK [0][-]{chapter.2}{Algoritmo}{}% 5
+\BOOKMARK [1][-]{section.2.1}{K-means, algoritmo principal}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.2}{Subrutina inicializaci\363n}{chapter.2}% 7
+\BOOKMARK [2][-]{subsection.2.2.1}{Inicializaci\363n aleatoria}{section.2.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.2}{Pertenencia aleatoria}{section.2.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.3}{Divisi\363n de espacio}{section.2.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.4}{Generaci\363n aleatoria de codewords}{section.2.2}% 11
+\BOOKMARK [1][-]{section.2.3}{Subrutina calcularPertenencias}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.4}{Subrutina calcularCentroides}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.5}{Subrutina calcularDivergencia}{chapter.2}% 14
+\BOOKMARK [0][-]{chapter.3}{Dise\361o}{}% 15
+\BOOKMARK [0][-]{chapter.4}{Resultados experimentales}{}% 16
+\BOOKMARK [1][-]{section.4.1}{Banco de pruebas para la validaci\363n de software y resultados}{chapter.4}% 17
+\BOOKMARK [2][-]{subsection.4.1.1}{Pruebas realizadas}{section.4.1}% 18
+\BOOKMARK [1][-]{section.4.2}{Resultados comparativos}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.3}{Clasificaci\363n supervisada respecto de otro software de referencia}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.4}{Variabilidad de los resultados}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.5}{An\341lisis cr\355tico y discusi\363n de resultados}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.6}{Rendimiento del software}{chapter.4}% 23
+\BOOKMARK [0][-]{chapter.5}{Conclusiones}{}% 24
+\BOOKMARK [1][-]{section.5.1}{Motivaci\363n para la realizaci\363n de Clustering}{chapter.5}% 25
+\BOOKMARK [1][-]{section.5.2}{Conclusiones de los resultados}{chapter.5}% 26
+\BOOKMARK [1][-]{section.5.3}{Conclusiones generales}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.4}{Propuestas de mejora}{chapter.5}% 28
+\BOOKMARK [0][-]{chapter.6}{Valoraci\363n subjetiva}{}% 29

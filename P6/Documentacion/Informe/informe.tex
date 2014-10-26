@@ -72,6 +72,10 @@ Dentro del algoritmo cabe el estudio de diferentes variaciones en los distintos 
 	\section{Objetivo}
 	
 	Esta práctica tiene como objetivo principal la comprensión de los procesos internos que realiza un algoritmo de agrupamiento cualquiera como puede ser el K-Means clustering. El aprendizaje se realizará de forma práctica a través de la implementación del algoritmo K-Means clustering junto con diversas opciones con las que realizar algunos pasos del mismo, como son el uso de métricas o inicializaciones del algoritmo diferentes.	Estas variaciones requieren que el algoritmo sea entendido plenamente para poder hacer contribuciones que tengan utilidad para la realización del proceso.
+
+	\section{Código fuente}
+	
+	Todos los archivos referentes a la práctica están contenidos en el repositorio usado para el desarrollo de la misma. El proyecto es "P6" dentro del repositorio \url{https://github.com/davidramirez/MineriaDeDatos.git}.
 	
 \chapter{Algoritmo}
 
@@ -273,7 +277,7 @@ En la figura \ref{fig:clases} se muestra el diagrama de clases final de la aplic
 	
 	Para solucionarlo, hemos hecho 100 ejecuciones de cada combinación de parámetros posible y hemos utilizado la media de los diferentes errores obtenidos para conseguir un valor más estable del error cometido por nuestro software. El proceso con el ejecutable estándar desarrollado sería muy costoso, así que hemos desarrollado el programa \textit{MDP6\_tab\_errores.jar} para automatizar dicho proceso.
 	
-	Los ficheros correspondientes a este apartado están disponibles en la carpeta \textit{/resultados/resultados\_comparativos}. Se encuentran los ficheros originales, los ficheros operativos y los fichero resultado obtenidos. El resumen de los resultados se encuentra a continuación.
+	Los ficheros correspondientes a este apartado están disponibles en la carpeta de resultados  \textit{/resultados/resultados\_comparativos}. Se encuentran los ficheros originales, los ficheros operativos y los fichero resultado obtenidos. El resumen de los resultados se encuentra a continuación.
 	
 	
 	\begin{figure}[htbp]
@@ -344,7 +348,7 @@ En la figura \ref{fig:clases} se muestra el diagrama de clases final de la aplic
 	
 	En cuanto a parámetros, se han tenido en cuanta las diferentes inicializaciones de nuestro software y varias distancias de las soportadas. En Weka se han utilizado las dos distancias soportadas (Manhattan y Euclídea) y por cada una se ha probado con y sin normalización.En cuanto al parámetro K, se establece igual al número de clases diferentes del fichero original. Estas pruebas se han basado en el fichero \textit{iris.arff}, por lo que el valor de K usado ha sido \textbf{3}.
 	
-	Para obtener las instancias etiquetadas en nuestro software se ha utilizado el ejecutable \textit{MDP6.jar} que automáticamente genera un fichero conteniendo las diferentes instancias y su cluster correspondiente. La variación de parámetro se ha llevado a cabo mediante un script BASH, \textit{MDP6\_param\_variator.sh},  con el que hemos obtenido los diferentes ficheros resultados.
+	Para obtener las instancias etiquetadas en nuestro software se ha utilizado el ejecutable \textit{MDP6.jar} que automáticamente genera un fichero conteniendo las diferentes instancias y su cluster correspondiente. La variación de parámetros se ha llevado a cabo mediante un script BASH carente de parámetros, \textit{MDP6\_param\_variator.sh},  con el que hemos obtenido los diferentes ficheros resultados.
 	
 	En el caso de Weka, el proceso se ha realizado de forma manual mediante su interfaz, ya que eran solo 4 las diferentes combinaciones de parámetros a probar.
 	
