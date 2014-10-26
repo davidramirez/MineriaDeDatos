@@ -272,6 +272,15 @@ En la figura \ref{fig:clases} se muestra el diagrama de clases final de la aplic
 		
 	\section{Variabilidad de los resultados}
 	\label{resestadisticos}
+	Para analizar la variabilidad de los resultados ofrecidos por nuestro programa, hemos realizado 10000 experimentos con cada inicialización para los parámetros por defecto variando únicamente el número de clusters que se desea obtener.
+	
+	Los resultados obtenidos por los algoritmos en los que intervienen variables de carácter aleatorio arrojan resultados distintos en cada repetición mientras que el algoritmo de inicialización por división del espacio resulta siempre en un resultado idéntico siempre que tratemos con el mismo fichero de datos.
+	
+	La distribución de los resultados se muestra gráficamente mediante franjas en los valores en los que tienen tendencia a converger los resultados de la aplicación de los algoritmos. ^!!!AÑADIR FIGURAS""!! Estas franjas son similares entre el algoritmo de pertenencia aleatoria y el de centroides aleatorios.
+	
+	Si comparamos los índices estadísticos, observamos que los algoritmos que mejor puntuan en base a su media son los de pertenencia y centroides aleatorios para aquellas pruebas realizadas sobre 3 y 5 clusters, sin embargo, la puntuación de la inicialización aleatoria es mejor para 8 clusters.
+	
+	La división del espacio otorga siempre el mismo resultado teniendo por tanto varianza cero. Este algoritmo no ha puntuado como último en ninguna de las pruebas (misma mediana k3)
 
 	
 	\section{Análisis crítico y discusión de resultados}
