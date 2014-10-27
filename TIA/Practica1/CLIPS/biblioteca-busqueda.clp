@@ -43,8 +43,8 @@
         (if (and (> ?*PASOS* 0) (= ?i ?*PASOS*)) then (break))
 )
 
-(if  (exito ?*PADRE*) then (printout t "La soluci�n es " ?*PADRE* crlf)
-else (if (=(length$ ?*LISTA*)0)  then (printout t "No hay soluci�n" crlf)))
+(if  (exito ?*PADRE*) then (printout t "La solución es " ?*PADRE* crlf)
+else (if (=(length$ ?*LISTA*)0)  then (printout t "No hay solución" crlf)))
 )
 
 
@@ -67,8 +67,8 @@ else (if (=(length$ ?*LISTA*)0)  then (printout t "No hay soluci�n" crlf)))
         (if (and (> ?*PASOS* 0) (= ?i ?*PASOS*)) then (break))
 )
 
-(if  (exito ?*PADRE*) then (printout t "La soluci�n es " ?*PADRE* crlf)
-else (if (=(length$ ?*LISTA*)0)  then (printout t "No hay soluci�n" crlf)))
+(if  (exito ?*PADRE*) then (printout t "La solución es " ?*PADRE* crlf)
+else (if (=(length$ ?*LISTA*)0)  then (printout t "No hay solución" crlf)))
 )
 
 
@@ -87,8 +87,8 @@ else (if (=(length$ ?*LISTA*)0)  then (printout t "No hay soluci�n" crlf)))
         (if (and (> ?*PASOS* 0) (= ?i ?*PASOS*)) then (break))
 )
 
-(if  (exito ?*PADRE*) then (printout t "La soluci�n es " ?*PADRE* crlf)
-else (if (=(length$ ?*LISTA*)0)  then (printout t "No hay soluci�n" crlf)))
+(if  (exito ?*PADRE*) then (printout t "La solución es " ?*PADRE* crlf)
+else (if (=(length$ ?*LISTA*)0)  then (printout t "No hay solución" crlf)))
 )
 
 
@@ -111,6 +111,8 @@ else (if (=(length$ ?*LISTA*)0)  then (printout t "No hay soluci�n" crlf)))
         (if (and (> ?*PASOS* 0) (= ?i ?*PASOS*)) then (break))
 )
 
-(if  (exito ?*PADRE*) then (printout t "La soluci�n es " ?*PADRE* crlf)
-else (if (=(length$ ?*LISTA*)0)  then (printout t "No hay soluci�n" crlf)))
+(if  (exito ?*PADRE*) then (printout t "La solución es " ?*PADRE* crlf)
+else (if (=(length$ ?*LISTA*)0)  then (printout t "No hay solución" crlf)))
 )
+
+(deffunction busqueda_exhaustiva 
