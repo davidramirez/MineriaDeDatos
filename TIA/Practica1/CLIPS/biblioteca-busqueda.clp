@@ -115,4 +115,21 @@ else (if (=(length$ ?*LISTA*)0)  then (printout t "No hay solución" crlf)))
 else (if (=(length$ ?*LISTA*)0)  then (printout t "No hay solución" crlf)))
 )
 
-(deffunction busqueda_exhaustiva 
+(deffunction busqueda_exhaustiva ($?algoritmo, $?visitados,$?lista)
+	(if(eq(?algoritmo p))
+	then
+		(if (eq(?visitados true) 
+		then
+			(busquedaEnProfundidadConVisitados ?lista)
+		else
+			(busquedaEnProfundidadSinVisitados ?Lista)
+		))
+	else
+		(if (eq(?visitados true)
+		then
+			(busquedaEnAnchuraConVisitados ?lista)
+		else
+			(busquedaEnAnchuraSinVisitados ?lista)
+		))
+	)
+)
