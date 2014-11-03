@@ -8,10 +8,10 @@
  ?*PASOS* = 10
 )
 
-;sistema-aspiradora: lista (h1 aspiradora sucia h2 sucia)
+; estado: lista (p c l b), donde p,b,l,c €(i,d)
 
 
-(deffunction igualBarquero? ($?pos, $?estado)
+(deffunction igualBarquero? (?pos $?estado)
 
 (return(eq (nth$ ?pos ?estado) (nth$ 4 ?estado)))
 )
@@ -21,27 +21,34 @@
 (return (not(member$ (create$ i) ?estado))))
 
 (deffunction fracaso ($?estado)
---comprobar que el estado es posible. si no lo es devover PROHIBIDO
+;comprobar que el estado es posible. si no lo es devover PROHIBIDO
+;cabra y puma solos y lechuga y cabra solos
+
+(if(and(and(eq (nth$ 1 ?estado) (nth$ 2 ?estado)) (not(eq (nth$ 1 ?estado) (nth$ 4 ?estado)))) (not (eq (nth$ 2 ?estado) (nth$ 4 ?estado)))) then
+(return (create$ PROHIBIDO))
+else
+  (if (and(and(eq (nth$ 3 ?estado) (nth$ 2 ?estado)) (not(eq (nth$ 2 ?estado) (nth$ 4 ?estado)))) (not (eq (nth$ 3 ?estado) (nth$ 4 ?estado)))) then
+    (return (create$ PROHIBIDO))
+  else
+    (return ?estado)
+  )
+
+)
 )
 
 (deffunction contrario (?pos)
   (if (eq ?pos d) then
     (return i)
-
   else
     (return d)
   )
 )
 
-(deffunction A ($?estado)
-  (bind ?h1 (aspirar(extrae-h1 ?estado)))
-  (bind ?h2 (aspirar(extrae-h2 ?estado)))
-  (create$ ?h1 ?h2))
 
 (deffunction MoverP ($?estado)
 
 (if (igualBarquero? 1 ?estado) then
-  (create$ (contrario (nth$ 1 ?estado)) (nth$ 2 ?estado) (nth$ 3 ?estado) (contrario (nth$ 4 ?estado)))
+  (return (fracaso (create$ (contrario (nth$ 1 ?estado)) (nth$ 2 ?estado) (nth$ 3 ?estado) (contrario (nth$ 4 ?estado)))))
 )
 
 (return (fracaso ?estado))
@@ -49,7 +56,7 @@
 
 (deffunction MoverC ($?estado)
 (if (igualBarquero? 2 ?estado) then
-  (create$ (nth$ 1 ?estado) (contrario (nth$ 2 ?estado)) (nth$ 3 ?estado) (contrario (nth$ 4 ?estado)))
+  (return (fracaso (create$ (nth$ 1 ?estado) (contrario (nth$ 2 ?estado)) (nth$ 3 ?estado) (contrario (nth$ 4 ?estado)))))
 )
 
 (return (fracaso ?estado))
@@ -57,14 +64,14 @@
 
 (deffunction MoverL ($?estado)
 (if (igualBarquero? 3 ?estado) then
-  (create$ (nth$ 1 ?estado) (nth$ 2 ?estado) (contrario (nth$ 3 ?estado)) (contrario (nth$ 4 ?estado)))
-)
+  (return (fracaso (create$ (nth$ 1 ?estado) (nth$ 2 ?estado) (contrario (nth$ 3 ?estado)) (contrario (nth$ 4 ?estado)))))
+else
+  (return ?estado))
 
-(return (fracaso ?estado))
+
 )
 
 (deffunction MoverB ($?estado)
-  (create$ (nth$ 1 ?estado) (nth$ 2 ?estado) (nth$ 3 ?estado) (contrario (nth$ 4 ?estado))
-
-(return (fracaso ?estado))
+  
+(return (fracaso (create$ (nth$ 1 ?estado) (nth$ 2 ?estado) (nth$ 3 ?estado) (contrario (nth$ 4 ?estado)))))
 )

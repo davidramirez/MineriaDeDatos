@@ -1,5 +1,7 @@
 (deffunction prohibido? ($?estado)
-(eq $?estado PROHIBIDO)
+    ;(printout t (eq ?estado (create$ PROHIBIDO)) crlf)
+    ;(printout t "llega a comparar el estado: " (nth$ 1 ?estado) crlf)
+ (eq ?estado (create$ PROHIBIDO))
 )
 
 
@@ -14,7 +16,7 @@
 (bind $?lista-operadores (create$))
 (progn$ (?op ?*OPERADORES*)
         (bind $?hijo (aplicar-operador ?op ?estado))
-        (if (not (prohibido? ?hijo)) then
+        (if (not (prohibido? ?hijo)) then***************revisar por aqquí
                 (bind ?lista-operadores (create$ ?lista-operadores ?op))))
 ?lista-operadores)
 
@@ -31,6 +33,7 @@
 (deffunction busqueda-en-profundidad ($?lista)
 (bind ?i 0)
 (while (and(not (exito ?*PADRE*)) (not (eq ?*LISTA* (create$)))) do
+        (printout t "algo " ?*LISTA* crlf)
         (printout t "Paso " ?i crlf)
         (bind ?*PADRE*  (explode$(nth$ 1  ?*LISTA*)))
         (printout t "Padre " ?*PADRE* crlf)
@@ -115,21 +118,21 @@ else (if (=(length$ ?*LISTA*)0)  then (printout t "No hay solución" crlf)))
 else (if (=(length$ ?*LISTA*)0)  then (printout t "No hay solución" crlf)))
 )
 
-(deffunction busqueda_exhaustiva ($?algoritmo, $?visitados,$?lista)
-	(if(eq(?algoritmo p))
+(deffunction busqueda-exhaustiva (?algoritmo ?visitados $?lista)
+	(if (eq ?algoritmo p)
 	then
-		(if (eq(?visitados true) 
+		(if (eq ?visitados TRUE) 
 		then
-			(busquedaEnProfundidadConVisitados ?lista)
+			(busqueda-en-profundidad-con-visitados ?lista)
 		else
-			(busquedaEnProfundidadSinVisitados ?Lista)
-		))
+			(busqueda-en-profundidad ?lista)
+		)
 	else
-		(if (eq(?visitados true)
+		(if (eq ?visitados TRUE)
 		then
-			(busquedaEnAnchuraConVisitados ?lista)
+			(busqueda-en-anchura-con-visitados ?lista)
 		else
-			(busquedaEnAnchuraSinVisitados ?lista)
-		))
+			(busqueda-en-anchura ?lista)
+		)
 	)
 )

@@ -1,13 +1,13 @@
 (defglobal 
-?*CAMINO* = "\\home\\user\\"
-?*FICHERO* = "estados.clp"
+?*CAMINO* = "/home/david/git/MineriaDeDatos2/TIA/Practica1/CLIPS/"
+?*FICHERO* = "estados-barquero.clp"
 ?*BIBLIOTECA* = "biblioteca-busqueda.clp"
-?*ALGORITMOS* = 
+?*ALGORITMOS* =
 " 
-1.Búsqueda-en-profundidad-sin-visitados
-2.Búsqueda-en-profundidad-con-visitados
-3.Búsqueda-en-anchura-sin-visitados
-4.Búsqueda-en-anchura-con-visitados
+1.BÃºsqueda-en-profundidad-sin-visitados
+2.BÃºsqueda-en-profundidad-con-visitados
+3.BÃºsqueda-en-anchura-sin-visitados
+4.BÃºsqueda-en-anchura-con-visitados
 "
 
 )
@@ -15,10 +15,10 @@
 (deffunction ejecutar-busqueda()
 (load (str-cat ?*CAMINO* ?*FICHERO*))
 (load (str-cat ?*CAMINO* ?*BIBLIOTECA*))
-(printout t "Cuántos pasos quiere ejecutar? si quiere todos escribir 0 y si el mismo -1" crlf)
+(printout t "CuÃ¡ntos pasos quiere ejecutar? si quiere todos escribir 0 y si el mismo -1" crlf)
 (bind ?pasos (read))
 (if (> ?pasos -1) then(eval (str-cat "(bind ?*PASOS* " ?pasos ")")))
-(printout t "¿Qué algoritmo quiere aplicar?" crlf ?*ALGORITMOS* crlf)
+(printout t "Â¿QuÃ© algoritmo quiere aplicar?" crlf ?*ALGORITMOS* crlf)
 (bind ?algoritmo (read))
 (switch ?algoritmo
 	(case 1 then (eval   "(busqueda-exhaustiva p FALSE ?*LISTA*)"))
