@@ -21,7 +21,7 @@
 (return (not(member$ (create$ i) ?estado))))
 
 (deffunction fracaso ($?estado)
-;comprobar que el estado es posible. si no lo es devover PROHIBIDO
+;comprobar que el estado es posible. si no lo es devolver PROHIBIDO
 ;cabra y puma solos y lechuga y cabra solos
 
 (if(and(and(eq (nth$ 1 ?estado) (nth$ 2 ?estado)) (not(eq (nth$ 1 ?estado) (nth$ 4 ?estado)))) (not (eq (nth$ 2 ?estado) (nth$ 4 ?estado)))) then
