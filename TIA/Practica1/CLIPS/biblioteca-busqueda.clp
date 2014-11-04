@@ -1,6 +1,5 @@
 (deffunction prohibido? ($?estado)
-    ;(printout t (eq ?estado (create$ PROHIBIDO)) crlf)
-    ;(printout t "llega a comparar el estado: " (nth$ 1 ?estado) crlf)
+    ;cambio la comparación para que sea entre valores multicampo y no multicampo-string que no va
  (eq ?estado (create$ PROHIBIDO))
 )
 
@@ -16,7 +15,7 @@
 (bind $?lista-operadores (create$))
 (progn$ (?op ?*OPERADORES*)
         (bind $?hijo (aplicar-operador ?op ?estado))
-        (if (not (prohibido? ?hijo)) then***************revisar por aqquí
+        (if (not (prohibido? ?hijo)) then
                 (bind ?lista-operadores (create$ ?lista-operadores ?op))))
 ?lista-operadores)
 
@@ -26,18 +25,19 @@
         (bind $?hijo (aplicar-operador ?op ?estado))
         (if (not (prohibido? ?hijo)) then
                 (bind ?lista-hijos (create$ ?lista-hijos (implode$  ?hijo))))
-))
+)
+;Añado el return de los hijos, sino devuelve false
+(return ?lista-hijos))
 
 
 
 (deffunction busqueda-en-profundidad ($?lista)
 (bind ?i 0)
 (while (and(not (exito ?*PADRE*)) (not (eq ?*LISTA* (create$)))) do
-        (printout t "algo " ?*LISTA* crlf)
         (printout t "Paso " ?i crlf)
-        (bind ?*PADRE*  (explode$(nth$ 1  ?*LISTA*)))
+        (bind ?*PADRE*  (explode$ (nth$ 1  ?*LISTA*)))
         (printout t "Padre " ?*PADRE* crlf)
-        (bind ?*LISTA*(rest$ ?*LISTA*))
+        (bind ?*LISTA* (rest$ ?*LISTA*))
         (if (not (exito ?*PADRE*)) then
                 (bind ?operadores-hijos (operadores-hijos ?*PADRE*))
                 (bind ?hijos (hijos ?*PADRE*))
@@ -55,11 +55,11 @@ else (if (=(length$ ?*LISTA*)0)  then (printout t "No hay solución" crlf)))
 (bind ?i 0)
 (while (and(not (exito ?*PADRE*)) (not (eq ?*LISTA* (create$)))) do
         (printout t "Paso " ?i crlf)
-        (bind ?*PADRE*  (explode$(nth$ 1  ?*LISTA*)))
+        (bind ?*PADRE*  (explode$ (nth$ 1  ?*LISTA*)))
         (printout t "Padre " ?*PADRE* crlf)
-        (bind ?*LISTA*(rest$ ?*LISTA*))
-        (if (not(member$ (nth$ 1  ?*LISTA*) ?*VISITADOS*)) then
-            (bind ?*VISITADOS* (create$ ?*VISITADOS* (nth$ 1  ?*LISTA*)))
+        (bind ?*LISTA* (rest$ ?*LISTA*))
+        (if (not(member$ (implode$ ?*PADRE*) ?*VISITADOS*)) then
+            (bind ?*VISITADOS* (create$ ?*VISITADOS* (implode$ ?*PADRE*)))
             (if (not (exito ?*PADRE*)) then
                 (bind ?operadores-hijos (operadores-hijos ?*PADRE*))
                 (bind ?hijos (hijos ?*PADRE*))
@@ -79,9 +79,9 @@ else (if (=(length$ ?*LISTA*)0)  then (printout t "No hay solución" crlf)))
 (bind ?i 0)
 (while (and(not (exito ?*PADRE*)) (not (eq ?*LISTA* (create$)))) do
         (printout t "Paso " ?i crlf)
-        (bind ?*PADRE*  (explode$(nth$ 1  ?*LISTA*)))
+        (bind ?*PADRE*  (explode$ (nth$ 1  ?*LISTA*)))
         (printout t "Padre " ?*PADRE* crlf)
-        (bind ?*LISTA*(rest$ ?*LISTA*))
+        (bind ?*LISTA* (rest$ ?*LISTA*))
         (if (not (exito ?*PADRE*)) then
                 (bind ?operadores-hijos (operadores-hijos ?*PADRE*))
                 (bind ?hijos (hijos ?*PADRE*))
@@ -99,11 +99,12 @@ else (if (=(length$ ?*LISTA*)0)  then (printout t "No hay solución" crlf)))
 (bind ?i 0)
 (while (and(not (exito ?*PADRE*)) (not (eq ?*LISTA* (create$)))) do
         (printout t "Paso " ?i crlf)
-        (bind ?*PADRE*  (explode$(nth$ 1  ?*LISTA*)))
+        (bind ?*PADRE*  (explode$ (nth$ 1  ?*LISTA*)))
         (printout t "Padre " ?*PADRE* crlf)
-        (bind ?*LISTA*(rest$ ?*LISTA*))
-        (if (not(member$ (nth$ 1  ?*LISTA*) ?*VISITADOS*)) then
-            (bind ?*VISITADOS* (create$ ?*VISITADOS* (nth$ 1  ?*LISTA*)))
+        (bind ?*LISTA* (rest$ ?*LISTA*))
+        (if (not(member$ (implode$ ?*PADRE*) ?*VISITADOS*)) then
+            (bind ?*VISITADOS* (create$ ?*VISITADOS* (implode$ ?*PADRE*)))
+            ;(printout t "visitados " ?*VISITADOS* crlf); Imprimo los visitados para comprobar que se guarda cada estado de forma individual
             (if (not (exito ?*PADRE*)) then
                 (bind ?operadores-hijos (operadores-hijos ?*PADRE*))
                 (bind ?hijos (hijos ?*PADRE*))

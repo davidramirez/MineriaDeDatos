@@ -49,24 +49,22 @@ else
 
 (if (igualBarquero? 1 ?estado) then
   (return (fracaso (create$ (contrario (nth$ 1 ?estado)) (nth$ 2 ?estado) (nth$ 3 ?estado) (contrario (nth$ 4 ?estado)))))
-)
-
-(return (fracaso ?estado))
+else
+  (return (create$ PROHIBIDO)))
 )
 
 (deffunction MoverC ($?estado)
 (if (igualBarquero? 2 ?estado) then
   (return (fracaso (create$ (nth$ 1 ?estado) (contrario (nth$ 2 ?estado)) (nth$ 3 ?estado) (contrario (nth$ 4 ?estado)))))
-)
-
-(return (fracaso ?estado))
+else
+  (return (create$ PROHIBIDO)))
 )
 
 (deffunction MoverL ($?estado)
 (if (igualBarquero? 3 ?estado) then
   (return (fracaso (create$ (nth$ 1 ?estado) (nth$ 2 ?estado) (contrario (nth$ 3 ?estado)) (contrario (nth$ 4 ?estado)))))
 else
-  (return ?estado))
+  (return (create$ PROHIBIDO)))
 
 
 )
@@ -74,4 +72,23 @@ else
 (deffunction MoverB ($?estado)
   
 (return (fracaso (create$ (nth$ 1 ?estado) (nth$ 2 ?estado) (nth$ 3 ?estado) (contrario (nth$ 4 ?estado)))))
+)
+
+
+
+
+(deffunction minimo ($?lista); precondición: todos los valores de la lista deben ser numéricos y la lista contiene almenos un valor
+
+(bind $?auxlist (rest$ ?lista))
+(bind ?min (nth$ 1 ?lista))
+
+(while(not(eq ?auxlist (create$))) do
+(printout t "entra" crlf)
+  (if (< (nth$ 1 ?auxlist) ?min) then
+    (bind ?min (nth$ 1 ?auxlist)))
+
+  (bind ?auxlist (rest$ ?auxlist))
+)
+
+(return ?min)
 )

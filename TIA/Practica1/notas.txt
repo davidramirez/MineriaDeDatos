@@ -1,0 +1,13 @@
+Definición de las operaciones.
+
+	-Inicialmente en su definición establecíamos que si al mover el puma, la cabra o la lechuga el barquero no se encontraba en la misma orilla, el estado devuelto era el mismo que el de partida. 
+	-Posteriormente, y dado que el recorrido en anchura sin visitados tardaba demasiado, procedimos a cambiar la implementación anterior y devolver estados PROHIBIDOS. 
+
+Tiene sentido porque no se puede ejecutar la operación al no estar el barquero en la misma orilla que el elemento a mover y, además, permite evitar gran cantidad de estados que se van a repetir y sin necesidad de utilizar una lista de repetidos. En cuestión de eficiencia, la implementación primera requería más de 4000 pasos para llegar al estado objetivo del problema utilizando búsqueda en anchura, mientras que la segunda requiere únicamente 108 pasos hasta alcanzar el objetivo. Una gran diferencia y sin usar una lista de visitados.
+
+
+Resultados de ejecución (siempre sin limitar el número de pasos):
+	1. Búsqueda en profundidad sin visitados: cicla ejecutando continuamente la operación moverB.
+	2. Búsqueda en profundidad con visitados: encuentra la solución en 9 pasos.
+	3. Búsqueda en anchura sin visitados: encuentra la solución en 108 pasos.
+	4. Búsqueda en anchura con visitados: encuentra la solución en 9 pasos.
