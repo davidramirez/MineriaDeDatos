@@ -77,7 +77,7 @@ else
 
 
 
-(deffunction minimo ($?lista); precondición: todos los valores de la lista deben ser numéricos y la lista contiene almenos un valor
+(deffunction minimo-propia ($?lista); precondición: todos los valores de la lista deben ser numéricos y la lista contiene almenos un valor
 
 (bind $?auxlist (rest$ ?lista))
 (bind ?min (nth$ 1 ?lista))
@@ -92,3 +92,6 @@ else
 
 (return ?min)
 )
+
+(deffunction minimo-de-lista ($?lista)
+  (eval (format nil "(%s %s)" "min" (implode$ ?lista))))); se construye el comando clips a ejecutar y se realiza su ejecución
